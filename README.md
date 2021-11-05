@@ -3,7 +3,7 @@ This works presents Okapi, a new dataset for Natural Language to executable web 
 
 ### Okapi statistics in comparison to other semantic parsing datasets
 
-| Dataset | # Question | # Queries | # Domains | # Templates | Realistic | 2-grams Jaccard similarity |
+| Dataset | #Question | #Queries | #Domains | #Templates | Realistic | 2-grams Jaccard similarity |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | CFQ | 239,357 | 228,149 | - | 34921 | No | 0.04 |
 | SCAN | 20,910 | 20,910 | 1 | - | No | 0.39 |
