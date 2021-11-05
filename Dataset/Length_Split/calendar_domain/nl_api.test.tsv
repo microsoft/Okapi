@@ -1,0 +1,1000 @@
+What are the important events that started before last Monday and are organized by cody scullawl?	GET event FILTER event.importance eq High FILTER event.organizer eq Cody Scullawl FILTER event.start lt last Monday
+List the events with low importance that organized by anibal shobe at  conf room 1078.	GET event FILTER event.importance eq Low FILTER event.location eq Conf Room 1078 FILTER event.organizer eq Anibal Shobe
+What are the low important events at conf room 4349 falling under gene category?	GET event FILTER event.categories eq gene FILTER event.importance eq Low FILTER event.location eq Conf Room 4349
+What are the events without attachments at lise' office ordered by start time newest to oldest?	GET event FILTER event.hasAttachments eq False FILTER event.location eq Lise's office ORDERBY event.start desc
+Provide me the events about relative trader model scheduled at lauretta's office that started before next year.	GET event FILTER event.location eq Lauretta's office FILTER event.start lt next year SEARCH relative trader model
+Give me the list of eventwith low importance that organized by  joya taillefer ordered by start time from most recent  to oldest.	GET event FILTER event.importance eq Low FILTER event.organizer eq Joya Taillefer ORDERBY event.start desc
+Provide me the low important events with attachments starting on Friday.	GET event FILTER event.hasAttachments eq True FILTER event.importance eq Low FILTER event.start eq Friday
+Give me the events without attachments in customer calender starting on monday.	GET event FILTER event.calendar eq Customers FILTER event.hasAttachments eq False FILTER event.start eq Monday
+What unimportant meetings from my calendar will take place prior to next year?	GET event FILTER event.calendar eq Personal FILTER event.importance eq Low FILTER event.start lt next year
+Provide me the important events organized by whitney molliere  without attachments.	GET event FILTER event.hasAttachments eq False FILTER event.importance eq High FILTER event.organizer eq Whitney Molliere
+List out the events with attachments ending this year falling under europe category.	GET event FILTER event.categories eq Europe FILTER event.end eq this year FILTER event.hasAttachments eq True
+Provide me the first event in customers calendar.	GET event FILTER event.calendar eq Customers ORDERBY event.start asc TOP 1
+What are the events in general calendar that falls under training category which started last Friday?	GET event FILTER event.calendar eq General FILTER event.categories eq Training FILTER event.start eq last Friday
+Provide me a list of all the meeting with attachments that are starting on Wednesday.	GET event FILTER event.hasAttachments eq True FILTER event.importance eq High FILTER event.start eq Wednesday
+Tell me about the meetings I have today starting from now in shared calendar.	GET event FILTER event.calendar eq Shared FILTER event.start eq today FILTER event.start gt now
+Give me the less important events that will start after now and will end today.	GET event FILTER event.end eq today FILTER event.importance eq Low FILTER event.start gt now
+Tell me about the meetings I have at conf room 3080 in research category that started before last month.	GET event FILTER event.categories eq Research FILTER event.location eq Conf Room 3080 FILTER event.start lt last month
+Provide the number of meetings that are under the performance category and marked as high importance.	GET event COUNT FILTER event.categories eq performance FILTER event.importance eq High
+What is the last event that will start after next Saturday?	GET event FILTER event.start gt next Saturday ORDERBY event.start desc TOP 1
+Give me the number of less important meeting invitation received from Isaiah Coster.	GET event COUNT FILTER event.importance eq Low FILTER event.organizer eq Isaiah Coster
+What are my meetings about geographic  IR in the Services category that had started before this week?	GET event FILTER event.categories eq Services FILTER event.start lt this week SEARCH geographic ir
+Give me the events I have with the keyword Pastoralism that started before this year and without attachment.	GET event FILTER event.hasAttachments eq False FILTER event.start lt this year SEARCH Pastoralism
+Provide me a list of meetings ordered by start time from oldest to newest from the clients calendar that fall under the intranet category.	GET event FILTER event.calendar eq Clients FILTER event.categories eq intranet ORDERBY event.start asc
+How many meeting are there in the shared calendar that are about Agroclimatic zones?	GET event COUNT FILTER event.calendar eq Shared SEARCH Agroclimatic zones
+List out the number of events having high importance in coding category.	GET event COUNT FILTER event.categories eq coding FILTER event.importance eq High
+What are the events I have with the keyword Wax plants organized by Nyla Venecia ordered by start time oldest to newest?	GET event FILTER event.organizer eq Nyla Venecia ORDERBY event.start asc SEARCH Wax plants
+List the important events with attachments ending next Friday.	GET event FILTER event.end eq next Friday FILTER event.hasAttachments eq True FILTER event.importance eq High
+Find the number of important events which has no attachments.	GET event COUNT FILTER event.hasAttachments eq False FILTER event.importance eq High
+List the events organized by eddy varvel that started before this week ordered by start time newest to oldest.	GET event FILTER event.organizer eq Eddy Varvel FILTER event.start lt this week ORDERBY event.start desc
+Which are the high important events in my shared calendar starting from newest to oldest order?	GET event FILTER event.calendar eq Shared FILTER event.importance eq High ORDERBY event.start desc
+What are the events organized by basilia milwee without attachments in clients calendar?	GET event FILTER event.calendar eq Clients FILTER event.hasAttachments eq False FILTER event.organizer eq Basilia Milwee
+Make a list of today's meeting without attachments that will be starting after now.	GET event FILTER event.end eq today FILTER event.hasAttachments eq False FILTER event.start gt now
+List out the events about persuasive argument starting today from newest to oldest order.	GET event FILTER event.start eq today ORDERBY event.start desc SEARCH persuasive argument
+Find top 74 events that ends next wednesday ordered by start time in descending manner.	GET event FILTER event.end eq next Wednesday ORDERBY event.start desc TOP 74
+Give me the events without attachments falling under tools category starting after this week.	GET event FILTER event.categories eq tools FILTER event.hasAttachments eq False FILTER event.start gt this week
+What are the important events starting next month that fall under accounting categories?	GET event FILTER event.categories eq Accounting FILTER event.importance eq High FILTER event.start eq next month
+What are the meetings that are organized by Dwana Zahner in conf room 3726 ordered by start time from newest to oldest?	GET event FILTER event.location eq Conf Room 3726 FILTER event.organizer eq Dwana Zahner ORDERBY event.start desc
+List out the events I have with attachment in the marketing category and are going to start next tuesday.	GET event FILTER event.categories eq Marketing FILTER event.hasAttachments eq True FILTER event.start eq next Tuesday
+What are the important meetings I have without attachments in accounting category?	GET event FILTER event.categories eq Accounting FILTER event.hasAttachments eq False FILTER event.importance eq High
+List out the events without attachments about socratic game starting from oldest to newest order.	GET event FILTER event.hasAttachments eq False ORDERBY event.start asc SEARCH socratic game
+Provide me the List of events about Grassland management having attachments falling under systems category.	GET event FILTER event.categories eq systems FILTER event.hasAttachments eq True SEARCH Grassland management
+List the number of events I have with the keyword POLLUTION that started before last year.	GET event COUNT FILTER event.start lt last year SEARCH POLLUTION
+What are the events organized by carline morini that will start before now today?	GET event FILTER event.end eq today FILTER event.organizer eq Carline Morini FILTER event.start lt now
+Which are the events with low importance has attachments ordered by start time from most recent to oldest?	GET event FILTER event.hasAttachments eq True FILTER event.importance eq Low ORDERBY event.start desc
+Which are the high important meetings taking place at vaughn's office having attachments?	GET event FILTER event.hasAttachments eq True FILTER event.importance eq High FILTER event.location eq Vaughn's office
+What last meeting did I have with attachments ordered by start time?	GET event FILTER event.hasAttachments eq True ORDERBY event.start desc TOP 1
+Provide me the events in other appointments calendar starting before next Wednesday that fall under migration categories.	GET event FILTER event.calendar eq OtherAppointments FILTER event.categories eq Migration FILTER event.start lt next Wednesday
+Give me the low importance events started before last year from shared calendar.	GET event FILTER event.calendar eq Shared FILTER event.importance eq Low FILTER event.start lt last year
+List out the less important events I have without attachment and are organized by Henry Fritch.	GET event FILTER event.hasAttachments eq False FILTER event.importance eq Low FILTER event.organizer eq Henry Fritch
+What are the events organized by aleisha gilster about DUCKS that ended last Friday?	GET event FILTER event.end eq last Friday FILTER event.organizer eq Aleisha Gilster SEARCH DUCKS
+How many important events contain attachments?	GET event COUNT FILTER event.hasAttachments eq True FILTER event.importance eq High
+Give me the meeting invitation received from daphine maciag ordered by start time from oldest to most recent at rubi's office. 	GET event FILTER event.location eq Rubi's office FILTER event.organizer eq Daphine Maciag ORDERBY event.start asc
+List out the events in my google calendar starting from newest to oldest order organized by wai vernoy.	GET event FILTER event.calendar eq Google FILTER event.organizer eq Wai Vernoy ORDERBY event.start desc
+List out the events without attachments in shared calendar that ends on Saturday.	GET event FILTER event.calendar eq Shared FILTER event.end eq Saturday FILTER event.hasAttachments eq False
+Find the number of events that has attachments having end time saturday.	GET event COUNT FILTER event.end eq Saturday FILTER event.hasAttachments eq True
+Tell me about the events I had without attachment in the simulation category that ended last monday.	GET event FILTER event.categories eq simulation FILTER event.end eq last Monday FILTER event.hasAttachments eq False
+Provide me the number of events without attachments that are organized by particia vanhese.	GET event COUNT FILTER event.hasAttachments eq False FILTER event.organizer eq Particia Vanhese
+What are the events with attachments about evolutionary ordered by start time newest to oldest?	GET event FILTER event.hasAttachments eq True ORDERBY event.start desc SEARCH evolutionary
+What are the events organized by Theda Sjoberg that will start after this week and have attachments?	GET event FILTER event.hasAttachments eq True FILTER event.organizer eq Theda Sjoberg FILTER event.start gt this week
+List the events organized by gertha brazille with attachments about rate code.	GET event FILTER event.hasAttachments eq True FILTER event.organizer eq Gertha Brazille SEARCH rate code
+What are the last 40 events about traffic flow?	GET event ORDERBY event.start desc SEARCH traffic flow TOP 40
+List out the important events with attachments in ascending order of start time.	GET event FILTER event.hasAttachments eq True FILTER event.importance eq High ORDERBY event.start asc
+Which are the meetings I have without attachments organized at wan's office starting after tomorrow?	GET event FILTER event.hasAttachments eq False FILTER event.location eq Wan's office FILTER event.start gt tomorrow
+What meetings did I have in internet category starting after next tuesday ordered by start time from newest to oldest?	GET event FILTER event.categories eq internet FILTER event.start gt next Tuesday ORDERBY event.start desc
+Which events are starting next year about FEED PROCESSING in sales category?	GET event FILTER event.categories eq Sales FILTER event.start eq next year SEARCH FEED PROCESSING
+provide me the number of events starting from oldest to newest order falling under photos category without attachments.	GET event FILTER event.categories eq photos FILTER event.hasAttachments eq False ORDERBY event.start asc
+What are the events with attachments in clients calendar that starts after Thursday?	GET event FILTER event.calendar eq Clients FILTER event.hasAttachments eq True FILTER event.start gt Thursday
+What meetings did I have without attachments in day category ordered by start time from newest to oldest?	GET event FILTER event.categories eq day FILTER event.hasAttachments eq False ORDERBY event.start desc
+What are the events I have with attachment in the performance category and in friends calendar?	GET event FILTER event.calendar eq Friends FILTER event.categories eq performance FILTER event.hasAttachments eq True
+What meeting do I have with attachment in call category starting after Sunday?	GET event FILTER event.categories eq call FILTER event.hasAttachments eq True FILTER event.start gt Sunday
+List out the attachments of top 1 event ordered by start time newest to oldest.	GET event ORDERBY event.start desc TOP 1
+Provide me the high important events about 41061108 without attachments.	GET event FILTER event.hasAttachments eq False FILTER event.importance eq High SEARCH 41061108
+Arrange the events having attachments that are under the product category ordered by their start time from newest to oldest.	GET event FILTER event.categories eq product FILTER event.hasAttachments eq True ORDERBY event.start desc
+List the first 73 events that fall in security category ordered by start time oldest to newest.	GET event FILTER event.categories eq security ORDERBY event.start asc TOP 73
+Arrange the meetings in descending order of start time that have attachments and are marked low importance.	GET event FILTER event.hasAttachments eq True FILTER event.importance eq Low ORDERBY event.start desc
+List the events about HISTORY in work calendar ordered by start time newest to oldest.	GET event FILTER event.calendar eq Work ORDERBY event.start desc SEARCH HISTORY
+Which are the events that would be starting after today in Jillian's office and are marked high importance?	GET event FILTER event.importance eq High FILTER event.location eq Jillian's office FILTER event.start gt today
+Arrange the meetings that have low importance and that had started last year in ascending order of their start time.	GET event FILTER event.importance eq Low FILTER event.start eq last year ORDERBY event.start asc
+List out the events I have without attachment in the outlook calendar and in the competitive analysis category.	GET event FILTER event.calendar eq Outlook FILTER event.categories eq competitive analysis FILTER event.hasAttachments eq False
+What are the number of events about extortion without attachments?	GET event COUNT FILTER event.hasAttachments eq False SEARCH extortion
+List the events with attachments starting before next Tuesday ordered by start time newest to oldest.	GET event FILTER event.hasAttachments eq True FILTER event.start lt next Tuesday ORDERBY event.start desc
+List the number of important events that are organized by arturo petko.	GET event COUNT FILTER event.importance eq High FILTER event.organizer eq Arturo Petko
+Give me the meeting invitation received from Natasha Bou in the server category starting after tomorrow in the order newest to oldest.	GET event FILTER event.categories eq server FILTER event.organizer eq Natasha Bou FILTER event.start gt tomorrow ORDERBY event.start desc
+List out the events ordered by start time oldest to newest that started before now today.	GET event FILTER event.start eq today FILTER event.start lt now ORDERBY event.start asc
+What are the meetings I have in holidays calendar of misc category that will end on Thursday?	GET event FILTER event.calendar eq Holidays FILTER event.categories eq misc FILTER event.end eq Thursday
+What are the important events in home calendar that ends on tuesday?	GET event FILTER event.calendar eq Home FILTER event.end eq Tuesday FILTER event.importance eq High
+List out the oldest 53 events ordered by end time tomorrow from oldest to newest.	GET event FILTER event.end eq tomorrow ORDERBY event.start asc TOP 53
+List out the events of coding category in the order of start time newest to oldest having no attachment.	GET event FILTER event.categories eq coding FILTER event.hasAttachments eq False ORDERBY event.start desc
+What are the events I had without attachment in the simulation category that ended last monday?	GET event FILTER event.categories eq simulation FILTER event.end eq last Monday FILTER event.hasAttachments eq False
+What are the important events about personalize web search with attachments?	GET event FILTER event.hasAttachments eq True FILTER event.importance eq High SEARCH personalize web search
+Provide me the first event ended last Tuesday.	GET event FILTER event.end eq last Tuesday ORDERBY event.start asc TOP 1
+Give me the list of top 83 events with high importance arranged in ascending order of their start time.	GET event FILTER event.importance eq High ORDERBY event.start asc TOP 83
+Provide me the events about Interaction started before next Saturday taking place at halley's office.	GET event FILTER event.location eq Halley's office FILTER event.start lt next Saturday SEARCH Interaction
+Find the event without attachments with low importance at  conf room 4161.	GET event FILTER event.hasAttachments eq False FILTER event.importance eq Low FILTER event.location eq Conf Room 4161
+What are the events without attachments about fractional domain starting from newest to oldest order?	GET event FILTER event.hasAttachments eq False ORDERBY event.start desc SEARCH fractional domain
+List out the first 95 low important events.	GET event FILTER event.importance eq Low ORDERBY event.start asc TOP 95
+How many events are organized by Delfina Race that started after last year?	GET event COUNT FILTER event.organizer eq Delfina Race FILTER event.start gt last year
+Provide me the events in general calendar which starts after next Saturday has Honduras as keywords?	GET event FILTER event.calendar eq General FILTER event.start gt next Saturday SEARCH Honduras
+Provide me a list of meetings arranged in ascending order of start time that have attachments and whose start time is after Thursday	GET event FILTER event.hasAttachments eq True FILTER event.start gt Thursday ORDERBY event.start asc
+Give me the number of important events that are starting on Friday.	GET event COUNT FILTER event.importance eq High FILTER event.start eq Friday
+List out the events having low importance organized by whitley sickel that will start after tomorrow.	GET event FILTER event.importance eq Low FILTER event.organizer eq Whitley Sickel FILTER event.start gt tomorrow
+What's my first event organized by joi fassino ordered by start time from oldest to newest?	GET event FILTER event.importance eq High FILTER event.organizer eq Joi Fassino ORDERBY event.start asc TOP 1
+Please provide the events held at Petra's office organized by Genesis Shepley that ended last week.	GET event FILTER event.end eq last week FILTER event.location eq Petra's office FILTER event.organizer eq Genesis Shepley
+Provide me the number of events in clients calendar having nonmanipulable mechanism as keywords.	GET event COUNT FILTER event.calendar eq Clients SEARCH nonmanipulable mechanism
+What meetings did I have in outlook calendar  at conf room 2058 which started last friday?	GET event FILTER event.calendar eq Outlook FILTER event.location eq Conf Room 2058 FILTER event.start eq last Friday
+What are the important events about mirna precursor organized by myrtie thalacker?	GET event FILTER event.importance eq High FILTER event.organizer eq Myrtie Thalacker SEARCH mirna precursor
+What are the events about relative trader model scheduled at lauretta's office that started before next year?	GET event FILTER event.location eq Lauretta's office FILTER event.start lt next year SEARCH relative trader model
+Provide me the list of last 32 events in other appointments calendar.	GET event FILTER event.calendar eq OtherAppointments ORDERBY event.start desc TOP 32
+What are the events starting after now from oldest to newest  order and ending today?	GET event FILTER event.end eq today FILTER event.start gt now ORDERBY event.start asc
+What are the events organized by malinda lesh that fall under product categories starting from oldest to newest?	GET event FILTER event.categories eq product FILTER event.organizer eq Malinda Lesh ORDERBY event.start asc
+Mention the events I have in office calendar with the keyword Labelling controls ordered by start time oldest to newest.	GET event FILTER event.calendar eq Office ORDERBY event.start asc SEARCH Labelling controls
+What are the events without attachments at laquita's office ordered by start time newest to oldest?	GET event FILTER event.hasAttachments eq False FILTER event.location eq Laquita's office ORDERBY event.start desc
+List out the events I have with attachment from Theda Sjoberg that will start after this week.	GET event FILTER event.hasAttachments eq True FILTER event.organizer eq Theda Sjoberg FILTER event.start gt this week
+Tell me about the important events I have in the migration category that started after last Wednesday.	GET event FILTER event.categories eq Migration FILTER event.importance eq High FILTER event.start gt last Wednesday
+Give me the number of meeting invitation received from Cristal Retterbush.	GET event COUNT FILTER event.importance eq High FILTER event.organizer eq Cristal Retterbush
+What meetings did I have about Mauritius in automation category ordered by start time from oldest to newest?	GET event FILTER event.categories eq automation ORDERBY event.start asc SEARCH Mauritius
+List out the events starting today from oldest to newest order in my professional calendar.	GET event FILTER event.calendar eq Professional FILTER event.start eq today ORDERBY event.start asc
+Give me the less important events I have regarding Wavelet series that started before this month.	GET event FILTER event.importance eq Low FILTER event.start lt this month SEARCH Wavelet series
+What are the events with attachments starting before next Tuesday ordered by start time newest to oldest?	GET event FILTER event.hasAttachments eq True FILTER event.start lt next Tuesday ORDERBY event.start desc
+Provide me the events without attachments with high importance that are organized by nicolette rance.	GET event FILTER event.hasAttachments eq False FILTER event.importance eq High FILTER event.organizer eq Nicolette Rance
+What is the first event that started before Tuesday?	GET event FILTER event.start lt Tuesday ORDERBY event.start asc TOP 1
+List the events in friends calendar falling under Malaysia category that started before last Tuesday.	GET event FILTER event.calendar eq Friends FILTER event.categories eq Malaysia FILTER event.start lt last Tuesday
+What are the events I have with attachments and about palsson in clients calendar ordered by start time oldest to newest?	GET event FILTER event.calendar eq Clients FILTER event.hasAttachments eq True ORDERBY event.start asc SEARCH palsson
+Which is the oldest meeting that I had with google calendar which was organised by Candyce Koteles?	GET event FILTER event.calendar eq Google FILTER event.organizer eq Candyce Koteles ORDERBY event.start asc
+What are the events organized by trena edholm that have started before now and will end today?	GET event FILTER event.end eq today FILTER event.organizer eq Trena Edholm FILTER event.start lt now
+What meetings do I have with attachments at conf room 2000 ending on next wednesday ordered by start time from newest to oldest.	GET event FILTER event.end eq next Wednesday FILTER event.hasAttachments eq True FILTER event.location eq Conf Room 2000 ORDERBY event.start desc
+Provide me the events about Programming paradigm starting after next week ordered by start time newest to oldest.	GET event FILTER event.start gt next week ORDERBY event.start desc SEARCH Programming paradigm
+List the low important events about digital video application that started after last Wednesday.	GET event FILTER event.importance eq Low FILTER event.start gt last Wednesday SEARCH digital video application
+What are the events without attachments at conf room 3854 that ended yesterday?	GET event FILTER event.end eq yesterday FILTER event.hasAttachments eq False FILTER event.location eq Conf Room 3854
+List the events that are organized by lilliam sallings ending on thursday ordered by start time from newest to oldest.	GET event FILTER event.end eq Thursday FILTER event.organizer eq Lilliam Sallings ORDERBY event.start desc
+How many events organized by moon derer that starts before next sunday?	GET event COUNT FILTER event.organizer eq Moon Derer FILTER event.start lt next Sunday
+List out the events I have in the shiva category at conf room 4650 that will start next Tuesday.	GET event FILTER event.categories eq shiva FILTER event.location eq Conf Room 4650 FILTER event.start eq next Tuesday
+What are the number of events starting today after now?	GET event COUNT FILTER event.start eq today FILTER event.start gt now
+Tell me about the events I have without attachments having low importance starting before next week.	GET event FILTER event.hasAttachments eq False FILTER event.importance eq Low FILTER event.start lt next week
+List out the low important events about rules falling under shiva category.	GET event FILTER event.categories eq shiva FILTER event.importance eq Low SEARCH rules
+Provide the list of high important meetings with attachments whose category is automation.	GET event FILTER event.categories eq automation FILTER event.hasAttachments eq True FILTER event.importance eq High
+Give me the list of meetings with attachments that started yesterday and are under the training category.	GET event FILTER event.categories eq Training FILTER event.hasAttachments eq True FILTER event.start eq yesterday
+List out the important events I have in the products category in the conf room 4788.	GET event FILTER event.categories eq Products FILTER event.importance eq High FILTER event.location eq Conf Room 4788
+list out the events without attachments falling under tools category starting after this week.	GET event FILTER event.categories eq tools FILTER event.hasAttachments eq False FILTER event.start gt this week
+Please provide the events I have about SUBTROPICAL ZONES that ended last Sunday ordered by start time newest to oldest.	GET event FILTER event.end eq last Sunday ORDERBY event.start desc SEARCH SUBTROPICAL ZONES
+Find the events with attachments that ended yesterday ordered by start time in descending manner.	GET event FILTER event.end eq yesterday FILTER event.hasAttachments eq True ORDERBY event.start desc
+List out the events in my other appointments calendar ending this month falling under case studies category.	GET event FILTER event.calendar eq OtherAppointments FILTER event.categories eq Case studies FILTER event.end eq this month
+Provide me the low important events starting today before now.	GET event FILTER event.importance eq High FILTER event.start eq today FILTER event.start lt now
+Arrange the events under the software category that started before last Thursday ordered by their start time from oldest to newest.	GET event FILTER event.categories eq software FILTER event.start lt last Thursday ORDERBY event.start asc
+Please provide me the top 1 event I have with attachment ordered by start time newest to oldest.	GET event FILTER event.hasAttachments eq True ORDERBY event.start desc TOP 1
+How many events are marked as important in competitive analysis category?	GET event COUNT FILTER event.categories eq competitive analysis FILTER event.importance eq High
+Give me the events organized by Akiko Offret in the call category ending on Saturday.	GET event FILTER event.categories eq call FILTER event.end eq Saturday FILTER event.organizer eq Akiko Offret
+List out the events that started before now today held at caroline's office.	GET event FILTER event.location eq Caroline's office FILTER event.start eq today FILTER event.start lt now
+Provide me the low important events organized by rigoberto ledain at conf room 4688.	GET event FILTER event.importance eq Low FILTER event.location eq Conf Room 4688 FILTER event.organizer eq Rigoberto Ledain
+List the important events having no attachments ordered by start time oldest to newest.	GET event FILTER event.hasAttachments eq False FILTER event.importance eq High ORDERBY event.start asc
+What are the less important events I have in the professional calendar starting before next year?	GET event FILTER event.calendar eq Professional FILTER event.importance eq Low FILTER event.start lt next year
+How many meetings are there that start before Tuesday and are about wireless channel?	GET event COUNT FILTER event.start lt Tuesday SEARCH wireless channel
+How many events I have without attachments starting after next month?	GET event COUNT FILTER event.hasAttachments eq False FILTER event.start gt next month
+List the low important events organized by melanie robledo that will start next Sunday.	GET event FILTER event.importance eq Low FILTER event.organizer eq Melanie Robledo FILTER event.start eq next Sunday
+List out the events starting next week falling under strategy category taking place at conf room 3104.	GET event FILTER event.categories eq strategy FILTER event.location eq Conf Room 3104 FILTER event.start eq next week
+List out the events in my customers calendar starting today before now.	GET event FILTER event.calendar eq Customers FILTER event.start eq today FILTER event.start lt now
+Provide me the low important events starting today after now.	GET event FILTER event.importance eq Low FILTER event.start eq today FILTER event.start gt now
+List the events I have with attachments at conf room 2000 ending on next wednesday ordered by start time from newest to oldest.	GET event FILTER event.end eq next Wednesday FILTER event.hasAttachments eq True FILTER event.location eq Conf Room 2000 ORDERBY event.start desc
+Tell me the number of events I have in government category.	GET event COUNT FILTER event.categories eq Government FILTER event.importance eq High
+What are the events I have in google calendar organized by Gussie Fallago that ended last Friday?	GET event FILTER event.calendar eq Google FILTER event.end eq last Friday FILTER event.organizer eq Gussie Fallago
+List the events with attachments organized by miriam reven that started after last Sunday.	GET event FILTER event.hasAttachments eq True FILTER event.organizer eq Miriam Reven FILTER event.start gt last Sunday
+Which events about body are without attachments that are under the bluetooth category? 	GET event FILTER event.categories eq bluetooth FILTER event.hasAttachments eq False SEARCH body
+List out the less important meetings which are in other appointment's calendar that start after Monday .	GET event FILTER event.calendar eq OtherAppointments FILTER event.importance eq Low FILTER event.start gt Monday
+What events  did I have without attachments in government categories that ended last week?	GET event FILTER event.categories eq Government FILTER event.end eq last week FILTER event.hasAttachments eq False
+Give me the number of meeting invitation received from Howard Mandt about questionand-answer session.	GET event COUNT FILTER event.organizer eq Howard Mandt SEARCH questionand-answer session
+Give me the events I have with the keyword International relations starting from next Monday and order them by start time newest to oldest.	GET event FILTER event.start eq next Monday ORDERBY event.start desc SEARCH International relations
+Give me the events about syllables falling under simulation category which ended last Saturday.	GET event FILTER event.categories eq simulation FILTER event.end eq last Saturday SEARCH syllables
+Tell me about the meetings I have that are organized by Howard Gielow in the conf room 1665 starting after saturday.	GET event FILTER event.location eq Conf Room 1665 FILTER event.organizer eq Howard Gielow FILTER event.start gt Saturday
+Tell me about the events I have in conf room 2128 that ended yesterday and order them by oldest to newest.	GET event FILTER event.end eq yesterday FILTER event.location eq Conf Room 2128 ORDERBY event.start asc
+What are the events I have with the keyword Ghana at Mason's office ordered by start time newest to oldest?	GET event FILTER event.location eq Mason's office ORDERBY event.start desc SEARCH Ghana
+List out the events I have with the keyword baseline system in the order of start time newest to oldest and without attachment.	GET event FILTER event.hasAttachments eq False ORDERBY event.start asc SEARCH baseline system
+Find the events organized by ileana bodily that ends next week ordered by start time in ascending manner.	GET event FILTER event.end eq next week FILTER event.organizer eq Ileana Bodily ORDERBY event.start asc
+List out the events under the Malaysia category that are organized by Clint Dinkel and are about realistic mobility trace. 	GET event FILTER event.categories eq Malaysia FILTER event.organizer eq Clint Dinkel SEARCH realistic mobility trace
+List out the events with attachments falling under administration category located at carlita's office.	GET event FILTER event.categories eq Administration FILTER event.hasAttachments eq True FILTER event.location eq Carlita's office
+What are the number of low important events without attachments?	GET event COUNT FILTER event.hasAttachments eq False FILTER event.importance eq Low
+What are the events with attachments that have started after last Saturday ordered by start time oldest to newest?	GET event FILTER event.hasAttachments eq True FILTER event.start gt last Saturday ORDERBY event.start asc
+Find the events with attachments that starts after next thursday ordered by start time in descending manner.	GET event FILTER event.hasAttachments eq True FILTER event.start gt next Thursday ORDERBY event.start desc
+List out the number of events I have about Agroindustrial sector and without attachment.	GET event COUNT FILTER event.hasAttachments eq False SEARCH Agroindustrial sector
+Give me the top 1 event that will start next month ordered by start time newest to oldest.	GET event FILTER event.start eq next month ORDERBY event.start desc TOP 1
+Which were the events with attachments that were in conf room 1939 and ended next week?	GET event FILTER event.end eq next week FILTER event.hasAttachments eq True FILTER event.location eq Conf Room 1939
+What are the important events with start time before now and ending today?	GET event FILTER event.end eq today FILTER event.importance eq High FILTER event.start lt now
+What is the last event organized by salena tullis ?	GET event FILTER event.organizer eq Salena Tullis ORDERBY event.start desc TOP 1
+List out the events I have with the keyword matrix factorization at Thersa's office ending on Thursday.	GET event FILTER event.end eq Thursday FILTER event.location eq Thersa's office SEARCH matrix factorization
+How many events about LIVESTOCK are there in general calendar?	GET event COUNT FILTER event.calendar eq General SEARCH LIVESTOCK
+Provide me the events in my calendar starting today before now.	GET event FILTER event.calendar eq Holidays FILTER event.start eq today FILTER event.start lt now
+Provide me events about lateral transfer falling under internet category taking place at conf room 1957.	GET event FILTER event.categories eq internet FILTER event.location eq Conf Room 1957 SEARCH lateral transfer
+List out the events without attachments in competition category that will start after next Monday.	GET event FILTER event.categories eq competition FILTER event.hasAttachments eq False FILTER event.start gt next Monday
+Tell me about the events I have in training category and other appointments calendar that started after last Wednesday.	GET event FILTER event.calendar eq OtherAppointments FILTER event.categories eq Training FILTER event.start gt last Wednesday
+List out the events organized by Letisha Kurihara ending on monday in the order newest to oldest.	GET event FILTER event.end eq Monday FILTER event.organizer eq Letisha Kurihara ORDERBY event.start desc
+Provide me the list of last 57 events that are of low importance.	GET event FILTER event.importance eq Low ORDERBY event.start desc TOP 57
+Give me the top 5 important events I have ordered by newest to oldest.	GET event FILTER event.importance eq High ORDERBY event.start desc TOP 5
+Provide me the high important events about SOIL MANAGEMENT organized by mitch frum.	GET event FILTER event.importance eq High FILTER event.organizer eq Mitch Frum SEARCH SOIL MANAGEMENT
+List out the events without attachments in shared calendar in descending order of start time.	GET event FILTER event.calendar eq Shared FILTER event.hasAttachments eq False ORDERBY event.start desc
+Find the events with attachments that starts this week ordered by start time in descending manner.	GET event FILTER event.hasAttachments eq True FILTER event.start eq this week ORDERBY event.start desc
+List out the 18 events in ascending order of start time that do not have attachments.	GET event FILTER event.hasAttachments eq False ORDERBY event.start asc TOP 18
+What is the first event in customers calendar?	GET event FILTER event.calendar eq Customers ORDERBY event.start asc TOP 1
+Which events start now and end today that are organized by Alita Tew.	GET event FILTER event.end eq today FILTER event.organizer eq Alita Tew FILTER event.start gt now
+What are the events without attachments about shared topic taking place at conf room 1525?	GET event FILTER event.hasAttachments eq False FILTER event.location eq Conf Room 1525 SEARCH shared topic
+List out the events I have with attachment that started before now and will end today.	GET event FILTER event.end eq today FILTER event.hasAttachments eq True FILTER event.start lt now
+Give me the attendees of the last event.	GET event ORDERBY event.start desc TOP 1
+What are the events at conf room 2481 about Plant production ordered by start time newest to oldest?	GET event FILTER event.location eq Conf Room 2481 ORDERBY event.start desc SEARCH Plant production
+What are the less important events at conf room 2970 having attachments?	GET event FILTER event.hasAttachments eq True FILTER event.importance eq Low FILTER event.location eq Conf Room 2970
+What are the events I have with the keyword flies that started today before now?	GET event FILTER event.start eq today FILTER event.start lt now SEARCH flies
+List out the events having low importance that started after last thursday at conf room 1295.	GET event FILTER event.importance eq Low FILTER event.location eq Conf Room 1295 FILTER event.start gt last Thursday
+List the low important events that started after last Wednesday and fall under services categories.	GET event FILTER event.categories eq Services FILTER event.importance eq Low FILTER event.start gt last Wednesday
+Which low important meetings did I have in government categories that started last tuesday?	GET event FILTER event.categories eq Government FILTER event.importance eq Low FILTER event.start eq last Tuesday
+How many important events will start next Tuesday? 	GET event COUNT FILTER event.importance eq High FILTER event.start eq next Tuesday
+Mention the top 27 events I have in the work calendar ordered by start time newest to oldest.	GET event FILTER event.calendar eq Work ORDERBY event.start desc TOP 27
+List out the events that started before now today in google calendar.	GET event FILTER event.calendar eq Google FILTER event.start eq today FILTER event.start lt now
+Arrange the meetings in ascending order of start time that are in conf room 3635 and are under the testing categories.	GET event FILTER event.categories eq Testing FILTER event.location eq Conf Room 3635 ORDERBY event.start asc
+What are the events I have about optimal in the shared calendar ordered by start time newest to oldest?	GET event FILTER event.calendar eq Shared ORDERBY event.start desc SEARCH optimal
+Provide me with the list of meetings from the professional calendar that are marked as having low importance and that started after last month.	GET event FILTER event.calendar eq Professional FILTER event.importance eq Low FILTER event.start gt last month
+What are the events I have in the general calendar located at Shea's office ordered by start time newest to oldest?	GET event FILTER event.calendar eq General FILTER event.location eq Shea's office ORDERBY event.start desc
+What are the important meetings I have in shiva category which are ending this week?	GET event FILTER event.categories eq shiva FILTER event.end eq this week FILTER event.importance eq High
+What are the events with attachments starting from Sunday in newest to oldest order?	GET event FILTER event.hasAttachments eq True FILTER event.start eq Sunday ORDERBY event.start desc
+What are the events starting before today taking place at angelic's office organized by blondell southers?	GET event FILTER event.location eq Angelic's office FILTER event.organizer eq Blondell Southers FILTER event.start lt today
+Let me know the number of events in office calendar at conf room 3218.	GET event COUNT FILTER event.calendar eq Office FILTER event.location eq Conf Room 3218
+What meetings did I have of bluetooth categories that start after now and ends today?	GET event FILTER event.categories eq bluetooth FILTER event.end eq today FILTER event.start gt now
+Provide me the events that has no attachments which falls in software categories ends next friday.	GET event FILTER event.categories eq software FILTER event.end eq next Friday FILTER event.hasAttachments eq False
+What are the top 90 emails of other appointments calendar ordered by start time from oldest to newest?	GET event FILTER event.calendar eq OtherAppointments ORDERBY event.start asc TOP 90
+List the important events at edmund's office ordered by start time oldest to newest.	GET event FILTER event.importance eq High FILTER event.location eq Edmund's office ORDERBY event.start asc
+What are the low important events starting from newest to oldest order with attachments?	GET event FILTER event.hasAttachments eq True FILTER event.importance eq Low ORDERBY event.start desc
+Which was first meeting that I attended last Tuesday?	GET event FILTER event.end eq last Tuesday ORDERBY event.start desc TOP 1
+What are the events organized by Norene pomeranz scheduled after Sunday at douglass's office?	GET event FILTER event.location eq Douglass's office FILTER event.organizer eq Norene Pomeranz FILTER event.start gt Sunday
+What are the low important events starting before next Thursday at courtney's office ?	GET event FILTER event.importance eq Low FILTER event.location eq Courtney's office FILTER event.start lt next Thursday
+What are the low importance events having no attachments starting before next Wednesday?	GET event FILTER event.hasAttachments eq False FILTER event.importance eq Low FILTER event.start lt next Wednesday
+Tell me about the attachments of my first event.	GET event ORDERBY event.start asc TOP 1
+Provide me the name of the organizer of the latest event.	GET event ORDERBY event.start desc TOP 1
+What is the first event starting on Monday?	GET event FILTER event.start eq Monday ORDERBY event.start asc TOP 1
+How many events in home calendar have location  conf room 3356?	GET event COUNT FILTER event.calendar eq Home FILTER event.location eq Conf Room 3356
+What are the events at delia's office organized by nicolas boulanger that started after last year?	GET event FILTER event.location eq Delia's office FILTER event.organizer eq Nicolas Boulanger FILTER event.start gt last year
+What events has no attachments of simulation categories at location  karine's office?	GET event FILTER event.categories eq simulation FILTER event.hasAttachments eq False FILTER event.location eq Karine's office
+Tell me about the events I have in google calendar which are starting before next month ordered by start time from oldest to newest.	GET event FILTER event.calendar eq Google FILTER event.start lt next month ORDERBY event.start asc
+List out the important events in database category that started after last Thursday.	GET event FILTER event.categories eq Database FILTER event.importance eq High FILTER event.start gt last Thursday
+What are the events I have with the keyword share and without attachment at Shira's office?	GET event FILTER event.hasAttachments eq False FILTER event.location eq Shira's office SEARCH share
+How many events I have in xml category with high importance?	GET event COUNT FILTER event.categories eq xml FILTER event.importance eq High
+Provide me the events with true attachments starting before Friday from oldest to newest order.	GET event FILTER event.hasAttachments eq True FILTER event.start lt Friday ORDERBY event.start asc
+Give me the important meeting invitation received from Mikel Bacman ordered by start time newest to oldest.	GET event FILTER event.importance eq High FILTER event.organizer eq Mikel Bacman ORDERBY event.start desc
+Provide me the events I have about flies that started today before now.	GET event FILTER event.start eq today FILTER event.start lt now SEARCH flies
+List out the events in my professional calendar starting after Saturday from newest to oldest order.	GET event FILTER event.calendar eq Professional FILTER event.start gt Saturday ORDERBY event.start desc
+List the unimportant meetings from the Marketing categories that began prior to last month.	GET event FILTER event.categories eq Marketing FILTER event.importance eq Low FILTER event.start lt last month
+List out the events without attachments having low importance that ended last Wednesday.	GET event FILTER event.end eq last Wednesday FILTER event.hasAttachments eq False FILTER event.importance eq Low
+List out the important events about fuels at conf room 1526.	GET event FILTER event.importance eq High FILTER event.location eq Conf Room 1526 SEARCH Fuels
+What are the less important events I have about INTERNATIONAL COOPERATION at Asha's office?	GET event FILTER event.importance eq Low FILTER event.location eq Asha's office SEARCH INTERNATIONAL COOPERATION
+List the events with end time on friday in outlook calender at conf room 4815.	GET event FILTER event.calendar eq Outlook FILTER event.end eq Friday FILTER event.location eq Conf Room 4815
+List out the events under the knowledge base categories that are marked low importance and are about overlay mesh.	GET event FILTER event.categories eq Knowledge base FILTER event.importance eq Low SEARCH overlay mesh
+Find the events with low importance that organized by delinda goldblatt ordered by start time in ascending manner.	GET event FILTER event.importance eq Low FILTER event.organizer eq Delinda Goldblatt ORDERBY event.start asc
+Give me the top 1 event I have with attachment ordered by start time newest to oldest.	GET event FILTER event.hasAttachments eq True ORDERBY event.start desc TOP 1
+Provide me the events in shared calendar having no attachments and will end this year.	GET event FILTER event.calendar eq Shared FILTER event.end eq this year FILTER event.hasAttachments eq False
+List the low important events organized by alica waligora ending on sunday.	GET event FILTER event.end eq Sunday FILTER event.importance eq Low FILTER event.organizer eq Alica Waligora
+Please provide the events that started today before now in the order newest to oldest.	GET event FILTER event.start eq today FILTER event.start lt now ORDERBY event.start desc
+List out the events about problem-solving starting from oldest to newest order taking place at conf room 3226.	GET event FILTER event.location eq Conf Room 3226 ORDERBY event.start asc SEARCH problem-solving
+What are the important number of events  scheduled at conf room 3056?	GET event COUNT FILTER event.importance eq High FILTER event.location eq Conf Room 3056
+List out the events starting after now and ending today at kym's office.	GET event FILTER event.end eq today FILTER event.location eq Kym's office FILTER event.start gt now
+Which important events of server categories having location  diann's office?	GET event FILTER event.categories eq server FILTER event.importance eq High FILTER event.location eq Diann's office
+What are the events without attachments at conf room 4685 that are organized by wilhelmina zientara?	GET event FILTER event.hasAttachments eq False FILTER event.location eq Conf Room 4685 FILTER event.organizer eq Wilhelmina Zientara
+What are the events organized by Cristal Sutt that will start today after now?	GET event FILTER event.organizer eq Cristal Sutt FILTER event.start eq today FILTER event.start gt now
+List out the events without attachments starting on Monday organized by omega ulrey.	GET event FILTER event.hasAttachments eq False FILTER event.organizer eq Omega Ulrey FILTER event.start eq Monday
+What are the number of important events do I have in government category?	GET event COUNT FILTER event.categories eq Government FILTER event.importance eq High
+List out the important meetings I have about quals ordered by start time from oldest to newest.	GET event FILTER event.importance eq High ORDERBY event.start asc SEARCH quals
+List out the less important meetings invitation received from Nan Hudecek ordered by start time oldest to newest.	GET event FILTER event.importance eq Low FILTER event.organizer eq Nan Hudecek ORDERBY event.start asc
+Who attended my last meeting?	GET event ORDERBY event.start asc TOP 1
+What are the high important events falling under gene category starting before today?	GET event FILTER event.categories eq gene FILTER event.importance eq High FILTER event.start lt today
+What are the meeting invitation by warner irick started after last Monday with attachments.	GET event FILTER event.hasAttachments eq True FILTER event.organizer eq Warner Irick FILTER event.start gt last Monday
+List out the events I have without attachment in the conf room 1161 ordered by start time oldest to newest. 	GET event FILTER event.hasAttachments eq False FILTER event.location eq Conf Room 1161 ORDERBY event.start asc
+What are the events with attachments organized by etha pizarro that started after last Tuesday? 	GET event FILTER event.hasAttachments eq True FILTER event.organizer eq Etha Pizarro FILTER event.start gt last Tuesday
+Find the events with attachmensts which organized by lakesha rodberg  that starts tomorrow.	GET event FILTER event.hasAttachments eq True FILTER event.organizer eq Lakesha Rodberg FILTER event.start eq tomorrow
+List out the low important events starting from newest to oldest order falling under india category.	GET event FILTER event.categories eq India FILTER event.importance eq Low ORDERBY event.start desc
+Give me the last 83 events that started before last Monday.	GET event FILTER event.start lt last Monday ORDERBY event.start desc TOP 83
+Provide the meetings with attachments that will be taking place after next year in Clarissa's office.	GET event FILTER event.hasAttachments eq True FILTER event.location eq Clarissa's office FILTER event.start gt next year
+What are the events in knowledge category scheduled at conf room 3979 by jamee falgoust ?	GET event FILTER event.categories eq Knowledge FILTER event.location eq Conf Room 3979 FILTER event.organizer eq Jamee Falgoust
+List out the first event with attachments.	GET event FILTER event.hasAttachments eq True ORDERBY event.start asc TOP 1
+Give me the low important events falling under web category ending next year.	GET event FILTER event.categories eq web FILTER event.end eq next year FILTER event.importance eq Low
+List out the low important events falling under strategy category and starting after tomorrow.	GET event FILTER event.categories eq Strategy FILTER event.importance eq Low FILTER event.start gt tomorrow
+How many high important events i have in my google calendar?	GET event COUNT FILTER event.calendar eq Google FILTER event.importance eq High
+List out the events without attachments ended last month at owen's office.	GET event FILTER event.end eq last month FILTER event.hasAttachments eq False FILTER event.location eq Owen's office
+what are the low important events with attachments starting before next Wednesday?	GET event FILTER event.hasAttachments eq True FILTER event.importance eq Low FILTER event.start lt next Wednesday
+Provide me the low important events scheduled at conf room 4349 that fall under gene category.	GET event FILTER event.categories eq gene FILTER event.importance eq Low FILTER event.location eq Conf Room 4349
+What are the important events in other appointments calendar starting after Monday?	GET event FILTER event.calendar eq OtherAppointments FILTER event.importance eq High FILTER event.start gt Monday
+Which is the first event in personal calendar organized by cindi allain?	GET event FILTER event.calendar eq Personal FILTER event.organizer eq Cindi Allain ORDERBY event.start asc TOP 1
+What are the low important events without attachments in outlook calendar?	GET event FILTER event.calendar eq Outlook FILTER event.hasAttachments eq False FILTER event.importance eq Low
+Give me the less important events I have with attachment ordered by start time oldest to newest.	GET event FILTER event.hasAttachments eq True FILTER event.importance eq Low ORDERBY event.start asc
+Mention the events I have at conf room 1742 organized by Kai Oliviera starting before next Monday.	GET event FILTER event.location eq Conf Room 1742 FILTER event.organizer eq Kai Oliviera FILTER event.start lt next Monday
+What are the events in clients calendar that started after now and will end today? 	GET event FILTER event.calendar eq Clients FILTER event.end eq today FILTER event.start gt now
+What are the important events I have about brain anatomy starting after Tuesday?	GET event FILTER event.importance eq High FILTER event.start gt Tuesday SEARCH brain anatomy
+Which are the events under the Brazil category that have attachments and are starting on Sunday?	GET event FILTER event.categories eq Brazil FILTER event.hasAttachments eq True FILTER event.start eq Sunday
+Mention the events I have with the keyword reciprocative with attachment ordered by start time oldest to newest.	GET event FILTER event.hasAttachments eq True ORDERBY event.start asc SEARCH reciprocative peer
+List out the high important events in my general calendar without attachments.	GET event FILTER event.calendar eq General FILTER event.hasAttachments eq False FILTER event.importance eq High
+How many events I have without attachments that started before last week?	GET event COUNT FILTER event.hasAttachments eq False FILTER event.start lt last week
+What are the events organized by laure harcrow about collaborative filtering algorithm ordered by start time newest to oldest?	GET event FILTER event.organizer eq Laure Harcrow ORDERBY event.start desc SEARCH collaborative filtering algorithm
+List out the important events located at Orville's office and order them by start time newest to oldest.	GET event FILTER event.importance eq High FILTER event.location eq Orville's office ORDERBY event.start desc
+List out the first 68 events located at conf room 3736.	GET event FILTER event.location eq Conf Room 3736 ORDERBY event.start asc TOP 68
+List out the top 1 less important event ordered by start time newest to oldest.	GET event FILTER event.importance eq Low ORDERBY event.start desc TOP 1
+List out the events about rational behavior falling under europe category starting from oldest to newest order.	GET event FILTER event.categories eq Europe ORDERBY event.start asc SEARCH rational behavior
+What are the events I have without attachment in the google calendar starting before next tuesday?	GET event FILTER event.calendar eq Google FILTER event.hasAttachments eq False FILTER event.start lt next Tuesday
+What are the high important events starting before next Thursday organized by tracie kanish?	GET event FILTER event.importance eq High FILTER event.organizer eq Tracie Kanish FILTER event.start lt next Thursday
+What are the important events about Economic resources starts before wednesday?	GET event FILTER event.importance eq High FILTER event.start lt Wednesday SEARCH Economic resources
+What are the low important events in general calendar ordered by start time oldest to newest?	GET event FILTER event.calendar eq General FILTER event.importance eq Low ORDERBY event.start asc
+Which was the last event in the outlook calendar?	GET event FILTER event.calendar eq Outlook ORDERBY event.start desc TOP 1
+Provide me the meetings invitation received from Marylin Seikel that are starting now and that will end today.	GET event FILTER event.end eq today FILTER event.organizer eq Marylin Seikel FILTER event.start gt now
+What are the events about constraint program with attachments organized by  lesley smoley?	GET event FILTER event.hasAttachments eq True FILTER event.organizer eq Lesley Smoley SEARCH constraint program
+List out the events with attachments falling under japan category starting on Thursday.	GET event FILTER event.categories eq Japan FILTER event.hasAttachments eq True FILTER event.start eq Thursday
+What are the events without attachments falling under ibm category ending next Friday.	GET event FILTER event.categories eq IBM FILTER event.end eq next Friday FILTER event.hasAttachments eq True
+Mention the events I have in government category that will start before Friday in the order newest to oldest.	GET event FILTER event.categories eq Government FILTER event.start lt Friday ORDERBY event.start desc
+List out the high important meetings taking place at vaughn's office having attachments.	GET event FILTER event.hasAttachments eq True FILTER event.importance eq High FILTER event.location eq Vaughn's office
+What are the events in shared calendar that will be held at kayla's office next Thursday?	GET event FILTER event.calendar eq Shared FILTER event.end eq next Thursday FILTER event.location eq Kayla's office
+Make a list of meetings that are about multi-agent influence diagram and will be starting in Livia's office from next Friday.	GET event FILTER event.location eq Livia's office FILTER event.start eq next Friday SEARCH multi-agent influence diagram
+Mention the less important events with attachment in the order of start time oldest to newest.	GET event FILTER event.hasAttachments eq True FILTER event.importance eq Low ORDERBY event.start asc
+List the meetings without attachments related to pub and will be happening before next Tuesday. 	GET event FILTER event.hasAttachments eq False FILTER event.start lt next Thursday SEARCH pub
+Provide me the first location of event without attachment.	GET event FILTER event.hasAttachments eq False ORDERBY event.start asc TOP 1
+Which are the 71 events ordered by start time from newest to oldest?	GET event FILTER event.importance eq Low ORDERBY event.start desc TOP 71
+List out the low important events with attachments falling under malaysia category.	GET event FILTER event.categories eq Malaysia FILTER event.hasAttachments eq True FILTER event.importance eq Low
+Give me the first event about  homogeneous parallel environment ordered by start time in ascending manner.	GET event ORDERBY event.start asc SEARCH homogeneous parallel environment TOP 1
+Starting from oldest to newest, provide me the events falling under sales category that started after last month. 	GET event FILTER event.categories eq Sales FILTER event.start gt last month ORDERBY event.start asc
+Give me the list of meetings started last Friday organized by candace lafontain placed at conf room 2240.	GET event FILTER event.location eq Conf Room 2240 FILTER event.organizer eq Candace Lafontain FILTER event.start eq last Friday
+Please provide me the number of events I have about sidechains with attachment.	GET event COUNT FILTER event.hasAttachments eq True SEARCH sidechains
+Provide the list of meetings from the general calendar that are organized by Brunilda Gayle and are about Plant production.	GET event FILTER event.calendar eq General FILTER event.organizer eq Brunilda Gayle SEARCH Plant production
+Which are the first 83 events having no attachments.	GET event FILTER event.hasAttachments eq False ORDERBY event.start asc TOP 83
+Give me the low important events falling under case studies category from oldest to newest order.	GET event FILTER event.categories eq Case studies FILTER event.importance eq Low ORDERBY event.start asc
+List out the last low important 63 events about validation set.	GET event FILTER event.importance eq Low ORDERBY event.start desc SEARCH validation set TOP 63
+Which are the events with attachments and veer as keywords ordered in descending in start time?	GET event FILTER event.hasAttachments eq True ORDERBY event.start desc SEARCH veer
+What are the number of events organized by rashad bahar scheduled at bryon's office?	GET event COUNT FILTER event.location eq Bryon's office FILTER event.organizer eq Rashad Bahar
+Which events has attachments that ended yesterday ordered by start time from most recent to oldest?	GET event FILTER event.end eq yesterday FILTER event.hasAttachments eq True ORDERBY event.start desc
+Tell me about my first event in google calendar.	GET event FILTER event.calendar eq Google ORDERBY event.start asc TOP 1
+What important events did I have in office calendar and started yesterday?	GET event FILTER event.calendar eq Office FILTER event.importance eq High FILTER event.start eq yesterday
+List the events with attachments falling under products categories that started before last wednesday.	GET event FILTER event.categories eq Products FILTER event.hasAttachments eq True FILTER event.start lt last Wednesday
+Give me the meeting invitations received from Stacey Chevalier ordered by start time oldest to newest.	GET event FILTER event.importance eq High FILTER event.organizer eq Stacey Chevalier ORDERBY event.start asc
+What are the events I have about Public sector in the review category that started last week?	GET event FILTER event.categories eq review FILTER event.start eq last week SEARCH Public sector
+List the low important events organized by venessa dyba that starts after next friday.	GET event FILTER event.importance eq Low FILTER event.organizer eq Venessa Dyba FILTER event.start gt next Friday
+Mention those events that started before now and going to end today in the order newest to oldest.	GET event FILTER event.end eq today FILTER event.start lt now ORDERBY event.start desc
+Give me the events without attachments starting before next Wednesday organized by dillon gavilanes.	GET event FILTER event.hasAttachments eq False FILTER event.organizer eq Dillon Gavilanes FILTER event.start lt next Wednesday
+List out the number of events starting from oldest to newest order falling under photos category without attachments.	GET event FILTER event.categories eq photos FILTER event.hasAttachments eq False ORDERBY event.start asc
+What are the events I have in work calendar that started before last Friday ordered by start time oldest to newest?	GET event FILTER event.calendar eq Work FILTER event.start lt last Friday ORDERBY event.start asc
+What is the number of events in other appointments calendar that started after last month?	GET event COUNT FILTER event.calendar eq OtherAppointments FILTER event.start gt last month
+What meetings do I have today with attachments starting from now?	GET event FILTER event.hasAttachments eq True FILTER event.start eq today FILTER event.start gt now
+Give me the last 95 events I have in the case studies category.	GET event FILTER event.categories eq Case studies ORDERBY event.start desc TOP 95
+List out the low important events starting from newest to oldest order taking place in conf room 2974.	GET event FILTER event.importance eq Low FILTER event.location eq Conf Room 2974 ORDERBY event.start desc
+What are the events organized by sharri scharnberg falling under advertising category started before last Thursday?	GET event FILTER event.categories eq Advertising FILTER event.organizer eq Sharri Scharnberg FILTER event.start lt last Thursday
+Find the events regarding complexes that ends next year ordered by start time in descending manner.	GET event FILTER event.end eq next year ORDERBY event.start desc SEARCH complexes
+List out the events organized by dot dieball about sublist materialization starting after tomorrow.	GET event FILTER event.organizer eq Dot Dieball FILTER event.start gt tomorrow SEARCH sublist materialization
+How many meetings in personal calendar started after last wednesday?	GET event COUNT FILTER event.calendar eq Personal FILTER event.start gt last Wednesday
+Provide me the important events organized by allegra crest starting today ordered by start time oldest to newest.	GET event FILTER event.importance eq High FILTER event.organizer eq Allegra Crest FILTER event.start eq today ORDERBY event.start asc
+What are the low important events without attachments in work calendar?	GET event FILTER event.calendar eq Work FILTER event.hasAttachments eq False FILTER event.importance eq Low
+What are the events without attachments falling under web category starting from oldest to newest order?	GET event FILTER event.categories eq web FILTER event.hasAttachments eq False ORDERBY event.start asc
+Please provide me the less important events I have with the keyword Information hiding in status category.	GET event FILTER event.categories eq status FILTER event.importance eq Low SEARCH Information hiding
+List out the events without attachments falling under feedback category started before last Tuesday.	GET event FILTER event.categories eq feedback FILTER event.hasAttachments eq False FILTER event.start lt last Tuesday
+How many meetings about genes are there that are marked high importance?	GET event COUNT FILTER event.importance eq High SEARCH genes
+Find the events with low importance that falls in customers calendar ordered by start time from oldest to newest.	GET event FILTER event.calendar eq Customers FILTER event.importance eq Low ORDERBY event.start asc
+List the important events that will start after Thursday and order them by start time newest to oldest.	GET event FILTER event.importance eq High FILTER event.start gt Thursday ORDERBY event.start desc
+List out the low important events falling under case studies category from oldest to newest order.	GET event FILTER event.categories eq Case studies FILTER event.importance eq Low ORDERBY event.start asc
+List the events of evaluation categories with attachments that started last month.	GET event FILTER event.categories eq evaluation FILTER event.hasAttachments eq True FILTER event.start eq last month
+List out the events without attachments that started last Tuesday and were under the bluetooth category.	GET event FILTER event.categories eq bluetooth FILTER event.hasAttachments eq False FILTER event.start eq last Tuesday
+What are the high important events started before yesterday falling under development category?	GET event FILTER event.categories eq development FILTER event.importance eq High FILTER event.start lt yesterday
+What are the important events without attachments ordered by start time oldest to newest?	GET event FILTER event.hasAttachments eq False FILTER event.importance eq High ORDERBY event.start asc
+List out the events organized by Christoper Oge that are going to end next week ordered by start time oldest to newest.	GET event FILTER event.end eq next week FILTER event.organizer eq Christoper Oge ORDERBY event.start asc
+List out the events in my home calendar with attachments ended this month.	GET event FILTER event.calendar eq Home FILTER event.end eq this month FILTER event.hasAttachments eq True
+How many events about modeling methodology are there falling under database category?	GET event COUNT FILTER event.categories eq Database SEARCH modeling methodology
+ List the events I have at lakendra's office about organizational-self design in integration category.	GET event FILTER event.categories eq Integration FILTER event.location eq Lakendra's office SEARCH organizational-self design
+Provide me the list of events that are in the shared calendar that are organized by Fran Hallum arranged from start time oldest to newest.	GET event FILTER event.calendar eq Shared FILTER event.organizer eq Fran Hallum ORDERBY event.start asc
+List the events for today starting after now and which are under computer categories.	GET event FILTER event.categories eq Computer FILTER event.start eq today FILTER event.start gt now
+Give me a list of meetings with attachments that are about PLANT OILS and which are starting from next week .	GET event FILTER event.hasAttachments eq True FILTER event.start eq next week SEARCH PLANT OILS
+Please provide the events I have in the holidays calendar ordered by start time newest to oldest and having no attachment.	GET event FILTER event.calendar eq Holidays FILTER event.hasAttachments eq False ORDERBY event.start desc
+How many meeting are there in the conf room 3768 starting after last Tuesday?	GET event COUNT FILTER event.location eq Conf Room 3768 FILTER event.start gt last Tuesday
+List out the events started last month about Architecture.	GET event COUNT FILTER event.start eq last month SEARCH Architecture
+Provide me the events without attachments started after last Thursday from oldest to newest order.	GET event FILTER event.hasAttachments eq False FILTER event.start gt last Thursday ORDERBY event.start asc
+How many meetings from the Training category are going to begin before next month?	GET event COUNT FILTER event.categories eq Training FILTER event.start lt next month
+Find the events that starts before next monday at erick's office ordered by start time in descending manner.	GET event FILTER event.location eq Erick's office FILTER event.start lt next Monday ORDERBY event.start desc
+Find the events with no attachments in professional calendar with low importance.	GET event FILTER event.calendar eq Professional FILTER event.hasAttachments eq False FILTER event.importance eq Low
+List out the high important events about oceans starting from newest to oldest order.	GET event FILTER event.importance eq High ORDERBY event.start desc SEARCH oceans
+List out the less important events I have in the other appointments calendar ordered by start time newest to oldest.	GET event FILTER event.calendar eq OtherAppointments FILTER event.importance eq Low ORDERBY event.start desc
+Find the important events that has no attachments ordered by start time in ascending manner. 	GET event FILTER event.hasAttachments eq False FILTER event.importance eq High ORDERBY event.start asc
+List the low important events about concession notion with attachments.	GET event FILTER event.hasAttachments eq True FILTER event.importance eq Low SEARCH concession notion
+What are the important events in personal calendar starting next Wednesday?	GET event FILTER event.calendar eq Personal FILTER event.importance eq High FILTER event.start eq next Wednesday
+Give me the last event in my clients calendar.	GET event FILTER event.calendar eq Clients ORDERBY event.start desc TOP 1
+Which are the events organised by juliana beckton in the database category which ends on Saturday?	GET event FILTER event.categories eq Database FILTER event.end eq Saturday FILTER event.organizer eq Juliana Beckton
+List out the less important events that will start today after now.	GET event FILTER event.importance eq Low FILTER event.start eq today FILTER event.start gt now
+How many events are organized by wava franzen at niki's office?	GET event COUNT FILTER event.location eq Niki's office FILTER event.organizer eq Wava Franzen
+What is the number of important events ending on Saturday?	GET event COUNT FILTER event.end eq Saturday FILTER event.importance eq High
+How many events I had with high importance which ended last sunday?	GET event COUNT FILTER event.end eq last Sunday FILTER event.importance eq High
+List out the number of events started after last Thursday organized by truman nygard.	GET event COUNT FILTER event.organizer eq Truman Nygard FILTER event.start gt last Thursday
+List out the low important events with attachments starting from newest to oldest order.	GET event FILTER event.hasAttachments eq True FILTER event.importance eq Low ORDERBY event.start desc
+Provide me the events in clients calendar that started after now and will end today.	GET event FILTER event.calendar eq Clients FILTER event.end eq today FILTER event.start gt now
+What are the events about  alternative slot auction design starting before Saturday with attachments?	GET event FILTER event.hasAttachments eq True FILTER event.start lt Saturday SEARCH alternative slot auction design
+Give me the list of events that started after last Wednesday in conf room 3567 and which were about relevant document.	GET event FILTER event.location eq Conf Room 3567 FILTER event.start gt last Wednesday SEARCH relevant document
+Provide me the important events I have in conf room 2836 that are starting after next Saturday.	GET event FILTER event.importance eq High FILTER event.location eq Conf Room 2836 FILTER event.start gt next Saturday
+Tell me about the events I have with attachments in web category which ends on thursday.	GET event FILTER event.categories eq web FILTER event.end eq Thursday FILTER event.hasAttachments eq True
+What are the events without attachments organised by Stanton Pintado that are about impedance coupling strategy? 	GET event FILTER event.hasAttachments eq False FILTER event.organizer eq Stanton Pintado SEARCH impedance coupling strategy
+What are the high important events starting today after now?	GET event FILTER event.importance eq High FILTER event.start eq today FILTER event.start gt now
+What are the events organized by Christoper Oge that are going to end next week ordered by start time oldest to newest?	GET event FILTER event.end eq next week FILTER event.organizer eq Christoper Oge ORDERBY event.start asc
+What's my first important event?	GET event FILTER event.importance eq High ORDERBY event.start asc TOP 1
+Give me the important meeting invitation received from Johana Hutchings in clients calendar. 	GET event FILTER event.calendar eq Clients FILTER event.importance eq High FILTER event.organizer eq Johana Hutchings
+What are the important events I have in shred calender that will start next Friday?	GET event FILTER event.calendar eq Shared FILTER event.importance eq High FILTER event.start eq next Friday
+List out the events starting after now and ending today with attachments.	GET event FILTER event.end eq today FILTER event.hasAttachments eq True FILTER event.start gt now
+Provide me the total number of events I have with attachments in outlook calendar.	GET event COUNT FILTER event.calendar eq Outlook FILTER event.hasAttachments eq True
+Find the event with attachments that falls in migration categories and having location theressa's office.	GET event FILTER event.categories eq Migration FILTER event.hasAttachments eq True FILTER event.location eq Theressa's office
+List the meetings I have with attachments in italy category which started before thursday.	GET event FILTER event.categories eq Italy FILTER event.hasAttachments eq True FILTER event.start lt Thursday
+Tell me about events with attachments that started last year ordered by start time from oldest to newest.	GET event FILTER event.hasAttachments eq True FILTER event.start eq last year ORDERBY event.start asc
+What are the top 13 events I have at Lavinia's office order them by newest to oldest?	GET event FILTER event.location eq Lavinia's office ORDERBY event.start desc TOP 13
+List the events about power of player that started last month organized & by lynelle ceja.	GET event FILTER event.organizer eq Lynelle Ceja FILTER event.start eq last month SEARCH power of player
+List out the events having low importance in general calendar ordered by start time oldest to newest.	GET event FILTER event.calendar eq General FILTER event.importance eq Low ORDERBY event.start asc
+List out the high important events with attachments organized by loreen sulser.	GET event FILTER event.hasAttachments eq True FILTER event.importance eq High FILTER event.organizer eq Loreen Sulser
+Mention the less important events I have with attachment ordered by start time oldest to newest.	GET event FILTER event.hasAttachments eq True FILTER event.importance eq Low ORDERBY event.start asc
+List out the last 30 low important events.	GET event FILTER event.importance eq Low ORDERBY event.start desc TOP 30
+Tell me about the events organized by kaleigh domagalski at delphia's office with low importance.	GET event FILTER event.importance eq Low FILTER event.location eq Delphia's office FILTER event.organizer eq Kaleigh Domagalski
+List out the events I have without attachment in the call category ordered by start time newest to oldest.	GET event FILTER event.categories eq call FILTER event.hasAttachments eq False ORDERBY event.start desc
+Provide me the events starting today after now from oldest to newest order.	GET event FILTER event.start eq today FILTER event.start gt now ORDERBY event.start asc
+Please provide the top 1 event I have with attachment ordered by start time newest to oldest.	GET event FILTER event.hasAttachments eq True ORDERBY event.start desc TOP 1
+List out the important events that started last year in the order newest to oldest.	GET event FILTER event.importance eq High FILTER event.start eq last year ORDERBY event.start desc
+What are the top 32 events I have in rules category ordered by start time oldest to newest?	GET event FILTER event.categories eq rules ORDERBY event.start asc TOP 32
+List out the meetings starting after tomorrow in Cletus's office and that are under the xml category.	GET event FILTER event.categories eq xml FILTER event.location eq Cletus's office FILTER event.start gt tomorrow
+Please provide the top 1 event that took place at conf room 4639 in the order newest to oldest.	GET event FILTER event.location eq Conf Room 4639 ORDERBY event.start desc TOP 1
+How many emails organized by boyd habina that starts on thursday?	GET event COUNT FILTER event.organizer eq Boyd Habina FILTER event.start eq Thursday
+Which are the meetings in the holidays calendar that end next Tuesday and are under the misc category?	GET event FILTER event.calendar eq Holidays FILTER event.categories eq misc FILTER event.end eq next Tuesday
+Provide me the events in research categories started after next Saturday by newest to oldest order.	GET event FILTER event.categories eq Research FILTER event.start gt next Saturday ORDERBY event.start desc
+Mention the important events I have in the planning category and starting on friday.	GET event FILTER event.categories eq Planning FILTER event.importance eq High FILTER event.start eq Friday
+Which last event I started yesterday?	GET event FILTER event.end eq yesterday ORDERBY event.start desc TOP 1
+How many events I have with attachment that will start before next month?	GET event COUNT FILTER event.hasAttachments eq True FILTER event.start lt next month
+Which are the events starting before now from oldest to newest order and ending today?	GET event FILTER event.end eq today FILTER event.start lt now ORDERBY event.start asc
+How many events organized by steve june are without attachments? 	GET event COUNT FILTER event.hasAttachments eq False FILTER event.organizer eq Steve June
+What are the high important events in my work calendar without attachments?	GET event FILTER event.calendar eq Work FILTER event.hasAttachments eq False FILTER event.importance eq High
+Give me the list of my events from Today which have attachments starting from now.	GET event FILTER event.hasAttachments eq True FILTER event.start eq today FILTER event.start gt now
+What are the events I have about Resource(computer science) with attachment and that will end on Monday?	GET event FILTER event.end eq Monday FILTER event.hasAttachments eq True SEARCH Resource (computer science)
+Give me the list of events for today that have attachments and will be starting from now.	GET event FILTER event.hasAttachments eq True FILTER event.start eq today FILTER event.start lt now
+Give me the high important events without attachments starting from oldest to newest order.	GET event FILTER event.hasAttachments eq False FILTER event.importance eq High ORDERBY event.start asc
+Tell me about the meetings I have with low importance in professional calendar  at conf room 3880.	GET event FILTER event.calendar eq Professional FILTER event.importance eq Low FILTER event.location eq Conf Room 3880
+Give me the first 75 events taking place at samira's office.	GET event FILTER event.location eq Samira's office ORDERBY event.start asc TOP 75
+What are the important events I have in the planning category and starting time friday?	GET event FILTER event.categories eq Planning FILTER event.importance eq High FILTER event.start eq Friday
+List out the events organized by chantella arter at gwen's office that fall under Spain categories.	GET event FILTER event.categories eq Spain FILTER event.location eq Gwen's office FILTER event.organizer eq Chantelle Arter
+List the events I had without attachments about fat shattering dimension that started before saturday.	GET event FILTER event.hasAttachments eq False FILTER event.start lt Saturday SEARCH fat shattering dimension
+What is the number of events with attachments having high importance?	GET event COUNT FILTER event.hasAttachments eq True FILTER event.importance eq High
+List out the events I have with the keyword caching query result in work calendar and having no attachments?	GET event FILTER event.calendar eq Work FILTER event.hasAttachments eq False SEARCH caching query result
+How many events of misc category started after last Saturday?	GET event COUNT FILTER event.categories eq misc FILTER event.start gt last Saturday
+Which are the low importance meetings ending today that are organized by Lanny Cannard?	GET event FILTER event.end eq today FILTER event.importance eq Low FILTER event.organizer eq Lanny Cannard
+List out the events starting from newest to oldest order organized by delois klinglesmith talking place at norberto's office.	GET event FILTER event.location eq Norberto's office FILTER event.organizer eq Delois Klinglesmith ORDERBY event.start desc
+Which events has attachments that starts before now and ends today?	GET event FILTER event.end eq today FILTER event.hasAttachments eq True FILTER event.start lt now
+What are the  most recent 74 events that ends next wednesday?	GET event FILTER event.end eq next Wednesday ORDERBY event.start desc TOP 74
+What are the events I have about collaborative document in the bluetooth category ordered by start time oldest to newest?	GET event FILTER event.categories eq bluetooth ORDERBY event.start asc SEARCH collaborative document
+Who was the organizer of the last meeting?	GET event ORDERBY event.start desc TOP 1
+list out the events organized by sharri scharnberg falling under advertising category started before last Thursday.	GET event FILTER event.categories eq Advertising FILTER event.organizer eq Sharri Scharnberg FILTER event.start lt last Thursday
+Which are the meetings without attachments in office calendar that were started after last Wednesday?	GET event FILTER event.calendar eq Office FILTER event.hasAttachments eq False FILTER event.start gt last Wednesday
+What is the end time of the oldest event?	GET event ORDERBY event.start asc TOP 1
+List the high important events organized by hortensia ahimud at conf room 2879.	GET event FILTER event.importance eq High FILTER event.location eq Conf Room 2879 FILTER event.organizer eq Hortensia Ahimud
+Starting from newest to oldest,provide me the events having no attachments that started last Thursday .	GET event FILTER event.hasAttachments eq False FILTER event.start eq last Thursday ORDERBY event.start desc
+List out the events with the keyword content-based that I have with attachment and started after this year.	GET event FILTER event.hasAttachments eq True FILTER event.start gt this year SEARCH content-based
+List out the less important events I have without attachment ordered by start time newest to oldest.	GET event FILTER event.hasAttachments eq False FILTER event.importance eq Low ORDERBY event.start desc
+What are the events starting from newest to oldest order and ending this month having attachments?	GET event FILTER event.end eq this month FILTER event.hasAttachments eq True ORDERBY event.start desc
+List out the events falling under call category with attachments started on Friday.	GET event FILTER event.categories eq call FILTER event.hasAttachments eq True FILTER event.start eq Friday
+List out the events with attachments starting on Saturday organized by jae clagon.	GET event FILTER event.hasAttachments eq True FILTER event.organizer eq Jae Clagon FILTER event.start eq Saturday
+Give me the events in my calendar starting today before now.	GET event FILTER event.calendar eq Holidays FILTER event.start eq today FILTER event.start lt now
+What are the events before next Tuesday with attachments falling under advertising categories?	GET event FILTER event.categories eq Advertising FILTER event.hasAttachments eq True FILTER event.start lt next Tuesday
+What are the events about WEEDING organized by demarcus gorn starting before today?	GET event FILTER event.organizer eq Demarcus Gorn FILTER event.start lt today SEARCH WEEDING
+Provide me the meetings of status category about stimulusresponseassociation that started before last year.	GET event FILTER event.categories eq status FILTER event.start lt last year SEARCH stimulusresponseassociation
+What important meetings with Bettie Stehlik are scheduled to begin after next Sunday?	GET event FILTER event.hasAttachments eq True FILTER event.importance eq High FILTER event.organizer eq Bettie Stehlik FILTER event.start gt next Sunday
+Provide a list of meetings with low importance arranged in Jillian's office ordered by start time from oldest to newest.	GET event FILTER event.importance eq Low FILTER event.location eq Jillian's office ORDERBY event.start asc
+What are the events I have about matrix factorization at Thersa's office ending on Thursday?	GET event FILTER event.end eq Thursday FILTER event.location eq Thersa's office SEARCH matrix factorization
+What number of events will start after now today?	GET event COUNT FILTER event.end eq today FILTER event.start gt now
+Which are the high importance meetings that have started before now and will be ending today?	GET event FILTER event.end eq today FILTER event.importance eq High FILTER event.start lt now
+Which are the high importance events that will be starting this week and are about mobile ad-hoc network?	GET event FILTER event.importance eq High FILTER event.start eq this week SEARCH mobile ad-hoc network
+List out the number of high important events ending on Wednesday.	GET event COUNT FILTER event.end eq Wednesday FILTER event.importance eq High
+Give me the events I have with attachment in the holidays calendar and order them by newest to oldest.	GET event FILTER event.calendar eq Holidays FILTER event.hasAttachments eq True ORDERBY event.start desc
+What are the meetings that have attachments and are organized by Lauran Gieseman in ascending order of start time?	GET event FILTER event.hasAttachments eq True FILTER event.organizer eq Lauran Gieseman ORDERBY event.start asc
+Provide me the  oldest 12 events in shared calendar.	GET event FILTER event.calendar eq Shared ORDERBY event.start asc TOP 12
+What are the events I have in my calendar about crystallography that started last month?	GET event FILTER event.calendar eq Personal FILTER event.start eq last month SEARCH crystallography
+List out the events organised by warner irick having attachments started after last Monday.	GET event FILTER event.hasAttachments eq True FILTER event.organizer eq Warner Irick FILTER event.start gt last Monday
+What are the events I have without attachments that starts next wednesday ordered by start time in ascending manner?	GET event FILTER event.hasAttachments eq False FILTER event.start eq next Wednesday ORDERBY event.start asc
+Please provide the events I have about Rewriting Techniques and Application ordered by start time newest to oldest and that ended yesterday.	GET event FILTER event.end eq yesterday ORDERBY event.start desc SEARCH Rewriting Techniques and Applications
+What are the last 30 events falling under misc category?	GET event FILTER event.categories eq misc ORDERBY event.start desc TOP 30
+List out the meetings without attachments that are in the personal calendar and start after next week.	GET event FILTER event.calendar eq Personal FILTER event.hasAttachments eq False FILTER event.start gt next week
+Provide me a list of events without attachments that are in the holidays calendar that end next Monday.	GET event FILTER event.calendar eq Holidays FILTER event.end eq next Monday FILTER event.hasAttachments eq False
+What are the events I have about Polymorphism (biology) in automation category that started last Monday?	GET event FILTER event.categories eq automation FILTER event.start eq last Monday SEARCH Polymorphism (biology)
+How many meetings without attachments are scheduled to begin after today?	GET event COUNT FILTER event.hasAttachments eq False FILTER event.start gt today
+List and arrange in ascending order of start time for the events in conf room 4423 and which are about efficiency. 	GET event FILTER event.location eq Conf Room 4423 ORDERBY event.start asc SEARCH efficiency
+List out the important events with attachments scheduled at celena's office.	GET event FILTER event.hasAttachments eq True FILTER event.importance eq High FILTER event.location eq Celena's office
+Where did the last event take place?	GET event ORDERBY event.start desc TOP 1
+List out the events without attachments started before last Saturday which took place at conf room 2017.	GET event FILTER event.hasAttachments eq False FILTER event.location eq Conf Room 2107 FILTER event.start lt last Saturday
+Arrange the events that are organized by Charis Tripodi ordered by start time from oldest to newest.	GET event FILTER event.organizer eq Charis Tripodi ORDERBY event.start asc TOP 27
+What were my important meetings at Theols's office after last Thursday?	GET event FILTER event.importance eq High FILTER event.location eq Theola's office FILTER event.start gt last Thursday
+Find the last event with low importance.	GET event FILTER event.importance eq Low ORDERBY event.start desc TOP 1
+Give me the events I have in the office calendar organized by lynsey maritn at tanna's office.	GET event FILTER event.calendar eq Office FILTER event.location eq Tanna's office FILTER event.organizer eq Lynsey Maritn
+Provide me the events about syllables falling under simulation category which ended last Saturday.	GET event FILTER event.categories eq simulation FILTER event.end eq last Saturday SEARCH syllables
+What are the events in bluetooth categories ordered by start time newest to oldest in holidays calendar?	GET event FILTER event.calendar eq Holidays FILTER event.categories eq bluetooth ORDERBY event.start desc
+Tell me about the events I have at carrol's offie starting after wednesday.	GET event COUNT FILTER event.location eq Carrol's office FILTER event.start gt Wednesday
+What are the events I have with attachments in japan category ordered by start time oldest to newest?	GET event FILTER event.categories eq Japan FILTER event.hasAttachments eq True ORDERBY event.start asc
+Give me the top 1 event I have without attachment ordered by start time oldest to newest.	GET event FILTER event.hasAttachments eq False ORDERBY event.start asc TOP 1
+List out the low important events falling under spain category started before next Wednesday.	GET event FILTER event.categories eq Spain FILTER event.importance eq Low FILTER event.start lt next Wednesday
+List the important events in shared calendar that started before last Thursday.	GET event FILTER event.calendar eq Shared FILTER event.importance eq High FILTER event.start lt last Thursday
+List the important events with attachments organized by lashon alzaga.	GET event FILTER event.hasAttachments eq True FILTER event.importance eq High FILTER event.organizer eq Lashon Alzaga
+Give me the attendees of my first email.	GET event ORDERBY event.start asc TOP 1
+Provide the events organized by  lauren hallemeyer which has no attachments and started after last thursday.	GET event FILTER event.hasAttachments eq False FILTER event.organizer eq Lauren Hallemeyer FILTER event.start gt last Thursday
+What are the events in my general calendar falling under brazil category started before last month?	GET event FILTER event.calendar eq General FILTER event.categories eq Brazil FILTER event.start lt last month
+Tell me about the important events I have without attachments which are starting after today.	GET event FILTER event.hasAttachments eq False FILTER event.importance eq High FILTER event.start gt today
+Please provide the events I have about Pest control in the google calendar and without attachment.	GET event FILTER event.calendar eq Google FILTER event.hasAttachments eq False SEARCH Pest control
+List out the low important events in my home calendar without attachments.	GET event FILTER event.calendar eq Home FILTER event.hasAttachments eq False FILTER event.importance eq Low
+Tell me about the events containing interval skip graph that started before wednesday ordered by start time from oldest to newest.	GET event FILTER event.start lt Wednesday ORDERBY event.start asc SEARCH interval skip graph
+List out the important meetings organized by cordie arabian at conf room 2429.	GET event FILTER event.importance eq High FILTER event.location eq Conf Room 2429 FILTER event.organizer eq Cordie Arabian
+Tell me about the events I have in research category about social networks ordered by start time from oldest to newest?	GET event FILTER event.categories eq Research ORDERBY event.start asc SEARCH social networks
+List the important events organized by priscila quigg falling under shiva category.	GET event FILTER event.categories eq shiva FILTER event.importance eq High FILTER event.organizer eq Priscila Quigg
+List the events about Fuzzy string searching with attachments scheduled at aliza's office.	GET event FILTER event.hasAttachments eq True FILTER event.location eq Aliza's office SEARCH Fuzzy string searching
+How many meeting invitation I have received from Marty Erickson about labelling?	GET event COUNT FILTER event.organizer eq Marty Erickson SEARCH labelling
+Tell me about  the meeting I have without attachments about Mechanism starting from next week.	GET event FILTER event.hasAttachments eq False FILTER event.start gt next week SEARCH Mechanism
+What are the events in my general calendar falling under india category starting after Tuesday?	GET event FILTER event.calendar eq General FILTER event.categories eq India FILTER event.start gt Tuesday
+What are the high important events organized by Claire Schull that will start after next Wednesday?	GET event FILTER event.importance eq High FILTER event.organizer eq Claire Schull FILTER event.start gt next Wednesday
+What are the first 95 events I have starting before next sunday?	GET event FILTER event.start lt next Sunday ORDERBY event.start asc TOP 95
+Find the organizer of the first event.	GET event ORDERBY event.start asc TOP 1
+List out the events of clients calendar having keyword Bamboos and will start this month.	GET event FILTER event.calendar eq Clients FILTER event.start eq this month SEARCH Bamboos
+What are the events I have with attachment in strategy category ordered by start time oldest to newest?	GET event FILTER event.categories eq strategy FILTER event.hasAttachments eq True ORDERBY event.start asc
+What are the less important events I have with attachment that are organized by Roselyn Siegle?	GET event FILTER event.hasAttachments eq True FILTER event.importance eq Low FILTER event.organizer eq Roselyn Siegle
+Which are today's meetings that started before now and organized by Exie Nipple?	GET event FILTER event.organizer eq Exie Nipple FILTER event.start eq today FILTER event.start lt now
+Find the important events in shared calendar that falls in strategy.	GET event FILTER event.calendar eq Shared FILTER event.categories eq strategy FILTER event.importance eq High
+What's my first event I have without attachments?	GET event FILTER event.hasAttachments eq False ORDERBY event.start asc TOP 1
+How many events starts from now and ends today?	GET event COUNT FILTER event.end eq today FILTER event.start gt now
+List out the high important events organized by ruben murdick starting after this year.	GET event FILTER event.importance eq High FILTER event.organizer eq Ruben Murdick FILTER event.start gt this year
+Provide me the number of events with attachments that started last week.	GET event COUNT FILTER event.hasAttachments eq True FILTER event.start eq last week
+What are the high important events without attachments about messagecentric approach started yesterday?	GET event FILTER event.hasAttachments eq False FILTER event.importance eq High FILTER event.start eq yesterday SEARCH messagecentric approach
+Let me know the number of events in other appointments calendar that started after last month.	GET event COUNT FILTER event.calendar eq OtherAppointments FILTER event.start gt last month
+What are the events organized by venessa mervyn ending on Saturday ordered by start time newest to oldest?	GET event FILTER event.end eq Saturday FILTER event.organizer eq Venessa Mervyn ORDERBY event.start desc
+Find the number of events that has attachments and ends next month.	GET event COUNT FILTER event.end eq next month FILTER event.hasAttachments eq True
+Let me know the events without attachments started after last Friday.	GET event COUNT FILTER event.hasAttachments eq False FILTER event.start eq last Friday
+Find the events with no attachments that starts before next month ordered by start time in ascending manner.	GET event FILTER event.hasAttachments eq False FILTER event.start lt next month ORDERBY event.start asc
+How many meetings without attachments have started since last Friday?	GET event COUNT FILTER event.hasAttachments eq False FILTER event.start gt last Friday
+How many events are there in the customers calendar that ended last Tuesday?	GET event COUNT FILTER event.calendar eq Customers FILTER event.end eq last Tuesday
+Give me the events with attachments in outlook calendar that started after last year.	GET event FILTER event.calendar eq Outlook FILTER event.hasAttachments eq True FILTER event.start gt last year
+Give me the meeting invitations received from Nubia Fetui that are arrange in Ebonie's office and are under the category monitor?	GET event FILTER event.categories eq monitor FILTER event.location eq Ebonie's office FILTER event.organizer eq Nubia Fetui
+What are the events in holidays calendar that started after last Monday ordered by start time oldest to newest?	GET event FILTER event.calendar eq Holidays FILTER event.start gt last Monday ORDERBY event.start asc
+Provide me the events with attachments starting after Friday from newest to oldest order.	GET event FILTER event.hasAttachments eq True FILTER event.start gt Friday ORDERBY event.start desc
+Which are the low importance meetings for today that start before now?	GET event FILTER event.end eq today FILTER event.importance eq Low FILTER event.start lt now
+What are the important events organized by Jung Lui that started after last month?	GET event FILTER event.importance eq High FILTER event.organizer eq Jung Lui FILTER event.start gt last month
+What are the important events without attachments ordered by start time oldest to newest?	GET event FILTER event.hasAttachments eq False FILTER event.importance eq High ORDERBY event.start asc
+List out the events having no attachments in misc categories started after last thursday	GET event FILTER event.categories eq misc FILTER event.hasAttachments eq False FILTER event.start gt last Thursday
+What are the low important events organized by arlena landron that started before last Wednesday?	GET event FILTER event.importance eq Low FILTER event.organizer eq Arlena Landron FILTER event.start lt last Wednesday
+Give me the events about  institutional norm starting before last week from oldest to newest order.	GET event FILTER event.start lt last week ORDERBY event.start asc SEARCH institutional norm
+What is the last event starting before next Saturday?	GET event FILTER event.start lt next Saturday ORDERBY event.start desc TOP 1
+Provide me the low important events falling under web category ending next year.	GET event FILTER event.categories eq web FILTER event.end eq next year FILTER event.importance eq Low
+Provide me the list of events starting from oldest to newest order falling under 2002 category which ended last month.	GET event FILTER event.categories eq 2002 FILTER event.end eq last month ORDERBY event.start asc
+Tell me about the events I have in research category at dionna's office starting after next year.	GET event FILTER event.categories eq Research FILTER event.location eq Dionna's office FILTER event.start gt next year
+List out the last 69 events taking place at conf room 2233.	GET event FILTER event.location eq Conf Room 2233 ORDERBY event.start desc TOP 69
+Provide me the location of first event.	GET event ORDERBY event.start asc TOP 1
+List out the events with attachments starting after last Monday from newest to oldest order.	GET event FILTER event.hasAttachments eq True FILTER event.start gt last Monday ORDERBY event.start desc
+Which were the events under the sales category that were organized by Ezra Neidenbach and were about Control flow graph?	GET event FILTER event.categories eq Sales FILTER event.organizer eq Ezra Neidenbach SEARCH Control flow graph
+What are the events that started last week at vertie's office ordered by start time from most recent to oldest?	GET event FILTER event.location eq Vertie's office FILTER event.start eq last week ORDERBY event.start desc
+Find the events regarding degree that organized by rodrigo carson ordered by start time in ascending manner.	GET event FILTER event.organizer eq Rodrigo Carson ORDERBY event.start asc SEARCH degree
+What are the important events at conf room 1548 that started before Thursday?	GET event FILTER event.importance eq High FILTER event.location eq Conf Room 1548 FILTER event.start lt Thursday
+List out the events about ram started yesterday from newest to oldest order.	GET event FILTER event.start eq yesterday ORDERBY event.start desc SEARCH ram
+Who is the organizer of the oldest event?	GET event ORDERBY event.start asc TOP 1
+List the important meetings from other appointments calendar that will start after Monday.	GET event FILTER event.calendar eq OtherAppointments FILTER event.importance eq High FILTER event.start gt Monday
+List out the events organized by etha pizarro having attachments and started after last Tuesday.	GET event FILTER event.hasAttachments eq True FILTER event.organizer eq Etha Pizarro FILTER event.start gt last Tuesday
+How many events start after Sunday that are about distributing profit?	GET event COUNT FILTER event.start gt Sunday SEARCH distributing profit
+List out events low importance events  without attachments started before next Wednesday.	GET event FILTER event.hasAttachments eq False FILTER event.importance eq Low FILTER event.start lt next Wednesday
+Provide me the events stating today before now today at tera's office.	GET event FILTER event.location eq Tera's office FILTER event.start eq today FILTER event.start lt now
+Provide me a list of meetings without attachments that are under the future category and scheduled in conf room 3147.	GET event FILTER event.categories eq future FILTER event.hasAttachments eq False FILTER event.location eq Conf Room 3147
+Give me the list of meetings from the google calendar that are organized by Mafalda Bazin and are under the coding category.	GET event FILTER event.calendar eq Google FILTER event.categories eq coding FILTER event.organizer eq Mafalda Bazin
+Provide a list of meetings with attachments that are organized by Stephania Arrojo arranged in descending order of their start time.	GET event FILTER event.hasAttachments eq True FILTER event.organizer eq Stephania Arrojo ORDERBY event.start desc
+Who is the organizer of last meeting?	GET event ORDERBY event.start desc TOP 1
+Provide me the last event starting before next Tuesday.	GET event FILTER event.start lt next Tuesday ORDERBY event.start desc TOP 1
+What are the events without attachments starting this month ordered by start time newest to oldest?	GET event FILTER event.hasAttachments eq False FILTER event.start eq this month ORDERBY event.start desc
+What is the number of events without attachments that will start after next Monday?	GET event COUNT FILTER event.hasAttachments eq False FILTER event.start gt next Monday
+List out the less important events I have in the conf room 1575 ordered by start time newest to oldest.	GET event FILTER event.importance eq Low FILTER event.location eq Conf Room 1575 ORDERBY event.start desc
+List the low important events in day categories ordered by start time oldest to newest.	GET event FILTER event.categories eq day FILTER event.importance eq Low ORDERBY event.start asc
+How many events started before now and will end today?	GET event COUNT FILTER event.end eq today FILTER event.start lt now
+What are the events about maximin starting from newest to oldest order which is ending this month?	GET event FILTER event.end eq this month ORDERBY event.start desc SEARCH maximin
+Find the events that starts before next sunday  and organized by claribel fiorenzi ordered by start time in ascending manner.	GET event FILTER event.organizer eq Claribel Fiorenzi FILTER event.start lt next Sunday ORDERBY event.start asc
+How many events I have without attachment organized by Susann Leibfried?	GET event COUNT FILTER event.hasAttachments eq False FILTER event.organizer eq Susann Leibfried
+Please provide me the meetings from the Google calendar that do not have attachments and set to begin by next Tuesday.	GET event FILTER event.calendar eq Google FILTER event.hasAttachments eq False FILTER event.start lt next Tuesday
+What are the low important events starting next Wednesday ordered by start time oldest to newest?	GET event FILTER event.importance eq Low FILTER event.start eq next Wednesday ORDERBY event.start asc
+What are the important meetings about WILD ANIMALS ordered by start time from oldest to newest?	GET event FILTER event.importance eq High ORDERBY event.start asc SEARCH WILD ANIMALS
+How many events I have with the keyword search result snippet starting before monday?	GET event COUNT FILTER event.start lt Monday SEARCH search result snippet
+ Tell me about the meetings I have at lakendra's office about organizational-self design in integration category.	GET event FILTER event.categories eq Integration FILTER event.location eq Lakendra's office SEARCH organizational-self design
+What are the events without attachments organized by vanna krystek ending next Sunday?	GET event FILTER event.end eq next Sunday FILTER event.hasAttachments eq False FILTER event.organizer eq Vanna Krystek
+Give me the important events I have with attachment at Rico's office.	GET event FILTER event.hasAttachments eq True FILTER event.importance eq High FILTER event.location eq Rico's office
+Tell me about the events I have without attachments organized at wan's office starting after tomorrow.	GET event FILTER event.hasAttachments eq False FILTER event.location eq Wan's office FILTER event.start gt tomorrow
+What are the high important events without attachments falling under feedback category?	GET event FILTER event.categories eq feedback FILTER event.hasAttachments eq False FILTER event.importance eq High
+How many low important events will end on next Wednesday ?	GET event COUNT FILTER event.end eq next Wednesday FILTER event.importance eq Low
+Which are the meetings that are organized by Lucas Capitano under the migration category, arrange them in ascending order of start time?	GET event FILTER event.categories eq Migration FILTER event.organizer eq Lucas Capitano ORDERBY event.start asc
+Provide me the high important events without attachments starting before Monday.	GET event FILTER event.hasAttachments eq False FILTER event.importance eq High FILTER event.start lt Monday
+What are the events I have in training category that ended last Friday ordered by start time newest to oldest?	GET event FILTER event.categories eq Training FILTER event.end eq last Friday ORDERBY event.start desc
+Provide me the list of meetings in the outlook calendar that are under marketing category, arranged in descending order of start time.	GET event FILTER event.calendar eq Outlook FILTER event.categories eq Marketing ORDERBY event.start desc
+Find the events for today that will be starting from now and that are about VICIA FABA.	GET event FILTER event.start eq today FILTER event.start gt now SEARCH VICIA FABA
+Provide me the high important events about dataintegration starting from oldest to newest order.	GET event FILTER event.importance eq High ORDERBY event.start asc SEARCH dataintegration
+Which meetings under development category are going to start after Tuesday arranged in order from oldest to newest?	GET event FILTER event.categories eq development FILTER event.start gt Tuesday ORDERBY event.start desc
+Please provide the events that started before now and will end today in the order oldest to newest.	GET event FILTER event.end eq today FILTER event.start lt now ORDERBY event.start asc
+Give me the number of events ending this month taking place at helene's office.	GET event COUNT FILTER event.end eq this month FILTER event.location eq Helene's office
+Provide me the first event that will start on Monday.	GET event FILTER event.start eq Monday ORDERBY event.start asc TOP 1
+What are the events about Fuzzy string searching with attachments scheduled at aliza's office? 	GET event FILTER event.hasAttachments eq True FILTER event.location eq Aliza's office SEARCH Fuzzy string searching
+Let me know the number of events without attachments scheduled at conf room 4164 .	GET event COUNT FILTER event.hasAttachments eq False FILTER event.location eq Conf Room 4164
+What low important events did I have in outlook calendar at cecil's office ?	GET event FILTER event.calendar eq Outlook FILTER event.importance eq Low FILTER event.location eq Cecil's office
+Mention those events I have with the keyword naturalistic approach starting on Thursday in the order oldest to newest.	GET event FILTER event.start eq Thursday ORDERBY event.start asc SEARCH naturalistic approach
+How many events I have about INDUSTRIALIZATION with 2002 category?	GET event COUNT FILTER event.categories eq 2002 SEARCH INDUSTRIALIZATION
+List out the events falling under japan category organized by alisa samra that ends on Saturday.	GET event FILTER event.categories eq Japan FILTER event.end eq Saturday FILTER event.organizer eq Alisa Samra
+What are the events I have in conf room 2762 starting after this month ordered by start time oldest to newest?	GET event FILTER event.location eq Conf Room 2762 FILTER event.start gt this month ORDERBY event.start asc
+Provide me the list of meetings that have attachments and whose start time is tomorrow.	GET event COUNT FILTER event.hasAttachments eq True FILTER event.start eq tomorrow
+List the events without attachments in professional calendar organized by sue villaluazo.	GET event FILTER event.calendar eq Professional FILTER event.hasAttachments eq False FILTER event.organizer eq Sue Villaluazo
+List the events I had in holidays calendar which ended last monday ordered by start time from oldest to newest.	GET event FILTER event.calendar eq Holidays FILTER event.end eq last Monday ORDERBY event.start asc
+What are the events I have without attachments having low importance organized by lura machak?	GET event FILTER event.hasAttachments eq False FILTER event.importance eq Low FILTER event.organizer eq Lura Machak
+What are the number of events about weapon type taking place at conf room 3228?	GET event COUNT FILTER event.location eq Conf Room 3228 SEARCH weapon type
+What are the events organized by marianela brosco in google calendar starting this year?	GET event FILTER event.calendar eq Google FILTER event.organizer eq Marianela Brosco FILTER event.start eq this year
+What are the events organized by thelma witsell with attachments in other appointments calendar?	GET event FILTER event.calendar eq OtherAppointments FILTER event.hasAttachments eq True FILTER event.organizer eq Thelma Witsell
+What are the events about Common lands without attachments started before this month ?	GET event FILTER event.hasAttachments eq False FILTER event.start lt this month SEARCH Common lands
+List out the events starting now and ending today that are organized by Alita Tew.	GET event FILTER event.end eq today FILTER event.organizer eq Alita Tew FILTER event.start gt now
+Provide me the events about matrix factorization falling under brazil category started last Tuesday.	GET event FILTER event.categories eq Brazil FILTER event.start eq last Tuesday SEARCH matrix factorization
+What are the number of low important events in my general calendar?	GET event COUNT FILTER event.calendar eq General FILTER event.importance eq Low
+List the events in the office calendar organized by elwood gault that started after last Sunday.	GET event FILTER event.calendar eq Office FILTER event.organizer eq Elwood Gault FILTER event.start gt last Sunday
+What are the high important events starting from oldest to newest order and ending next Saturday?	GET event FILTER event.end eq next Saturday FILTER event.importance eq High ORDERBY event.start asc
+Find the events that falls in automation categories with high importance that ends tuesday.	GET event FILTER event.categories eq automation FILTER event.end eq Tuesday FILTER event.importance eq High
+List out the events with true attachments starting before Friday from oldest to newest order.	GET event FILTER event.hasAttachments eq True FILTER event.start lt Friday ORDERBY event.start asc
+Provide me the events without attachments falling under training category starting from oldest to newest order.	GET event FILTER event.categories eq Training FILTER event.hasAttachments eq False ORDERBY event.start asc
+Find the last event that has attachments ordered by start time.	GET event FILTER event.hasAttachments eq True ORDERBY event.start desc TOP 1
+List out the top 1 top less important event ordered by start time oldest to newest.	GET event FILTER event.importance eq Low ORDERBY event.start asc TOP 1
+What are the events I have without attachments that will start after now and going to end today?	GET event FILTER event.end eq today FILTER event.hasAttachments eq False FILTER event.start gt now
+What are the events with attachments in office calendar starting after Thursday?	GET event FILTER event.calendar eq Office FILTER event.hasAttachments eq True FILTER event.start gt Thursday
+How many events Started at Saturday which took place at xochitl's office?	GET event COUNT FILTER event.location eq Xochitl's office FILTER event.start eq Saturday
+Please provide me the top 1 less important event ordered by start time oldest to newest.	GET event FILTER event.importance eq Low ORDERBY event.start asc TOP 1
+List the events without attachments about Parameter(computer science) that are organized by carry golick.	GET event FILTER event.hasAttachments eq False FILTER event.organizer eq Carry Golick SEARCH Parameter (computer science)
+What are the events I have with attachment in clients calendar organized by Jeanice Pascale?	GET event FILTER event.calendar eq Clients FILTER event.hasAttachments eq True FILTER event.organizer eq Jeanice Pascale
+What are the less important events I have about Regular language that started before last month?	GET event FILTER event.importance eq Low FILTER event.start lt last month SEARCH Regular language
+Give me the list of meetings organized by tristan tuschhoff in feedback category ordered by start time from oldest to newest.	GET event FILTER event.categories eq feedback FILTER event.organizer eq Tristan Tuschhoff ORDERBY event.start asc
+List out the events I have without attachment organized by Antonette Goeden that started last Tuesday.	GET event FILTER event.hasAttachments eq False FILTER event.organizer eq Antonette Goeden FILTER event.start eq last Tuesday
+List out the less important events organized by Roselyn Siegle that I have with attachment.	GET event FILTER event.hasAttachments eq True FILTER event.importance eq Low FILTER event.organizer eq Roselyn Siegle
+What are the important events organized by allegra crest starting today ordered by start time oldest to newest?	GET event FILTER event.importance eq High FILTER event.organizer eq Allegra Crest FILTER event.start eq today ORDERBY event.start asc
+Tell me about the meetings I have with attachment organized by wm walczyk which started before last month.	GET event FILTER event.hasAttachments eq True FILTER event.organizer eq Wm Walczyk FILTER event.start lt last month
+Find the events in holiday calendar that starts before thursday ordered by start time in descending manner.	GET event FILTER event.calendar eq Holidays FILTER event.start lt Thursday ORDERBY event.start desc
+List out the low important events in feedback categories that started after last week.	GET event FILTER event.categories eq feedback FILTER event.importance eq Low FILTER event.start gt last week
+Provide the events from information category with contagion threshold keyword and ending on next Friday.	GET event FILTER event.categories eq Information FILTER event.end eq next Friday SEARCH contagion threshold
+What are the events about optimal auction design problem at conf room 1202 ordered by start time newest to oldest?	GET event FILTER event.location eq Conf Room 1202 ORDERBY event.start desc SEARCH optimal auction design problem
+Give me the last meeting that has been marked high importance.	GET event FILTER event.importance eq High ORDERBY event.start desc TOP 1
+What are the events with attachments at conf room 4246 ordered by start time newest to oldest?	GET event FILTER event.hasAttachments eq True FILTER event.location eq Conf Room 4246 ORDERBY event.start desc
+What are the events I have in outlook calendar organized by Allegra Regener that started before last year?	GET event FILTER event.calendar eq Outlook FILTER event.organizer eq Allegra Regener FILTER event.start lt last year
+Provide me the list of 65 meetings that were organized in conf room 4162 order by start time from newest to oldest.	GET event FILTER event.location eq Conf Room 4162 ORDERBY event.start desc TOP 65
+Provide me the list of events that started before now and will end today in the order newest to oldest.	GET event FILTER event.end eq today FILTER event.start lt now ORDERBY event.start desc
+How many low important events are organized by johnnie puehler?	GET event COUNT FILTER event.importance eq Low FILTER event.organizer eq Johnnie Puehler
+List out the events in my google calendar started last Monday from oldest to newest order.	GET event FILTER event.calendar eq Google FILTER event.start eq last Monday ORDERBY event.start asc
+How many events I have about generality of model without attachments?	GET event COUNT FILTER event.hasAttachments eq False SEARCH generality of model
+List out the number of events having high importance which ended last sunday.	GET event COUNT FILTER event.end eq last Sunday FILTER event.importance eq High
+What are the events in my other appointments calendar endinf next year with attachments?	GET event FILTER event.calendar eq OtherAppointments FILTER event.end eq next year FILTER event.hasAttachments eq True
+Provide me the events which started today before now by oldest to newest order.	GET event FILTER event.start eq today FILTER event.start lt now ORDERBY event.start asc
+Give the number of events that ended last Friday and fall under the Japan category.	GET event COUNT FILTER event.categories eq Japan FILTER event.end eq last Friday
+List out the high important events in my customers calendar organized by amalia domenick.	GET event FILTER event.calendar eq Customers FILTER event.importance eq High FILTER event.organizer eq Amalia Domenick
+List out the meeting starting after last Friday having no attachments and are marked high importance.	GET event FILTER event.hasAttachments eq False FILTER event.importance eq High FILTER event.start gt last Friday
+List out the number of low important events that are ending next Saturday.	GET event COUNT FILTER event.end eq next Saturday FILTER event.importance eq Low
+What are the low important events at oliver's office organized by lana taffer?	GET event FILTER event.importance eq Low FILTER event.location eq Oliver's office FILTER event.organizer eq Lana Taffer
+List out the events about user-centric one starting before this week organized by leeanna goldklang. 	GET event FILTER event.organizer eq Leeanna Goldklang FILTER event.start lt this week SEARCH user-centric one
+Which is the last event ending this month?	GET event FILTER event.end eq this month ORDERBY event.start desc TOP 1
+how many events are ended this week organized by lachelle gazo?	GET event COUNT FILTER event.end eq this week FILTER event.organizer eq Lachelle Gazo
+Provide me the events in my other appointments calendar ending this month falling under case studies category.	GET event FILTER event.calendar eq OtherAppointments FILTER event.categories eq Case studies FILTER event.end eq this month
+List the important events in home calendar starting on Wednesday.	GET event FILTER event.calendar eq Home FILTER event.importance eq High FILTER event.start eq Wednesday
+Provide me the events starting next year from newest to oldest order taking place at elliot's office.	GET event FILTER event.location eq Elliot's office FILTER event.start eq next year ORDERBY event.start desc
+What is the number of events without attachments that falls under Brazil category?	GET event COUNT FILTER event.categories eq Brazil FILTER event.hasAttachments eq False
+List the events with attachments in clients calendar that fall under japan category.	GET event FILTER event.calendar eq Clients FILTER event.categories eq Japan FILTER event.hasAttachments eq True
+How many events are there that ended last Wednesday and were about ad and keyword.	GET event COUNT FILTER event.end eq last Wednesday SEARCH ad and keyword
+What is the number of important events starting next Tuesday?	GET event COUNT FILTER event.importance eq High FILTER event.start eq next Tuesday
+Provide me events from the pricing category in holidays calendar in descending order of start time.	GET event FILTER event.calendar eq Holidays FILTER event.categories eq pricing ORDERBY event.start desc
+What are the low important events with attachments falling under server category?	GET event FILTER event.categories eq server FILTER event.hasAttachments eq True FILTER event.importance eq Low
+What are the events in clients calendar that fall under migration category and starts next Friday?	GET event FILTER event.calendar eq Clients FILTER event.categories eq Migration FILTER event.start eq next Friday
+List the events without attachments at conf room 3182 that will end next friday.	GET event FILTER event.end eq next Friday FILTER event.hasAttachments eq False FILTER event.location eq Conf Room 3182
+List out the events without attachments starting from newest to oldest order which ended last Thursday.	GET event FILTER event.end eq last Thursday FILTER event.hasAttachments eq False ORDERBY event.start desc
+What are the events organized by WM Omura in conf room 4726 starting on Tuesday?	GET event FILTER event.location eq Conf Room 4726 FILTER event.organizer eq Wm Omura FILTER event.start eq Tuesday
+What are the events I have without attachment organized by Florene Stiern ordered by start time oldest to newest?	GET event FILTER event.hasAttachments eq False FILTER event.organizer eq Florene Stiern ORDERBY event.start asc
+What are the events organized by Quentin Quillin that will start tomorrow in the order oldest to newest?	GET event FILTER event.organizer eq Quentin Quillin FILTER event.start eq tomorrow ORDERBY event.start asc
+List out the events with attachments falling under products categories that ends next Monday.	GET event FILTER event.categories eq Products FILTER event.end eq next Monday FILTER event.hasAttachments eq True
+List the events without attachments starting before Wednesday that fall under evaluation category.	GET event FILTER event.categories eq evaluation FILTER event.hasAttachments eq False FILTER event.start lt Wednesday
+Mention the events organized by Kaycee Kirbo that will end on Sunday ordered by start time oldest to newest.	GET event FILTER event.end eq Sunday FILTER event.organizer eq Kaycee Kirbo ORDERBY event.start asc
+Find the events about approximation that has low importance ordered by start time from oldest to newest.	GET event FILTER event.importance eq Low ORDERBY event.start asc SEARCH approximation
+Let me know the events with attachments in general calendar starting next month.	GET event FILTER event.calendar eq General FILTER event.hasAttachments eq True FILTER event.start eq next month
+How many important events I have from Cristal Retterbush?	GET event COUNT FILTER event.importance eq High FILTER event.organizer eq Cristal Retterbush
+Give me the less important events I have in testing category that started before Thursday.	GET event FILTER event.categories eq Testing FILTER event.importance eq Low FILTER event.start lt Thursday
+What are the low important events in my home calendar about dmel?	GET event FILTER event.calendar eq Home FILTER event.importance eq Low SEARCH dmel
+What are the important events ending on next Thursday without attachments?	GET event FILTER event.end eq next Thursday FILTER event.hasAttachments eq False FILTER event.importance eq High
+List the meetings that are about expertise and scheduled to happen after Tuesday in conf room 3768.	GET event FILTER event.location eq Conf Room 3768 FILTER event.start gt Tuesday SEARCH expertise
+List out the events without attachments falling under xml category about Price support.	GET event FILTER event.categories eq xml FILTER event.hasAttachments eq False SEARCH Price support
+What are the events in my home calendar with attachments ending this month?	GET event FILTER event.calendar eq Home FILTER event.end eq this month FILTER event.hasAttachments eq True
+Provide me the number of events without attachments organized by jazmin landberg.	GET event COUNT FILTER event.hasAttachments eq False FILTER event.organizer eq Jazmin Landberg
+How many meetings did I have without attachments at conf room 3068?	GET event COUNT FILTER event.hasAttachments eq False FILTER event.location eq Conf Room 3068
+List the events I have with low importance in professional calendar  at conf room 3880.	GET event FILTER event.calendar eq Professional FILTER event.importance eq Low FILTER event.location eq Conf Room 3880
+Give me the meeting invitation received from Beckie Rucinski that started last Thursday ordered by newest to oldest.	GET event FILTER event.organizer eq Beckie Rucinski FILTER event.start eq last Thursday ORDERBY event.start desc
+What are the less important events I have in the other appointments calendar ordered by start time newest to oldest?	GET event FILTER event.calendar eq OtherAppointments FILTER event.importance eq Low ORDERBY event.start desc
+Give me the events having no attachments that starts from Wednesday and order them by start time oldest to newest.	GET event FILTER event.hasAttachments eq False FILTER event.start eq Wednesday ORDERBY event.start asc
+What are the high important events organized by Lesia Jin under India categories?	GET event FILTER event.categories eq India FILTER event.importance eq High FILTER event.organizer eq Lesia Jin
+What are the important events that ended last Thursday ordered by start time oldest to newest ?	GET event FILTER event.end eq last Thursday FILTER event.importance eq High ORDERBY event.start asc
+List out the low important meetings with attachments taking place at julee's office.	GET event FILTER event.hasAttachments eq True FILTER event.importance eq Low FILTER event.location eq Julee's office
+What are the important events that are ending this week ordered by start time from oldest to newest?	GET event FILTER event.end eq this week FILTER event.importance eq High ORDERBY event.start asc
+Provide me the events about rational behavior falling under europe category starting from oldest to newest order.	GET event FILTER event.categories eq Europe ORDERBY event.start asc SEARCH rational behavior
+Give me the end time of my first meeting.	GET event ORDERBY event.start asc TOP 1
+Provide me the high important events in my holidays calendar organized by candra alcorn.	GET event FILTER event.calendar eq Holidays FILTER event.importance eq High FILTER event.organizer eq Candra Alcorn
+List the events without attachments in work calendar that starts after Friday.	GET event FILTER event.calendar eq Work FILTER event.hasAttachments eq False FILTER event.start gt Friday
+What are the high important events without attachments organized by concepcion lorion?	GET event FILTER event.hasAttachments eq False FILTER event.importance eq High FILTER event.organizer eq Concepcion Lorion
+Find the first event  I started that has no attachments.	GET event FILTER event.hasAttachments eq False ORDERBY event.start asc TOP 1
+Provide the oldest meeting did I have that started before sunday ordered by  start time in ascending manner.	GET event FILTER event.start lt Sunday ORDERBY event.start asc TOP 1
+List the important events I have in future category ordered by start time from newest to oldest.	GET event FILTER event.categories eq future FILTER event.importance eq High ORDERBY event.start desc
+Give me the important events I have with the keyword sequential game of imperfect information ordered by start time oldest to newest.	GET event FILTER event.importance eq High ORDERBY event.start asc SEARCH sequential game of imperfect information
+Which are the meetings about search context that were started before now and will end today?	GET event FILTER event.end eq today FILTER event.start lt now SEARCH search context
+Tell me about the events I have in europe category at conf room 3854 ordered by start time from newest to oldest.	GET event FILTER event.categories eq Europe FILTER event.location eq Conf Room 3854 ORDERBY event.start desc
+Give me the number of events I have at conf room 4102 starting Tuesday.	GET event COUNT FILTER event.location eq Conf Room 4102 FILTER event.start eq Tuesday
+What are the important events organized by buffy nopper ordered by start time newest to oldest?	GET event FILTER event.importance eq High FILTER event.organizer eq Buffy Nopper ORDERBY event.start desc
+Starting from newest to oldest please provide me the events that I have in holidays calendar with attachment.	GET event FILTER event.calendar eq Holidays FILTER event.hasAttachments eq True ORDERBY event.start desc
+List out the events without attachments organized by vanna krystek ending next Sunday.	GET event FILTER event.end eq next Sunday FILTER event.hasAttachments eq False FILTER event.organizer eq Vanna Krystek
+Arrange the meetings ordered by start time from newest to oldest which were about reward and started after last Wednesday.	GET event FILTER event.start gt last Wednesday ORDERBY event.start desc SEARCH reward
+List out the events with attachments starting today from oldest to newest order.	GET event FILTER event.hasAttachments eq True FILTER event.start eq today ORDERBY event.start asc
+List out the events starting before now and ending today taking place at ollie's office.	GET event FILTER event.end eq today FILTER event.location eq Ollie's office FILTER event.start lt now
+Give me the events I have in the products category that will start today after now.	GET event FILTER event.categories eq Products FILTER event.start eq today FILTER event.start gt now
+Provide the last event that starts before monday.	GET event FILTER event.start lt Monday ORDERBY event.start desc TOP 1
+List out the events without attachments starting after next week taking place at cedrick's office.	GET event FILTER event.hasAttachments eq False FILTER event.location eq Cedrick's office FILTER event.start gt next week
+Please provide the events I have in the planning category started before last week and in the order newest to oldest.	GET event FILTER event.categories eq Planning FILTER event.start lt last week ORDERBY event.start desc
+What are the events I have without attachments about caching query result in work calendar?	GET event FILTER event.calendar eq Work FILTER event.hasAttachments eq False SEARCH caching query result
+List the events under xml that started before sunday in descending order of start time.	GET event FILTER event.categories eq xml FILTER event.start lt Sunday ORDERBY event.start desc
+List out the high important events starting today after now.	GET event FILTER event.importance eq High FILTER event.start eq today FILTER event.start gt now
+Tell me about the less important events I have without attachment ordered by start time newest to oldest.	GET event FILTER event.hasAttachments eq False FILTER event.importance eq Low ORDERBY event.start desc
+Provide me the events in ascending order of start time that started before now and will end today. 	GET event FILTER event.end eq today FILTER event.start lt now ORDERBY event.start asc
+How many events I have at kit's office which are starting on friday?	GET event COUNT FILTER event.location eq Kit's office FILTER event.start eq Friday
+Please provide the events I have with attachment in the shared calendar that started yesterday.	GET event FILTER event.calendar eq Shared FILTER event.hasAttachments eq True FILTER event.start eq yesterday
+List out the events organized by Liliana Bischoff at Oralee's office that are ending today.	GET event FILTER event.end eq today FILTER event.location eq Oralee's office FILTER event.organizer eq Liliana Bischoff
+What are the events without attachments about Parameter(computer science) that are organized by carry golick?	GET event FILTER event.hasAttachments eq False FILTER event.organizer eq Carry Golick SEARCH Parameter (computer science)
+What are the events with attachments in customer calendar that started last year? 	GET event FILTER event.calendar eq Customers FILTER event.hasAttachments eq True FILTER event.start eq last year
+Provide me the list of events ending next Tuesday that are in holidays calendar under the misc category.  	GET event FILTER event.calendar eq Holidays FILTER event.categories eq misc FILTER event.end eq next Tuesday
+Mention the events I have with the keyword Varieties in knowledge category starting after Sunday.	GET event FILTER event.categories eq Knowledge FILTER event.start gt Sunday SEARCH Varieties
+Mention the events I have with attachments and with the keyword palsson in clients calendar in the order oldest to newest.	GET event FILTER event.calendar eq Clients FILTER event.hasAttachments eq True ORDERBY event.start asc SEARCH palsson
+Find the events with no attachments that falls in simulation categories at karine's office.	GET event FILTER event.categories eq simulation FILTER event.hasAttachments eq False FILTER event.location eq Karine's office
+Provide me the events with attachments in my shared calendar starting after next Wednesday.	GET event FILTER event.calendar eq Shared FILTER event.hasAttachments eq True FILTER event.start gt next Wednesday
+Find the oldest event with high importance .	GET event FILTER event.importance eq High ORDERBY event.start asc TOP 1
+List out the events I have with attachment in the clients calendar that started last Monday.	GET event FILTER event.calendar eq Clients FILTER event.hasAttachments eq True FILTER event.start eq last Monday
+What are the important events with attachments that fall under project categories?	GET event FILTER event.categories eq project FILTER event.hasAttachments eq True FILTER event.importance eq High
+Provide me the top 1 event I have with attachment ordered by start time oldest to newest?	GET event FILTER event.hasAttachments eq True ORDERBY event.start asc TOP 1
+How many events I have with attachment in the friends calendar?	GET event COUNT FILTER event.calendar eq Friends FILTER event.hasAttachments eq True
+What are the high important events organized by ruben murdick starting after this year?	GET event FILTER event.importance eq High FILTER event.organizer eq Ruben Murdick FILTER event.start gt this year
+What are the events with attachments that ended last Saturday ordered by start time newest to oldest?	GET event FILTER event.end eq last Saturday FILTER event.hasAttachments eq True ORDERBY event.start desc
+What are the events about  CALLIANDRA CALOTHYRSUS that started after last week ordered by start time newest to oldest? 	GET event FILTER event.start gt last week ORDERBY event.start desc SEARCH CALLIANDRA CALOTHYRSUS
+What are the low important events in japan category ordered by start time oldest to newest?	GET event FILTER event.categories eq Japan FILTER event.importance eq Low ORDERBY event.start asc
+List out events about lateral transfer falling under internet category taking place at conf room 1957.	GET event FILTER event.categories eq internet FILTER event.location eq Conf Room 1957 SEARCH lateral transfer
+Which are the multi-agent influence diagram meetings that will be starting in Livia's office from next Friday?	GET event FILTER event.location eq Livia's office FILTER event.start eq next Friday SEARCH multi-agent influence diagram
+List out the number of meetings containing INDUSTRIALIZATION keyword in 2002 category.	GET event COUNT FILTER event.categories eq 2002 SEARCH INDUSTRIALIZATION
+Provide the unimportant meetings without attachments that are scheduled to commence by Tuesday.	GET event FILTER event.hasAttachments eq False FILTER event.importance eq Low FILTER event.start lt Tuesday
+What are the events in friends calendar located at conf room 1860 which will end on Wednesday?	GET event FILTER event.calendar eq Friends FILTER event.end eq Wednesday FILTER event.location eq Conf Room 1860
+Find the end time of the last meeting.	GET event ORDERBY event.start desc TOP 1
+Provide the events of  customer calendar that started after last tuesday having location conf room 2137.	GET event FILTER event.calendar eq Customers FILTER event.location eq Conf Room 2137 FILTER event.start gt last Tuesday
+List out the high important events starting from newest to oldest order taking place at damon's office.	GET event FILTER event.importance eq High FILTER event.location eq Damon's office ORDERBY event.start desc
+Tell me the end time of first event.	GET event ORDERBY event.start asc TOP 1
+List out the events organized by Mao Dretzka that are about Agriculture and which are starting before next Friday.	GET event FILTER event.organizer eq Mao Dretzka FILTER event.start lt next Friday SEARCH Agriculture
+Give me the location of last event.	GET event ORDERBY event.start desc TOP 1
+List out the high important events ended last week held at cynthia's office.	GET event FILTER event.end eq last week FILTER event.importance eq High FILTER event.location eq Cynthia's office
+What are the important events without attachments about POPULATION DYNAMICS?	GET event FILTER event.hasAttachments eq False FILTER event.importance eq High SEARCH POPULATION DYNAMICS
+What are the low important events about digital video application that started after last Wednesday?	GET event FILTER event.importance eq Low FILTER event.start gt last Wednesday SEARCH digital video application
+Provide me the high important events starting next Monday from oldest to newest order organized by sima matison.	GET event FILTER event.importance eq High FILTER event.organizer eq Sima Matison FILTER event.start eq next Monday ORDERBY event.start asc
+Provide me the high important events starting from oldest to newest order taking place at candis's office.	GET event FILTER event.importance eq High FILTER event.location eq Candis's office ORDERBY event.start asc
+List out the events starting from oldest to newest order falling under japan category organized by carita whipple.	GET event FILTER event.categories eq Japan FILTER event.organizer eq Carita Whipple ORDERBY event.start asc
+What are the number of events that started before Thursday in work calendar?	GET event COUNT FILTER event.calendar eq Work FILTER event.start lt Thursday
+Let me know the first event before last month.	GET event FILTER event.start lt last month ORDERBY event.start asc TOP 1
+What are the important events at edmund's office ordered by start time oldest to newest?	GET event FILTER event.importance eq High FILTER event.location eq Edmund's office ORDERBY event.start asc
+Provide me a list of today's events that started before now and were organized by Exie Nipple.	GET event FILTER event.organizer eq Exie Nipple FILTER event.start eq today FILTER event.start lt now
+What are the attachments of last event?	GET event ORDERBY event.start desc TOP 1
+Give me the events I have in the general calendar located at Shea's office ordered by start time newest to oldest.	GET event FILTER event.calendar eq General FILTER event.location eq Shea's office ORDERBY event.start desc
+How many events will start after now today.	GET event COUNT FILTER event.end eq today FILTER event.start gt now
+List out the events I have about linkage and without attachment ordered by start time newest to oldest.	GET event FILTER event.hasAttachments eq False ORDERBY event.start desc SEARCH linkage
+List out the meetings about Silvopastoral systems that will be ending this week and arrange them in descending order of their start time.	GET event FILTER event.end eq this week ORDERBY event.start desc SEARCH Silvopastoral systems
+How many important meetings I have with the category of coding?	GET event COUNT FILTER event.categories eq coding FILTER event.importance eq High
+What are the events I have without attachment starting Tuesday in the order oldest to newest?	GET event FILTER event.hasAttachments eq False FILTER event.start eq Tuesday ORDERBY event.start asc
+Give me the events with attachments starting next Tuesday from newest to oldest order.	GET event FILTER event.hasAttachments eq True FILTER event.start eq next Tuesday ORDERBY event.start desc
+Please provide the events that are organized by Rico Borio about Cell culture that started last week.	GET event FILTER event.organizer eq Rico Borio FILTER event.start eq last week SEARCH Cell culture
+What are the low important events organized by lucia hollender having no attachments  ?	GET event FILTER event.hasAttachments eq False FILTER event.importance eq Low FILTER event.organizer eq Lucia Hollender
+List out the first 11 events falling under products category.	GET event FILTER event.categories eq Products ORDERBY event.start asc TOP 11
+List the important events organized by cody scullawl that started before last Monday.	GET event FILTER event.importance eq High FILTER event.organizer eq Cody Scullawl FILTER event.start lt last Monday
+What are the events without attachments started before last Saturday which took place at conf room 2017?	GET event FILTER event.hasAttachments eq False FILTER event.location eq Conf Room 2107 FILTER event.start lt last Saturday
+What are the less important events I have in the products category that will start on Monday?	GET event FILTER event.categories eq Products FILTER event.importance eq Low FILTER event.start eq Monday
+What are the events with attachments that fall under education categories and will end this week?	GET event FILTER event.categories eq Education FILTER event.end eq this week FILTER event.hasAttachments eq True
+List out the first meeting that was under the bluetooth category.	GET event FILTER event.categories eq bluetooth ORDERBY event.start asc TOP 1
+Give me the number of high important events about PLANT OILS that are organized by denisse podaras. 	GET event COUNT FILTER event.importance eq High FILTER event.organizer eq Denisse Podaras SEARCH PLANT OILS
+List out the low important events having attachments taking place at julee's office.	GET event FILTER event.hasAttachments eq True FILTER event.importance eq Low FILTER event.location eq Julee's office
+Find the first 100 events I have in outlook calendar.	GET event FILTER event.calendar eq Outlook ORDERBY event.start asc TOP 100
+What are the low important events starting before tuesday at christie's office?	GET event FILTER event.importance eq Low FILTER event.location eq Christie's office FILTER event.start lt Tuesday
+List out the meetings that will start now and will be ending today in the order newest to oldest.	GET event FILTER event.end eq today FILTER event.start gt now ORDERBY event.start desc
+What are the important events organized by Sheron Bobola ordered by start time newest to oldest?	GET event FILTER event.importance eq High FILTER event.organizer eq Sheron Bobola ORDERBY event.start desc
+List out the events without attachments falling under technology category starting from yesterday.	GET event FILTER event.categories eq Technology FILTER event.hasAttachments eq False FILTER event.start eq yesterday
+Give me the events from pricing categories in holidays calendar by newest to oldest order.	GET event FILTER event.calendar eq Holidays FILTER event.categories eq pricing ORDERBY event.start desc
+Give me the number of events organized by Lenard Haskin and having attachments.	GET event COUNT FILTER event.hasAttachments eq True FILTER event.organizer eq Lenard Haskin
+What events organized by  claribel fiorenzi that ends before next sunday ordered by start time from oldest to newest?	GET event FILTER event.organizer eq Claribel Fiorenzi FILTER event.start lt next Sunday ORDERBY event.start asc
+Provide the list of events without attachments organized by Kermit Ekstrom arranged in order of start time from oldest to newest.	GET event FILTER event.hasAttachments eq False FILTER event.organizer eq Kermit Ekstrom ORDERBY event.start asc
+List the events in shared calendar scheduled for next Thursday at kayla's office.	GET event FILTER event.calendar eq Shared FILTER event.end eq next Thursday FILTER event.location eq Kayla's office
+What are the events organized by Anette Helde about pay per click and will start before this Monday?	GET event FILTER event.organizer eq Anette Helde FILTER event.start lt Monday SEARCH pay per click
+Which events in outlook calendar has attachments that organized by   january doria?	GET event FILTER event.calendar eq Outlook FILTER event.hasAttachments eq True FILTER event.organizer eq January Doria
+What are the meetings I have in holidays calendar that started last Wednesday at conf room 4501?	GET event FILTER event.calendar eq Holidays FILTER event.location eq Conf Room 4501 FILTER event.start eq last Wednesday
+List the meetings I had with attachments which ended last sunday ordered by start time from oldest to newest.	GET event FILTER event.end eq last Sunday FILTER event.hasAttachments eq True ORDERBY event.start asc
+List out the first 52 events starting before this week?	GET event FILTER event.start lt this week ORDERBY event.start asc TOP 52
+Provide me the low important events without attachments starting after Thursday.	GET event FILTER event.hasAttachments eq False FILTER event.importance eq Low FILTER event.start gt Thursday
+What are the events I have at Kathryn's office that started after last friday in the order newest to oldest?	GET event FILTER event.location eq Kathryn's office FILTER event.start gt last Friday ORDERBY event.start desc
+Name the  events under technology categories ordered by start time newest to oldest scheduled at conf room 1703.	GET event FILTER event.categories eq Technology FILTER event.location eq Conf Room 1703 ORDERBY event.start desc
+What are the events without attachments at conf room 1477 that will start after Saturday?	GET event FILTER event.hasAttachments eq False FILTER event.location eq Conf Room 1477 FILTER event.start gt Saturday
+Give me my top 95 meetings that start by next Sunday from oldest to newest.	GET event FILTER event.start lt next Sunday ORDERBY event.start asc TOP 95
+How many events I have about questionand-answer session from Howard Mandt?	GET event COUNT FILTER event.organizer eq Howard Mandt SEARCH questionand-answer session
+What are the events in the office calendar organized by elwood gault that started after last Sunday?	GET event FILTER event.calendar eq Office FILTER event.organizer eq Elwood Gault FILTER event.start gt last Sunday
+Which are the events I have containing graph mining keyword which started before friday ordered by start time from newest to oldest.	GET event FILTER event.start lt Friday ORDERBY event.start desc SEARCH graph mining
+When did my first event start?	GET event ORDERBY event.start asc TOP 1
+List the events with attachments in clients calendar that starts after Thursday.	GET event FILTER event.calendar eq Clients FILTER event.hasAttachments eq True FILTER event.start gt Thursday
+Tell me about the events I have with high importance about selfish agents starting before next sunday.	GET event FILTER event.importance eq High FILTER event.start lt next Sunday SEARCH selfish agent
+What are the important events of automation categories ends on tuesday?	GET event FILTER event.categories eq automation FILTER event.end eq Tuesday FILTER event.importance eq High
+How many events are there with attachments that are starting from next Wednesday? 	GET event COUNT FILTER event.hasAttachments eq True FILTER event.start eq next Wednesday
+What are the events about PRODUCT LABELLING without attachments ordered by start time oldest to newest?	GET event FILTER event.hasAttachments eq False ORDERBY event.start asc SEARCH PRODUCT LABELLING
+What are the important events I have with attachment ordered by start time oldest to newest?	GET event FILTER event.hasAttachments eq True FILTER event.importance eq High ORDERBY event.start asc
+What events did I have of internet categories that started last year ordered by start time in descending manner?	GET event FILTER event.categories eq internet FILTER event.start eq last year ORDERBY event.start desc
+How many events I have without attachments which started last thursday?	GET event COUNT FILTER event.hasAttachments eq False FILTER event.start eq last Thursday
+How many events of product categories ends next year?	GET event COUNT FILTER event.categories eq product FILTER event.end eq next year
+What are the number of events about Natural disasters organized terresa seachord?	GET event COUNT FILTER event.organizer eq Terresa Seachord SEARCH Natural disasters
+Provide me a list of low important meetings from the customers calendar that are organized by Marlin Slevin.	GET event FILTER event.calendar eq Customers FILTER event.importance eq Low FILTER event.organizer eq Marlin Slevin
+Which is the first meeting without attachments?	GET event FILTER event.hasAttachments eq False ORDERBY event.start asc TOP 1
+Who are the attendees of the first event?	GET event ORDERBY event.start asc TOP 1
+Give me the low important events organized by lucia hollender having no attachments.	GET event FILTER event.hasAttachments eq False FILTER event.importance eq Low FILTER event.organizer eq Lucia Hollender
+Give me the low important events starting after Thursday from oldest to newest order.	GET event FILTER event.importance eq Low FILTER event.start gt Thursday ORDERBY event.start asc
+Provide me a list of meetings that start start before Sunday and are under the evaluation category and organized by Latricia Jirjis.	GET event FILTER event.categories eq evaluation FILTER event.organizer eq Latricia Jirjis FILTER event.start lt Sunday
+Provide me the attendees of first event.	GET event ORDERBY event.start asc TOP 1
+What are the events in my google calendar starting from newest to oldest order organized by wai vernoy?	GET event FILTER event.calendar eq Google FILTER event.organizer eq Wai Vernoy ORDERBY event.start desc
+Provide me the low important events falling under spain category started before next Wednesday.	GET event FILTER event.categories eq Spain FILTER event.importance eq Low FILTER event.start lt next Wednesday
+Give me the number of low important events I have without attachments.	GET event COUNT FILTER event.hasAttachments eq False FILTER event.importance eq Low
+Give me the number of events organized by minnie lingefelt starting next year.	GET event COUNT FILTER event.organizer eq Minnie Lingefelt FILTER event.start eq next year
+What meetings did I have  about stranger adaptive and without attachments ordered by start time from most recent to oldest?	GET event FILTER event.hasAttachments eq False ORDERBY event.start desc SEARCH stranger adaptive
+How many events are there that ended last year and were about linguistic data consortium?	GET event COUNT FILTER event.end eq last year SEARCH linguistic data consortium
+Give me oldest 21  important events.	GET event FILTER event.importance eq High ORDERBY event.start asc TOP 21
+What are the meetings did I have without attachments that are starting from next week ordered by start time from oldest to newest?	GET event FILTER event.hasAttachments eq False FILTER event.start eq next week ORDERBY event.start asc
+Give me the meeting invitation received from Cortney Huhtasaari in work calendar and category research.	GET event FILTER event.calendar eq Work FILTER event.categories eq Research FILTER event.organizer eq Cortney Huhtasaari
+Which are the high importance meetings that are in the holidays calendar that have end time for this month?	GET event FILTER event.calendar eq Holidays FILTER event.end eq this month FILTER event.importance eq High
+Give me the number of events I have with attachment in the general calendar.	GET event COUNT FILTER event.calendar eq General FILTER event.hasAttachments eq True
+What are the events I have about emboss with attachment ordered by start time oldest to newest?	GET event FILTER event.hasAttachments eq True ORDERBY event.start asc SEARCH emboss
+Please provide the meeting invitation received from Karma Shiever in the information category having no attachment.	GET event FILTER event.categories eq Information FILTER event.hasAttachments eq False FILTER event.organizer eq Karma Shiever
+What meetings did I have without attachments and low importance that starts after next monday?	GET event FILTER event.hasAttachments eq False FILTER event.importance eq Low FILTER event.start gt next Monday
+What unimportant meetings with Venessa Dyba are scheduled to take place after Friday?	GET event FILTER event.importance eq Low FILTER event.organizer eq Venessa Dyba FILTER event.start gt next Friday
+List out the events falling under knowledge category at mina's office ordered by start time oldest to newest.	GET event FILTER event.categories eq Knowledge FILTER event.location eq Mina's office ORDERBY event.start asc
+What meetings did I have with low importance organized by nam shipman which started last thursday?	GET event FILTER event.importance eq Low FILTER event.organizer eq Nam Shipman FILTER event.start eq last Thursday
+Give me the last event organized by shemika sword.	GET event FILTER event.organizer eq Shemika Sword ORDERBY event.start desc TOP 1
+What events did I have with attachments in outlook calendar that started after last year?	GET event FILTER event.calendar eq Outlook FILTER event.hasAttachments eq True FILTER event.start gt last year
+Which are the events without attachments that start before Saturday and are scheduled in conf room 1747?	GET event FILTER event.hasAttachments eq False FILTER event.location eq Conf Room 1747 FILTER event.start lt Saturday
+What meetings do I have about top returned image starting from wednesday ordered by start time from oldest to newest.	GET event FILTER event.start eq Wednesday ORDERBY event.start asc SEARCH top returned image
+What are the important events at conf room 2108 that started before last Tuesday?	GET event FILTER event.importance eq High FILTER event.location eq Conf Room 2108 FILTER event.start lt last Tuesday
+List the events without attachment organized by raceli Zanfardino ordered by start time from newest to oldest.	GET event FILTER event.hasAttachments eq False FILTER event.organizer eq Araceli Zanfardino ORDERBY event.start desc
+Tell me about the events with low importance starting from tuesday?	GET event COUNT FILTER event.importance eq Low FILTER event.start eq Tuesday
+Give me the last event about pthinc.	GET event ORDERBY event.start desc SEARCH pthinc TOP 1
+Which events organised by margene secreto having metaheuristic keywords that ended on last Tuesday?	GET event FILTER event.end eq last Tuesday FILTER event.organizer eq Margene Secreto SEARCH metaheuristic
+What meetings did I have about Agrosilvopastoral systems which falls in rules categories and start from oldest to newest? 	GET event FILTER event.categories eq rules ORDERBY event.start asc SEARCH Agrosilvopastoral systems
+Which meetings with attachments are scheduled with Sue Caywood and will initiate by next Wednesday?	GET event FILTER event.hasAttachments eq True FILTER event.organizer eq Sue Caywood FILTER event.start lt next Wednesday
+Give me the events about Data Modeling starting Tuesday in the order newest to oldest.	GET event FILTER event.start eq Tuesday ORDERBY event.start desc SEARCH Data modeling
+What are the events I have in the archive category organized by Chelsie Greaser that started last year?	GET event FILTER event.categories eq archive FILTER event.organizer eq Chelsie Greaser FILTER event.start eq last year
+Provide me a list of low importance meetings whose end time is next Monday and under the status category.	GET event FILTER event.categories eq status FILTER event.end eq next Monday FILTER event.importance eq Low
+Provide me the events about video encoding/decoding starting before Tuesday from oldest to newest order.	GET event FILTER event.start lt Tuesday ORDERBY event.start asc SEARCH video encoding/decoding
+What are the events I have in the review category organized by Francis Seggerman that started before yesterday?	GET event FILTER event.categories eq review FILTER event.organizer eq Francis Seggerman FILTER event.start lt yesterday
+Please provide the events organized by Cordia Ostby that are starting friday in the order oldest to newest.	GET event FILTER event.organizer eq Cordia Ostby FILTER event.start eq Friday ORDERBY event.start desc
+Give me the list of my events from Today which organized by  adelaida hagert starting now.	GET event FILTER event.organizer eq Adelaida Hagert FILTER event.start eq today FILTER event.start lt now
+Find the last meeting that is ending next year.	GET event FILTER event.end eq next year ORDERBY event.start desc TOP 1
+Which is the last meeting that is marked high importance?	GET event FILTER event.importance eq High ORDERBY event.start desc TOP 1
+Which is the last starting event falling under internet category?	GET event FILTER event.categories eq internet ORDERBY event.start desc TOP 1
+Which is the last event that did not have attachments?	GET event FILTER event.hasAttachments eq False ORDERBY event.start asc TOP 1
+Give me the number of meeting I have with attachment that are starting today.	GET event COUNT FILTER event.hasAttachments eq True FILTER event.start eq today
+Let me know the events at conf room 4265 that started before this week ordered by start time oldest to newest.	GET event FILTER event.location eq Conf Room 4265 FILTER event.start lt this week ORDERBY event.start asc
+Who attended the top 1 event ordered by start time oldest to newest?	GET event ORDERBY event.start asc TOP 1
+How many events are there without attachments ending last year?	GET event COUNT FILTER event.end eq last year FILTER event.hasAttachments eq False
+Which are the meetings that are about Maximum residue limits and starting after now and ending today?	GET event FILTER event.end eq today FILTER event.start gt now SEARCH Maximum residue limits
+Give me the first event starting,organized by garnett mettee?	GET event FILTER event.organizer eq Garnett Mettee ORDERBY event.start asc TOP 1
+How many events I have in conf room 4537 that started after last Tuesday?	GET event COUNT FILTER event.location eq Conf Room 4537 FILTER event.start gt last Tuesday
+What meeting did I have with attachment that are starting today after now?	GET event FILTER event.end eq today FILTER event.hasAttachments eq True FILTER event.start gt now
+List out the number of meetings which ended last Wednesday and were about ad and keyword.	GET event COUNT FILTER event.end eq last Wednesday SEARCH ad and keyword
+Give me the last event located at conf room 3608.	GET event FILTER event.location eq Conf Room 3608 ORDERBY event.start desc TOP 1
+Give me the important events I have with attachment organized by Zonia Mathisen.	GET event FILTER event.hasAttachments eq True FILTER event.importance eq High FILTER event.organizer eq Zonia Mathisen
+What meetings with attachments about social costs began since last Friday?	GET event FILTER event.hasAttachments eq True FILTER event.start gt last Friday SEARCH Social costs
+Tell me about the events I have in the performance category ordered by oldest to newest and will end next wednesday.	GET event FILTER event.categories eq performance FILTER event.end eq next Wednesday ORDERBY event.start asc
+What are the less important events I have in the government category ordered by start time oldest to newest?	GET event FILTER event.categories eq Government FILTER event.importance eq Low ORDERBY event.start asc
+How many important events are ending next saturday?	GET event COUNT FILTER event.end eq next Saturday FILTER event.importance eq High
+List out the number of events by Pansy Martz that are marked under education category.	GET event COUNT FILTER event.categories eq Education FILTER event.organizer eq Pansy Martz
+What are the events organized by leandra needleman at dacia's office that ended last Thursday? 	GET event FILTER event.end eq last Thursday FILTER event.location eq Dacia's office FILTER event.organizer eq Leandra Needleman
+List out the events organized by Melissia Tillberry about PLANT DISEASES that started before last Saturday.	GET event FILTER event.organizer eq Melissia Tillberry FILTER event.start lt last Saturday SEARCH PLANT DISEASES
+Which are the meetings with attachments that are starting from now?	GET event FILTER event.hasAttachments eq False FILTER event.start eq today FILTER event.start gt now
+Provide me the list of meetings that are starting after next week and are organized Layne Bendzans  by  in ascending order by their start time.	GET event FILTER event.organizer eq Layne Bendzans FILTER event.start gt next week ORDERBY event.start asc
+Find the events in google calendar that organized by tina sirmons ordered by start time in ascending manner.	GET event FILTER event.calendar eq Google FILTER event.organizer eq Tina Sirmons ORDERBY event.start asc
+List the low important events at meri's office that falls under competitive analysis category.	GET event FILTER event.categories eq competitive analysis FILTER event.importance eq Low FILTER event.location eq Meri's office
+What are the events falling under India category that ended last Sunday ordered by start time newest to oldest?	GET event FILTER event.categories eq India FILTER event.end eq last Sunday ORDERBY event.start desc
+What are the high important events without attachments starting from oldest to newest order?	GET event FILTER event.hasAttachments eq False FILTER event.importance eq High ORDERBY event.start asc
+List the important events with attachments that fall under india category.	GET event FILTER event.categories eq India FILTER event.hasAttachments eq True FILTER event.importance eq High
+Find the important events in client calendar that organized by florentino helfenbein which ends on wednesday.	GET event FILTER event.calendar eq Clients FILTER event.end eq Wednesday FILTER event.importance eq High FILTER event.organizer eq Florentino Helfenbein
+What are the events without attachments in professional calendar organized by sue villaluazo?	GET event FILTER event.calendar eq Professional FILTER event.hasAttachments eq False FILTER event.organizer eq Sue Villaluazo
+What is the first event after Monday?	GET event FILTER event.start gt Monday ORDERBY event.start asc TOP 1
+Provide the list of events about Fishing areas that ended on last Saturday without attachments.	GET event FILTER event.end eq last Saturday FILTER event.hasAttachments eq False SEARCH Fishing areas
+List out the high important events without attachments starting from oldest to newest order.	GET event FILTER event.hasAttachments eq False FILTER event.importance eq High ORDERBY event.start asc
+Give me the less important events I have in conf room 3385 that started after last Tuesday.	GET event FILTER event.importance eq Low FILTER event.location eq Conf Room 3385 FILTER event.start gt last Tuesday
+Please provide me the list of events of competition category located at conf room 4258 order them by start time  newest to oldest.	GET event FILTER event.categories eq competition FILTER event.location eq Conf Room 4258 ORDERBY event.start desc
+What are the important events I have with attachment in the home calendar?	GET event FILTER event.calendar eq Home FILTER event.hasAttachments eq True FILTER event.importance eq High
+What are the events without attachments in other appointments calendar starting on Sunday?	GET event FILTER event.calendar eq OtherAppointments FILTER event.hasAttachments eq False FILTER event.start eq Sunday
+List out the low important events without attachments ordered by start time newest to oldest.	GET event FILTER event.hasAttachments eq False FILTER event.importance eq Low ORDERBY event.start desc
+Provide me the low important events organized by cherelle yager starting this month.	GET event FILTER event.importance eq Low FILTER event.organizer eq Cherelle Yager FILTER event.start eq this month
+List out the meeting that in Erika's office which have attachments that are under the Europe category.	GET event FILTER event.categories eq Europe FILTER event.hasAttachments eq True FILTER event.location eq Erika's office
+List out the less important events I have in the security category ordered by start time newest to oldest.	GET event FILTER event.categories eq security FILTER event.importance eq Low ORDERBY event.start desc
+List out the events I have about social networks in the outlook calendar that started last month.	GET event FILTER event.calendar eq Outlook FILTER event.start eq last month SEARCH social networks
+What are the important meetings I have at Orville's office ordered by start time newest to oldest?	GET event FILTER event.importance eq High FILTER event.location eq Orville's office ORDERBY event.start desc
+List out the low important events about SCHISTOCERCA GREGARIA starting tomorrow.	GET event FILTER event.importance eq Low FILTER event.start eq tomorrow SEARCH SCHISTOCERCA GREGARIA
+What are the less important events I have about Information hiding in status category?	GET event FILTER event.categories eq status FILTER event.importance eq Low SEARCH Information hiding
+Tell me about the events I have without attachments in day category ordered by start time from newest to oldest?	GET event FILTER event.categories eq day FILTER event.hasAttachments eq False ORDERBY event.start desc
+Provide me the events having attachments which are organized by dewey strutynski and will start after next Wednesday.	GET event FILTER event.hasAttachments eq True FILTER event.organizer eq Dewey Strutynski FILTER event.start gt next Wednesday
+Tell me about the meetings having low importance that started after last thursday at conf room 1295.	GET event FILTER event.importance eq Low FILTER event.location eq Conf Room 1295 FILTER event.start gt last Thursday
+Give me the number of events that organized by moon derer start next sunday.	GET event COUNT FILTER event.organizer eq Moon Derer FILTER event.start lt next Sunday
+What is the number of events without attachments having end time on next monday?	GET event COUNT FILTER event.end eq next Monday FILTER event.hasAttachments eq False
+What are the events I have with attachment in the competitive analysis category starting after this month?	GET event FILTER event.categories eq competitive analysis FILTER event.hasAttachments eq True FILTER event.start gt this month
+Give me the less important events I have in my calendar before next year.	GET event FILTER event.calendar eq Personal FILTER event.importance eq Low FILTER event.start lt next year
+Provide me the list of high important meetings arranged in Roselia's office that were started before this month.	GET event FILTER event.importance eq High FILTER event.location eq Roselia's office FILTER event.start lt this month
+List out the events about Data cleansing starting from oldest to newest order without attachments.	GET event FILTER event.hasAttachments eq False ORDERBY event.start asc SEARCH Data cleansing
+What are the low important events about SCHISTOCERCA GREGARIA starting tomorrow?	GET event FILTER event.importance eq Low FILTER event.start eq tomorrow SEARCH SCHISTOCERCA GREGARIA
+Give me the low important events starting after next Tuesday from oldest to newest order.	GET event FILTER event.importance eq Low FILTER event.start gt next Tuesday ORDERBY event.start asc
+List out the events I have in my calendar about crystallography that started last month.	GET event FILTER event.calendar eq Personal FILTER event.start eq last month SEARCH crystallography
+List out the events I have in holidays calendar that started last Tuesday in the order oldest to newest.	GET event FILTER event.calendar eq Holidays FILTER event.start eq last Tuesday ORDERBY event.start asc
+List the events about Grammar induction that will start after tomorrow ordered by start time oldest to newest.	GET event FILTER event.start gt tomorrow ORDERBY event.start asc SEARCH Grammar induction
+List out the low important events in japan category ordered by start time oldest to newest.	GET event FILTER event.categories eq Japan FILTER event.importance eq Low ORDERBY event.start asc
+What are the events about Exports starting tomorrow without attachments?	GET event FILTER event.hasAttachments eq False FILTER event.start eq tomorrow SEARCH Exports
+Provide me the low important events with attachments taking place at gilberto's office.	GET event FILTER event.hasAttachments eq True FILTER event.importance eq Low FILTER event.location eq Gilberto's office
+Provide me the first 66 events starting before Saturday.	GET event FILTER event.start lt Saturday ORDERBY event.start asc TOP 66
+List out the events without attachments starting before next Wednesday organized by dillon gavilanes.	GET event FILTER event.hasAttachments eq False FILTER event.organizer eq Dillon Gavilanes FILTER event.start lt next Wednesday
+List out the number of events organized by bill blaske starting from monday.	GET event COUNT FILTER event.organizer eq Bill Blaske FILTER event.start eq Monday
+List out the events without attachments about Prototype ending last Monday.	GET event FILTER event.end eq last Monday FILTER event.hasAttachments eq False SEARCH Prototype
+What are the events in my friends calendar falling under plan category ending this Friday?	GET event FILTER event.calendar eq Friends FILTER event.categories eq plan FILTER event.end eq Friday
+How many events with attachments are at noah's office?	GET event COUNT FILTER event.hasAttachments eq True FILTER event.location eq Noah's office
+Give me the first event I have with attachment.	GET event FILTER event.hasAttachments eq True ORDERBY event.start asc TOP 1
+Provide the meetings that I have today starting now of security categories.	GET event FILTER event.categories eq security FILTER event.start eq today FILTER event.start lt now
+Give me the number of events that will end next Tuesday.	GET event COUNT FILTER event.end eq next Tuesday FILTER event.importance eq Low
+List out the events of status category organized by Jude Dulemba and located at Darrel's office.	GET event FILTER event.categories eq status FILTER event.location eq Darrel's office FILTER event.organizer eq Jude Dulemba
+Tell me about the events I have without attachments starting from this month ordered by start time from oldest to newest.	GET event FILTER event.hasAttachments eq False FILTER event.start eq this month ORDERBY event.start asc
+List the important events about personalize web search with attachments.	GET event FILTER event.hasAttachments eq True FILTER event.importance eq High SEARCH personalize web search
+Please provide me the last event I have in the friends calendar.	GET event FILTER event.calendar eq Friends ORDERBY event.start desc TOP 1
+Provide me the events without attachments in other appointments calendar that starts on Sunday.	GET event FILTER event.calendar eq OtherAppointments FILTER event.hasAttachments eq False FILTER event.start eq Sunday
+Provide me high importance events  in documentation categories by newest to oldest order.	GET event FILTER event.categories eq Documentation FILTER event.importance eq High ORDERBY event.start desc
+What are the low important events in home calendar starting after Friday?	GET event FILTER event.calendar eq Home FILTER event.importance eq Low FILTER event.start gt Friday
+What meetings do I have  that organized by barabara goolia started before now and ends today?	GET event FILTER event.end eq today FILTER event.organizer eq Barabara Goolia FILTER event.start lt now
+List out the events starting after Friday from newest to oldest order organized by kelsey neiderhiser.	GET event FILTER event.organizer eq Kelsey Neiderhiser FILTER event.start gt Friday ORDERBY event.start desc
+List out the events that held at Petra's office organized by Genesis Shepley that ended last week.	GET event FILTER event.end eq last week FILTER event.location eq Petra's office FILTER event.organizer eq Genesis Shepley
+Give me the events invitation received from pat myrum having low importance ordered by start time from oldest to newest.	GET event FILTER event.importance eq Low FILTER event.organizer eq Pat Myrum ORDERBY event.start asc
+What are the events starting after now and ending today with attachments?	GET event FILTER event.end eq today FILTER event.hasAttachments eq True FILTER event.start gt now
+Tell me about the meetings organized by aletha fall which ends next thursday ordered by start time from newest to oldest.	GET event FILTER event.end eq next Thursday FILTER event.organizer eq Aletha Fall ORDERBY event.start desc
+Find the low important events regarding imitation that has no attachments.	GET event FILTER event.hasAttachments eq False FILTER event.importance eq Low SEARCH imitation
+List out the low important events with attachments starting from newest to oldest order.	GET event FILTER event.hasAttachments eq True FILTER event.importance eq Low ORDERBY event.start desc
+Tell me about the important events about BROWSE PLANTS which started last sunday.	GET event FILTER event.importance eq High FILTER event.start eq last Sunday SEARCH BROWSE PLANTS
+List the low important events starting next Wednesday organized by august kolikas.	GET event FILTER event.importance eq Low FILTER event.organizer eq August Kolikas FILTER event.start eq next Wednesday
+Provide me the events in my professional calendar starting from oldest to newest order taking place at conf room 4576.	GET event FILTER event.calendar eq Professional FILTER event.location eq Conf Room 4576 ORDERBY event.start asc
+How many events in friends calendar started after last Thursday ?	GET event COUNT FILTER event.calendar eq Friends FILTER event.start gt last Thursday
+List the events in other appointments calendar falling under database categories and organized by terence vanoflen.	GET event FILTER event.calendar eq OtherAppointments FILTER event.categories eq Database FILTER event.organizer eq Terence Vanoflen
+What meetings did I have with attachments having high importance ordered by sent time from oldest to newest?	GET event FILTER event.hasAttachments eq True FILTER event.importance eq High ORDERBY event.start asc
+List the events with attachments at fernande's office that fall under 2002 categories.	GET event FILTER event.categories eq 2002 FILTER event.hasAttachments eq True FILTER event.location eq Fernande's office
+What are the events started after last Sunday falls under misc category ordered by newest to oldest.	GET event FILTER event.categories eq misc FILTER event.start gt last Sunday ORDERBY event.start desc
+Give me the first important event.	GET event FILTER event.importance eq High ORDERBY event.start asc TOP 1
+What are the events in google calendar starting before next week at lon's office?	GET event FILTER event.calendar eq Google FILTER event.location eq Lon's office FILTER event.start lt next week
+List out the events starting today after now from newest to oldest order.	GET event FILTER event.start eq today FILTER event.start gt now ORDERBY event.start desc
+List out the low important events with attachments that are arranged in Corinne's office.	GET event FILTER event.hasAttachments eq True FILTER event.importance eq Low FILTER event.location eq Corinne's office
+What meetings did I have of competitive analysis categories that started last monday ordered by start time from most recent to oldest?	GET event FILTER event.categories eq competitive analysis FILTER event.start eq last Monday ORDERBY event.start desc
+How many events I have with attachment in day category?	GET event COUNT FILTER event.categories eq day FILTER event.hasAttachments eq True
+Provide me the last event that started before Monday.	GET event FILTER event.start lt Monday ORDERBY event.start desc TOP 1
+What important meetings did I have without attachments which are starting after today.	GET event FILTER event.hasAttachments eq False FILTER event.importance eq High FILTER event.start gt today
+Please provide the list of meetings having no attachments that starts after now and ending today.	GET event FILTER event.end eq today FILTER event.hasAttachments eq False FILTER event.start gt now
+List the events I had without attachments about pthinc ordered by start time newest to oldest.	GET event FILTER event.hasAttachments eq False ORDERBY event.start desc SEARCH pthinc
+Give me events about Mathematical analysis in other appointments calendar that started last Monday.	GET event FILTER event.calendar eq OtherAppointments FILTER event.start eq last Monday SEARCH Mathematical analysis
+Find top 32 events of system categories that ordered by start time in ascending manner.	GET event FILTER event.categories eq systems ORDERBY event.start asc TOP 32
+Provide me the last event with attachments taking place at rosemarie's office.	GET event FILTER event.hasAttachments eq True FILTER event.location eq Rosemarie's office ORDERBY event.start desc TOP 1
+Give me the events with attachments falling under photos category starting from newest to oldest order.	GET event FILTER event.categories eq photos FILTER event.hasAttachments eq True ORDERBY event.start desc
+What are the events starting after next month that have no attachments and are marked low importance?	GET event FILTER event.hasAttachments eq False FILTER event.importance eq Low FILTER event.start gt next month
+List out the important meetings I have about benchmark in the client calendar.	GET event FILTER event.calendar eq Clients FILTER event.importance eq High SEARCH benchmark
+How many events without attachments are organized by jazmin landberg?	GET event COUNT FILTER event.hasAttachments eq False FILTER event.organizer eq Jazmin Landberg
+How many events I have about POLLUTION that started before last year?	GET event COUNT FILTER event.start lt last year SEARCH POLLUTION
+How many important events are without attachments?	GET event COUNT FILTER event.hasAttachments eq False FILTER event.importance eq High
+Please provide the events I have with the keyword share and without attachment at Shira's office.	GET event FILTER event.hasAttachments eq False FILTER event.location eq Shira's office SEARCH share
+List out the less important events I have without attachment that are ending next year.	GET event FILTER event.end eq next year FILTER event.hasAttachments eq False FILTER event.importance eq Low
+Give me the list of important meetings I have at Taryn's office and order them by start time oldest to newest.	GET event FILTER event.importance eq High FILTER event.location eq Taryn's office ORDERBY event.start asc
+Give me the high important events organized by margery swink taking place at conf room 1250. 	GET event FILTER event.importance eq High FILTER event.location eq Conf Room 1250 FILTER event.organizer eq Margery Swink
+Tell me about the meetings I have with low importance organized by vivan jezierski starting after saturday.	GET event FILTER event.importance eq Low FILTER event.organizer eq Vivan Jezierski FILTER event.start gt Saturday
+What is the starting time of first event?	GET event ORDERBY event.start asc TOP 1
+What events did I have in google calendar organized by rhonda lotta which started before next year?	GET event FILTER event.calendar eq Google FILTER event.organizer eq Rhonda Lotta FILTER event.start lt next year
+List the events about RODENTS in shared calender ordered by start time newest to oldest.	GET event FILTER event.calendar eq Shared ORDERBY event.start desc SEARCH RODENTS
+Find the last event organized by carina unterkofler .	GET event FILTER event.organizer eq Carina Unterkofler ORDERBY event.start desc TOP 1
+List out the events without attachments that are organized by Johnny Spartley arranged in descending order of their start time.	GET event FILTER event.hasAttachments eq False FILTER event.organizer eq Johnny Spratley ORDERBY event.start desc
+How many events I have about sidechains with attachment?	GET event COUNT FILTER event.hasAttachments eq True SEARCH sidechains
+List out the events I have without attachment in the simulation category at Alana's office.	GET event FILTER event.categories eq simulation FILTER event.hasAttachments eq False FILTER event.location eq Alana's office
+What is the number of events starting after now today?	GET event COUNT FILTER event.start eq today FILTER event.start gt now
+What are the events I have with the keyword linkage ordered by start time newest to oldest and having no attachment?	GET event FILTER event.hasAttachments eq False ORDERBY event.start desc SEARCH linkage
+Give me the list of events having attachments that are under the product category ordered by their start time from newest to oldest.	GET event FILTER event.categories eq product FILTER event.hasAttachments eq True ORDERBY event.start desc
+What are the events I have with the keyword Data Modeling starting Tuesday in the order newest to oldest?	GET event FILTER event.start eq Tuesday ORDERBY event.start desc SEARCH Data modeling
+Provide me the events about user-centric one starting before this week organized by leeanna goldklang. 	GET event FILTER event.organizer eq Leeanna Goldklang FILTER event.start lt this week SEARCH user-centric one
+How many events about Bioreactors are there with attachments?	GET event COUNT FILTER event.hasAttachments eq True SEARCH Bioreactors
+List out the meetings that are about authority information without attachments and will start after next Tuesday. 	GET event FILTER event.hasAttachments eq False FILTER event.start gt next Tuesday SEARCH authority information
+What are the events in sales category that started after last month ordered by start time oldest to newest?	GET event FILTER event.categories eq Sales FILTER event.start gt last month ORDERBY event.start asc
+How many events started after last Saturday at nola's office?	GET event COUNT FILTER event.location eq Nola's office FILTER event.start gt last Saturday
+What are the low important events in personal calender organized by lael houben?	GET event FILTER event.calendar eq Personal FILTER event.importance eq Low FILTER event.organizer eq Lael Houben
+Find the low importance events about  bidding mechanism that falls in plan categories.	GET event FILTER event.categories eq plan FILTER event.importance eq Low SEARCH bidding mechanism
+How many events do I have without attachments in 2001 category?	GET event COUNT FILTER event.categories eq 2001 FILTER event.hasAttachments eq False
+Give me the meeting invitation received from julia oreskovich without attachments started after last tuesday in ascending order of the start time.	GET event FILTER event.hasAttachments eq False FILTER event.organizer eq Julia Oreskovich FILTER event.start gt last Tuesday ORDERBY event.start asc
+What are the low important events Started on Friday organized by  so zybia?	GET event FILTER event.importance eq Low FILTER event.organizer eq So Zybia FILTER event.start eq Friday
+List the events without attachments at laquita's office ordered by start time newest to oldest.	GET event FILTER event.hasAttachments eq False FILTER event.location eq Laquita's office ORDERBY event.start desc
+What are the events about Mathematical analysis in other appointments calendar that started last Monday?	GET event FILTER event.calendar eq OtherAppointments FILTER event.start eq last Monday SEARCH Mathematical analysis
+Which are the low important meetings with attachments that are organized in Corinne's office?	GET event FILTER event.hasAttachments eq True FILTER event.importance eq Low FILTER event.location eq Corinne's office
+List out the high important events starting after next Thursday from oldest to newest order.	GET event FILTER event.importance eq High FILTER event.start gt next Thursday ORDERBY event.start asc
+What are the events without attachments about likelihood ordered by start time newest to oldest?	GET event FILTER event.hasAttachments eq False ORDERBY event.start desc SEARCH likelihood
+Give me the high important events falling under simulation category ended last week.	GET event FILTER event.categories eq simulation FILTER event.end eq last week FILTER event.importance eq High
+Which are the meetings without attachments that are under the future category and scheduled in conf room 3147?	GET event FILTER event.categories eq future FILTER event.hasAttachments eq False FILTER event.location eq Conf Room 3147
+Mention the number of less important events I have in the conf room 1641.	GET event COUNT FILTER event.importance eq Low FILTER event.location eq Conf Room 1641
+Provide the list of events about viral market marked under high importance, arrange them in ascending order of start time.	GET event FILTER event.importance eq High ORDERBY event.start asc SEARCH viral market
+Which are the last 77 events without attachments?	GET event FILTER event.hasAttachments eq False ORDERBY event.start desc TOP 77
+List out the events scheduled at toshiko's office that will start now on-wards today.	GET event FILTER event.location eq Toshiko's office FILTER event.start eq today FILTER event.start gt now
+List out the events that started before now and going to end today in the order newest to oldest.	GET event FILTER event.end eq today FILTER event.start lt now ORDERBY event.start desc
+What are the events I have in the planning category started before last week and in the order newest to oldest?	GET event FILTER event.categories eq Planning FILTER event.start lt last week ORDERBY event.start desc
+Show me the attachments and attendees of the meetings started after last weekend.	GET event FILTER event.start gt last weekend
+What is the last event organized by vivienne burtless?	GET event FILTER event.organizer eq Vivienne Burtless ORDERBY event.start desc TOP 1
+List out the events that will start today after now at Thomasina's office.	GET event FILTER event.location eq Thomasina's office FILTER event.start eq today FILTER event.start gt now
+Which high importance events starts on next Monday having  innetwork aggregation keywords?	GET event FILTER event.importance eq High FILTER event.start eq next Monday SEARCH innetwork aggregation
+How many events organized by jesica fregoe in server category?	GET event COUNT FILTER event.categories eq server FILTER event.organizer eq Jesica Fregoe
+What are the events about sublist materialization organized by dot dieball that will start after tomorrow?	GET event FILTER event.organizer eq Dot Dieball FILTER event.start gt tomorrow SEARCH sublist materialization
+What are the 15 meetings that have started before this month arranged in order from newest to oldest?	GET event FILTER event.start lt this month ORDERBY event.start desc TOP 15

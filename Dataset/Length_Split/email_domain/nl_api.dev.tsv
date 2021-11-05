@@ -1,0 +1,860 @@
+Which are the unread emails I have received in q2-2001 category having no attachments?	GET message FILTER message.categories eq Q2-2001 FILTER message.hasAttachments eq False FILTER message.isRead eq False
+What are the emails I have sent from oldest to newest order having attachments about ranked retrieval system?	GET message FILTER message.hasAttachments eq True ORDERBY message.sentDateTime asc SEARCH ranked retrieval system
+Tell me about the last email I have sent about secure multi-party computation.	GET message ORDERBY message.sentDateTime desc SEARCH secure multi-party computation TOP 1
+How many emails I have about correctness guarantee without attachment?	GET message COUNT FILTER message.hasAttachments eq False SEARCH correctness guarantee
+How many emails with attachment in send.com category and from  Jamaal Kusko ?	GET message FILTER message.categories eq Send.com FILTER message.from eq Jamaal Kusko FILTER message.hasAttachments eq True
+Which are the read emails I have with high importance having no attachments?	GET message FILTER message.hasAttachments eq False FILTER message.importance eq High FILTER message.isRead eq True
+Who is the recipient of first email sent?	GET message ORDERBY message.sentDateTime asc TOP 1
+List out emails I received today in  infolio category and still unread.	GET message FILTER message.categories eq infolio FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+Give me the emails without attachments that are under reps category and are about job scheduling.	GET message FILTER message.categories eq Reps FILTER message.hasAttachments eq False SEARCH job scheduling
+Give me the emails I received today from yong kovack in ascending manner.	GET message FILTER message.from eq Yong Kovack FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc
+List the emails I have received today about Object composition ordered by received time from oldest to newest.	GET message FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc SEARCH Object composition
+What emails I have received under oracle backup from Edie Debenedittis which are marked as unread?	GET message FILTER message.categories eq Oracle Backup FILTER message.from eq Edie Debenedittis FILTER message.isRead eq False
+List of emails I received in ascending order with low importance from maryalice bellin.	GET message FILTER message.from eq Maryalice Bellin FILTER message.importance eq Low ORDERBY message.receivedDateTime asc
+What are the emails I received from marcell fittje with attachment and marked as read?	GET message FILTER message.from eq Marcell Fittje FILTER message.hasAttachments eq True FILTER message.isRead eq True
+What is the number of emails that I received today and are marked as read?	GET message COUNT FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+Provide the unread emails received today starting from newest to oldest.	GET message FILTER message.isRead eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+List out emails received today marked as read ordered by receive time oldest to newest.	GET message FILTER message.isRead eq True FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc
+What emails I received with attachment from kattie cicala ordered by oldest to newest?	GET message FILTER message.from eq Kattie Cicala FILTER message.hasAttachments eq True ORDERBY message.receivedDateTime asc
+When did I sent my first email with no attachment?	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime asc TOP 1
+Provide a list of emails that are under the category of leads to sales that were sent by edward etheridge arranged in order of received time from oldest to newest.	GET message FILTER message.categories eq Leads to Sales FILTER message.from eq Edward Etheridge ORDERBY message.receivedDateTime asc
+Give me the first email I sent in the *@_new_website category.	GET message FILTER message.categories eq *@_new_website ORDERBY message.sentDateTime asc TOP 1
+List out total number of emails sent today without attachments.	GET message COUNT FILTER message.hasAttachments eq False FILTER message.sentDateTime eq today
+Which is the last email sent without attachments?	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime desc TOP 1
+Which are the emails I sent today with low importance ordered by sent time from newest to oldest?	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc
+To whom did I send my Last email ordered by sent time  from newest to oldest?	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the list of emails fall in world bank categories that I received today which marked as read.	GET message FILTER message.categories eq WorldBank FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+What was the  last email I sent in carlos development category?	GET message FILTER message.categories eq Carlos Development ORDERBY message.sentDateTime desc TOP 1
+List out the low importance emails I sent today from newest to oldest order.	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc
+List out read emails those I received from  riva mosena about mixed-query situation .	GET message FILTER message.from eq Riva Mosena FILTER message.isRead eq True SEARCH mixed-query situation
+What ziprealty category emails I sent today in the order newest to oldest?	GET message FILTER message.categories eq ziprealty FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc
+List out the high importance emails I have without attachments that are marked as unread.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq High FILTER message.isRead eq False
+Give me the emails I have received from gaynell gelo from oldest to newest order without attachments.	GET message FILTER message.from eq Gaynell Gelo FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime asc
+Which is the first email I have received from yvette droegmiller?	GET message FILTER message.from eq Yvette Droegmiller ORDERBY message.receivedDateTime asc TOP 1
+What are the high importance emails I have received from cecilia fromdahl about Price support?	GET message FILTER message.from eq Cecilia Fromdahl FILTER message.importance eq High SEARCH Price support
+What is the last email I sent with attachments?	GET message FILTER message.hasAttachments eq True ORDERBY message.sentDateTime desc TOP 1
+List out emails I received in gene category with attachment ordered by oldest to newest.	GET message FILTER message.categories eq Gene FILTER message.hasAttachments eq True ORDERBY message.receivedDateTime asc
+Which are the last 12 emails I have with high importance?	GET message FILTER message.importance eq High ORDERBY message.sentDateTime desc TOP 12
+Give me the number of low importance emails that I have sent today.	GET message COUNT FILTER message.importance eq Low FILTER message.sentDateTime eq today
+Tell me about the first 36 emails I received today.	GET message FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc TOP 36
+What was the first email I sent about privacy requirement ?	GET message ORDERBY message.sentDateTime asc SEARCH privacy requirement TOP 1
+Which are the emails I have received about interactive retrieval with low importance ordered by received time from newest to oldest?	GET message FILTER message.importance eq Low ORDERBY message.receivedDateTime desc SEARCH interactive retrieval
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Tell me about the read emails I have received from maryjane borror with no attachments.	GET message FILTER message.from eq Maryjane Borror FILTER message.hasAttachments eq False FILTER message.isRead eq True
+How many emails I have received from shaunda beyea without attachments?	GET message COUNT FILTER message.from eq Shaunda Beyea FILTER message.hasAttachments eq False
+Which are the read emails I have with low importance having attachments?	GET message FILTER message.hasAttachments eq False FILTER message.importance eq Low FILTER message.isRead eq True
+What are the emails I sent today in chapman online category without attachment?	GET message FILTER message.categories eq Chapman Online FILTER message.hasAttachments eq False FILTER message.sentDateTime eq today
+List the emails of low importance that are sent by me today and contains word Seaweeds.	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today SEARCH Seaweeds
+How many emails I have received from francesca grizzel with attachments?	GET message COUNT FILTER message.from eq Francesca Grizzel FILTER message.hasAttachments eq True
+Which are the emails I have sent in aug category having low importance ordered by sent time from newest to oldest?	GET message FILTER message.categories eq Aug FILTER message.importance eq Low ORDERBY message.sentDateTime desc
+List the unread emails having attachments received from Azzie Schmand.	GET message FILTER message.from eq Azzie Schmand FILTER message.hasAttachments eq True FILTER message.isRead eq False
+Tell me about the emails I have received in ops pagers category with low importance ordered by received time from oldest to newest.	GET message FILTER message.categories eq ops pagers FILTER message.importance eq Low ORDERBY message.receivedDateTime asc
+Which emails do I received from jamika wincapaw about star3 which marked as read?	GET message FILTER message.from eq Jamika Wincapaw FILTER message.isRead eq True SEARCH star3
+List out the emails I have sent in low importance with no attachments ordered by sent time from oldest to newest.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq Low ORDERBY message.sentDateTime asc
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+List the emails I received today from carlotta fu.	GET message COUNT FILTER message.from eq Carlotta Fu FILTER message.receivedDateTime eq today
+What unread emails I received today ordered by newest to oldest?	GET message FILTER message.isRead eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+To whom did I sent the first email?	GET message ORDERBY message.sentDateTime asc TOP 1
+List the emails in descending order which marked as unread that I received today.	GET message FILTER message.isRead eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+What are the emails that I sent today in the order oldest to newest about Water harvesting?	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc SEARCH Water harvesting
+Tell me about the read emails I have with no attachments and low importance.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq Low FILTER message.isRead eq True
+Give me the unread emails having low importance I received today.	GET message FILTER message.importance eq Low FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+Give me the unread emails I have received today about  Communication technology.	GET message FILTER message.isRead eq False FILTER message.receivedDateTime eq today SEARCH Communication technology
+List out emails in report samples category with the keyword gunung palung without attachment.	GET message FILTER message.categories eq report samples FILTER message.hasAttachments eq False SEARCH gunung palung
+What emails are sent today with low importance under cyber cafe's category?	GET message FILTER message.categories eq Cyber Cafe's FILTER message.importance eq Low FILTER message.sentDateTime eq today
+Send me a number about unread emails received from Deloise Figgins.	GET message COUNT FILTER message.from eq Deloise Figgins FILTER message.isRead eq False
+What is the emailI have sent lying under david watson category?	GET message FILTER message.categories eq David Watson ORDERBY message.sentDateTime desc TOP 1
+What are the emails I have about Forest without attachment and are marked as read?	GET message FILTER message.hasAttachments eq False FILTER message.isRead eq True SEARCH Forests
+Give me the emails that I sent today about fifth contextdimension group-context ordered by sent time from newest to oldest.	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc SEARCH fifth contextdimension group-context
+What are the emails about supporter of charity I received  ascending ordered by time with no attachments?	GET message FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime asc SEARCH supporter of charity
+List out last email received that is marked as read.	GET message FILTER message.isRead eq True ORDERBY message.receivedDateTime desc TOP 1
+What are the first 81 emails I have received which lies under omnipod category?	GET message FILTER message.categories eq Omnipod ORDERBY message.receivedDateTime asc TOP 81
+To who did i sent my first email?	GET message ORDERBY message.sentDateTime asc TOP 1
+How many emails I have from argentina mowatt about INTERCROPPING?	GET message COUNT FILTER message.from eq Argentina Mowatt SEARCH INTERCROPPING
+Tell me about the read emails I have received from loni ferraiz with attachments.	GET message FILTER message.from eq Loni Ferraiz FILTER message.hasAttachments eq True FILTER message.isRead eq True
+How many emails I have which are marked as unread and are of low importance?	GET message COUNT FILTER message.importance eq Low FILTER message.isRead eq False
+How many unread emails do I have with attachment?	GET message COUNT FILTER message.hasAttachments eq True FILTER message.isRead eq False
+What are the high importance emails in the fairmarkets categories with attachments?	GET message FILTER message.categories eq Fairmarkets FILTER message.hasAttachments eq True FILTER message.importance eq High
+Tell me about the read emails I have in adress-personal category with no attachments.	GET message FILTER message.categories eq adress-personal FILTER message.hasAttachments eq False FILTER message.isRead eq True
+List out the first  60 emails I have sent in se stuff category.	GET message FILTER message.categories eq SE Stuff ORDERBY message.sentDateTime asc TOP 60
+What emails I have received today with attachments ordered by receive time newest to oldest?	GET message FILTER message.hasAttachments eq True FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+What are the low importance emails that I have received today with attachment?	GET message FILTER message.hasAttachments eq True FILTER message.importance eq Low FILTER message.receivedDateTime eq today
+Please provide the emails with no attachment that I have received today and are marked as read.	GET message FILTER message.hasAttachments eq False FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+How many emails I have received from janette laronda about Sorting?	GET message COUNT FILTER message.from eq Janette Laronda SEARCH Sorting
+How many emails I have received from ingeborg scheuren with low importance?	GET message COUNT FILTER message.from eq Ingeborg Scheuren FILTER message.importance eq Low
+What emails I have received from Jin Freberg today about Animal nutrition?	GET message FILTER message.from eq Jin Freberg FILTER message.receivedDateTime eq today SEARCH Animal nutrition
+Give me the first email I sent with attachments.	GET message FILTER message.hasAttachments eq True ORDERBY message.sentDateTime asc TOP 1
+Give me the list of read emails with low importance in descending order with received time.	GET message FILTER message.importance eq Low FILTER message.isRead eq True ORDERBY message.receivedDateTime desc
+Give me the number of emails I received from alona inbody with attachments.	GET message COUNT FILTER message.from eq Alona Inbody FILTER message.hasAttachments eq True
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Give me the list of high importance emails that I received ordered from newest to oldest with no attachments.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq High ORDERBY message.receivedDateTime desc
+Provide the number of emails that have attachments and are under quote process category.	GET message COUNT FILTER message.categories eq Quote Process FILTER message.hasAttachments eq True
+What emails are marked as read and having attachment in archive2001 category ?	GET message FILTER message.categories eq archive2001 FILTER message.hasAttachments eq True FILTER message.isRead eq True
+Which are the email I have received about Fuzzy string searching having attachments ordered by received time from newest to oldest?	GET message FILTER message.hasAttachments eq True ORDERBY message.receivedDateTime desc SEARCH Fuzzy string searching
+What are the emails I have sent today about IFAD ordered by sent time from oldest to newest?	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc SEARCH IFAD
+List the first email I received without attachment.	GET message FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime asc TOP 1
+What is the first email I have sent today?	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc TOP 1
+Tell me about the first 88 emails I received containing stop word keyword.	GET message ORDERBY message.receivedDateTime asc SEARCH stop word TOP 88
+Provide me the first 92 emails I received which lies under paine webber category.	GET message FILTER message.categories eq PaineWebber ORDERBY message.receivedDateTime asc TOP 92
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Give me the emails that I sent today about fifth contextdimension group-context ordered by sent time from newest to oldest.	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc SEARCH fifth contextdimension group-context
+Which are the emails I have sent in aug category having low importance ordered by sent time from newest to oldest?	GET message FILTER message.categories eq Aug FILTER message.importance eq Low ORDERBY message.sentDateTime desc
+What emails I have received today with attachments ordered by receive time newest to oldest?	GET message FILTER message.hasAttachments eq True FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+What emails I have received today with attachments ordered by receive time newest to oldest?	GET message FILTER message.hasAttachments eq True FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+Provide the unread emails received today starting from newest to oldest.	GET message FILTER message.isRead eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+Provide the unread emails received today starting from newest to oldest.	GET message FILTER message.isRead eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the emails that I sent today about fifth contextdimension group-context ordered by sent time from newest to oldest.	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc SEARCH fifth contextdimension group-context
+What unread emails I received today ordered by newest to oldest?	GET message FILTER message.isRead eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+List out emails in report samples category with the keyword gunung palung without attachment.	GET message FILTER message.categories eq report samples FILTER message.hasAttachments eq False SEARCH gunung palung
+Provide me the first 92 emails I received which lies under paine webber category.	GET message FILTER message.categories eq PaineWebber ORDERBY message.receivedDateTime asc TOP 92
+What emails are sent today with low importance under cyber cafe's category?	GET message FILTER message.categories eq Cyber Cafe's FILTER message.importance eq Low FILTER message.sentDateTime eq today
+List out the first  60 emails I have sent in se stuff category.	GET message FILTER message.categories eq SE Stuff ORDERBY message.sentDateTime asc TOP 60
+Tell me about the read emails I have in adress-personal category with no attachments.	GET message FILTER message.categories eq adress-personal FILTER message.hasAttachments eq False FILTER message.isRead eq True
+List out emails I received in gene category with attachment ordered by oldest to newest.	GET message FILTER message.categories eq Gene FILTER message.hasAttachments eq True ORDERBY message.receivedDateTime asc
+How many emails with attachment in send.com category and from  Jamaal Kusko ?	GET message FILTER message.categories eq Send.com FILTER message.from eq Jamaal Kusko FILTER message.hasAttachments eq True
+What are the high importance emails in the fairmarkets categories with attachments?	GET message FILTER message.categories eq Fairmarkets FILTER message.hasAttachments eq True FILTER message.importance eq High
+List out the first  60 emails I have sent in se stuff category.	GET message FILTER message.categories eq SE Stuff ORDERBY message.sentDateTime asc TOP 60
+What emails I have received under oracle backup from Edie Debenedittis which are marked as unread?	GET message FILTER message.categories eq Oracle Backup FILTER message.from eq Edie Debenedittis FILTER message.isRead eq False
+How many emails I have about correctness guarantee without attachment?	GET message COUNT FILTER message.hasAttachments eq False SEARCH correctness guarantee
+Which emails do I received from jamika wincapaw about star3 which marked as read?	GET message FILTER message.from eq Jamika Wincapaw FILTER message.isRead eq True SEARCH star3
+List out read emails those I received from  riva mosena about mixed-query situation .	GET message FILTER message.from eq Riva Mosena FILTER message.isRead eq True SEARCH mixed-query situation
+List out read emails those I received from  riva mosena about mixed-query situation .	GET message FILTER message.from eq Riva Mosena FILTER message.isRead eq True SEARCH mixed-query situation
+How many emails I have from argentina mowatt about INTERCROPPING?	GET message COUNT FILTER message.from eq Argentina Mowatt SEARCH INTERCROPPING
+List the emails I have received today about Object composition ordered by received time from oldest to newest.	GET message FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc SEARCH Object composition
+Give me the emails that I sent today about fifth contextdimension group-context ordered by sent time from newest to oldest.	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc SEARCH fifth contextdimension group-context
+Which are the emails I have received about interactive retrieval with low importance ordered by received time from newest to oldest?	GET message FILTER message.importance eq Low ORDERBY message.receivedDateTime desc SEARCH interactive retrieval
+What are the emails I have sent today about IFAD ordered by sent time from oldest to newest?	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc SEARCH IFAD
+What was the first email I sent about privacy requirement ?	GET message ORDERBY message.sentDateTime asc SEARCH privacy requirement TOP 1
+List out total number of emails sent today without attachments.	GET message COUNT FILTER message.hasAttachments eq False FILTER message.sentDateTime eq today
+How many emails I have about correctness guarantee without attachment?	GET message COUNT FILTER message.hasAttachments eq False SEARCH correctness guarantee
+How many emails I have received from francesca grizzel with attachments?	GET message COUNT FILTER message.from eq Francesca Grizzel FILTER message.hasAttachments eq True
+How many emails I have about correctness guarantee without attachment?	GET message COUNT FILTER message.hasAttachments eq False SEARCH correctness guarantee
+List the emails I received today from carlotta fu.	GET message COUNT FILTER message.from eq Carlotta Fu FILTER message.receivedDateTime eq today
+How many unread emails do I have with attachment?	GET message COUNT FILTER message.hasAttachments eq True FILTER message.isRead eq False
+How many emails I have from argentina mowatt about INTERCROPPING?	GET message COUNT FILTER message.from eq Argentina Mowatt SEARCH INTERCROPPING
+How many emails I have about correctness guarantee without attachment?	GET message COUNT FILTER message.hasAttachments eq False SEARCH correctness guarantee
+How many emails I have received from francesca grizzel with attachments?	GET message COUNT FILTER message.from eq Francesca Grizzel FILTER message.hasAttachments eq True
+How many emails I have received from shaunda beyea without attachments?	GET message COUNT FILTER message.from eq Shaunda Beyea FILTER message.hasAttachments eq False
+How many emails I have from argentina mowatt about INTERCROPPING?	GET message COUNT FILTER message.from eq Argentina Mowatt SEARCH INTERCROPPING
+How many emails I have from argentina mowatt about INTERCROPPING?	GET message COUNT FILTER message.from eq Argentina Mowatt SEARCH INTERCROPPING
+How many emails I have about correctness guarantee without attachment?	GET message COUNT FILTER message.hasAttachments eq False SEARCH correctness guarantee
+Give me the number of emails I received from alona inbody with attachments.	GET message COUNT FILTER message.from eq Alona Inbody FILTER message.hasAttachments eq True
+How many emails I have received from francesca grizzel with attachments?	GET message COUNT FILTER message.from eq Francesca Grizzel FILTER message.hasAttachments eq True
+How many emails I have received from janette laronda about Sorting?	GET message COUNT FILTER message.from eq Janette Laronda SEARCH Sorting
+How many emails I have about correctness guarantee without attachment?	GET message COUNT FILTER message.hasAttachments eq False SEARCH correctness guarantee
+How many emails I have from argentina mowatt about INTERCROPPING?	GET message COUNT FILTER message.from eq Argentina Mowatt SEARCH INTERCROPPING
+How many unread emails do I have with attachment?	GET message COUNT FILTER message.hasAttachments eq True FILTER message.isRead eq False
+How many emails I have about correctness guarantee without attachment?	GET message COUNT FILTER message.hasAttachments eq False SEARCH correctness guarantee
+How many emails I have which are marked as unread and are of low importance?	GET message COUNT FILTER message.importance eq Low FILTER message.isRead eq False
+How many emails I have which are marked as unread and are of low importance?	GET message COUNT FILTER message.importance eq Low FILTER message.isRead eq False
+Which are the read emails I have with high importance having no attachments?	GET message FILTER message.hasAttachments eq False FILTER message.importance eq High FILTER message.isRead eq True
+Give me the list of high importance emails that I received ordered from newest to oldest with no attachments.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq High ORDERBY message.receivedDateTime desc
+Tell me about the emails I have received in ops pagers category with low importance ordered by received time from oldest to newest.	GET message FILTER message.categories eq ops pagers FILTER message.importance eq Low ORDERBY message.receivedDateTime asc
+Give me the list of high importance emails that I received ordered from newest to oldest with no attachments.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq High ORDERBY message.receivedDateTime desc
+List out the emails I have sent in low importance with no attachments ordered by sent time from oldest to newest.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq Low ORDERBY message.sentDateTime asc
+Give me the number of low importance emails that I have sent today.	GET message COUNT FILTER message.importance eq Low FILTER message.sentDateTime eq today
+Tell me about the read emails I have with no attachments and low importance.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq Low FILTER message.isRead eq True
+What are the low importance emails that I have received today with attachment?	GET message FILTER message.hasAttachments eq True FILTER message.importance eq Low FILTER message.receivedDateTime eq today
+To who did i sent my first email?	GET message ORDERBY message.sentDateTime asc TOP 1
+Who is the recipient of first email sent?	GET message ORDERBY message.sentDateTime asc TOP 1
+Who is the recipient of first email sent?	GET message ORDERBY message.sentDateTime asc TOP 1
+To who did i sent my first email?	GET message ORDERBY message.sentDateTime asc TOP 1
+To whom did I send my Last email ordered by sent time  from newest to oldest?	GET message ORDERBY message.sentDateTime desc TOP 1
+To who did i sent my first email?	GET message ORDERBY message.sentDateTime asc TOP 1
+To whom did I sent the first email?	GET message ORDERBY message.sentDateTime asc TOP 1
+To who did i sent my first email?	GET message ORDERBY message.sentDateTime asc TOP 1
+To whom did I send my Last email ordered by sent time  from newest to oldest?	GET message ORDERBY message.sentDateTime desc TOP 1
+To whom did I send my Last email ordered by sent time  from newest to oldest?	GET message ORDERBY message.sentDateTime desc TOP 1
+Who is the recipient of first email sent?	GET message ORDERBY message.sentDateTime asc TOP 1
+To who did i sent my first email?	GET message ORDERBY message.sentDateTime asc TOP 1
+Who is the recipient of first email sent?	GET message ORDERBY message.sentDateTime asc TOP 1
+Who is the recipient of first email sent?	GET message ORDERBY message.sentDateTime asc TOP 1
+To who did i sent my first email?	GET message ORDERBY message.sentDateTime asc TOP 1
+To who did i sent my first email?	GET message ORDERBY message.sentDateTime asc TOP 1
+Who is the recipient of first email sent?	GET message ORDERBY message.sentDateTime asc TOP 1
+Who is the recipient of first email sent?	GET message ORDERBY message.sentDateTime asc TOP 1
+To who did i sent my first email?	GET message ORDERBY message.sentDateTime asc TOP 1
+To whom did I send my Last email ordered by sent time  from newest to oldest?	GET message ORDERBY message.sentDateTime desc TOP 1
+To whom did I send my Last email ordered by sent time  from newest to oldest?	GET message ORDERBY message.sentDateTime desc TOP 1
+Who is the recipient of first email sent?	GET message ORDERBY message.sentDateTime asc TOP 1
+To who did i sent my first email?	GET message ORDERBY message.sentDateTime asc TOP 1
+To who did i sent my first email?	GET message ORDERBY message.sentDateTime asc TOP 1
+To whom did I sent the first email?	GET message ORDERBY message.sentDateTime asc TOP 1
+Who is the recipient of first email sent?	GET message ORDERBY message.sentDateTime asc TOP 1
+To who did i sent my first email?	GET message ORDERBY message.sentDateTime asc TOP 1
+Who is the recipient of first email sent?	GET message ORDERBY message.sentDateTime asc TOP 1
+To whom did I sent the first email?	GET message ORDERBY message.sentDateTime asc TOP 1
+To who did i sent my first email?	GET message ORDERBY message.sentDateTime asc TOP 1
+To who did i sent my first email?	GET message ORDERBY message.sentDateTime asc TOP 1
+To whom did I send my Last email ordered by sent time  from newest to oldest?	GET message ORDERBY message.sentDateTime desc TOP 1
+To who did i sent my first email?	GET message ORDERBY message.sentDateTime asc TOP 1
+Who is the recipient of first email sent?	GET message ORDERBY message.sentDateTime asc TOP 1
+To who did i sent my first email?	GET message ORDERBY message.sentDateTime asc TOP 1
+To who did i sent my first email?	GET message ORDERBY message.sentDateTime asc TOP 1
+To whom did I send my Last email ordered by sent time  from newest to oldest?	GET message ORDERBY message.sentDateTime desc TOP 1
+To who did i sent my first email?	GET message ORDERBY message.sentDateTime asc TOP 1
+Who is the recipient of first email sent?	GET message ORDERBY message.sentDateTime asc TOP 1
+To who did i sent my first email?	GET message ORDERBY message.sentDateTime asc TOP 1
+What is the number of emails that I received today and are marked as read?	GET message COUNT FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+Provide the unread emails received today starting from newest to oldest.	GET message FILTER message.isRead eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+Provide the unread emails received today starting from newest to oldest.	GET message FILTER message.isRead eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+What emails I have received today with attachments ordered by receive time newest to oldest?	GET message FILTER message.hasAttachments eq True FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+List the emails I received today from carlotta fu.	GET message COUNT FILTER message.from eq Carlotta Fu FILTER message.receivedDateTime eq today
+Provide the unread emails received today starting from newest to oldest.	GET message FILTER message.isRead eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+Please provide the emails with no attachment that I have received today and are marked as read.	GET message FILTER message.hasAttachments eq False FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+List the emails I received today from carlotta fu.	GET message COUNT FILTER message.from eq Carlotta Fu FILTER message.receivedDateTime eq today
+What emails I have received today with attachments ordered by receive time newest to oldest?	GET message FILTER message.hasAttachments eq True FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+List the emails I have received today about Object composition ordered by received time from oldest to newest.	GET message FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc SEARCH Object composition
+What emails I have received today with attachments ordered by receive time newest to oldest?	GET message FILTER message.hasAttachments eq True FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+Please provide the emails with no attachment that I have received today and are marked as read.	GET message FILTER message.hasAttachments eq False FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+Tell me about the first 36 emails I received today.	GET message FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc TOP 36
+Please provide the emails with no attachment that I have received today and are marked as read.	GET message FILTER message.hasAttachments eq False FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+List the emails in descending order which marked as unread that I received today.	GET message FILTER message.isRead eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+List out emails received today marked as read ordered by receive time oldest to newest.	GET message FILTER message.isRead eq True FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc
+Give me the list of emails fall in world bank categories that I received today which marked as read.	GET message FILTER message.categories eq WorldBank FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+List the emails I have received today about Object composition ordered by received time from oldest to newest.	GET message FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc SEARCH Object composition
+What emails I have received today with attachments ordered by receive time newest to oldest?	GET message FILTER message.hasAttachments eq True FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+Provide the unread emails received today starting from newest to oldest.	GET message FILTER message.isRead eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+List out emails I received today in  infolio category and still unread.	GET message FILTER message.categories eq infolio FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+List the emails I received today from carlotta fu.	GET message COUNT FILTER message.from eq Carlotta Fu FILTER message.receivedDateTime eq today
+Provide the unread emails received today starting from newest to oldest.	GET message FILTER message.isRead eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+Provide the unread emails received today starting from newest to oldest.	GET message FILTER message.isRead eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+List the emails I have received today about Object composition ordered by received time from oldest to newest.	GET message FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc SEARCH Object composition
+List the emails I have received today about Object composition ordered by received time from oldest to newest.	GET message FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc SEARCH Object composition
+What is the number of emails that I received today and are marked as read?	GET message COUNT FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+What emails I have received today with attachments ordered by receive time newest to oldest?	GET message FILTER message.hasAttachments eq True FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+List out emails I received today in  infolio category and still unread.	GET message FILTER message.categories eq infolio FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+Give me the list of emails fall in world bank categories that I received today which marked as read.	GET message FILTER message.categories eq WorldBank FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+Give me the emails I received today from yong kovack in ascending manner.	GET message FILTER message.from eq Yong Kovack FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc
+Provide the unread emails received today starting from newest to oldest.	GET message FILTER message.isRead eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+Provide the unread emails received today starting from newest to oldest.	GET message FILTER message.isRead eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+Which is the first email I have received from yvette droegmiller?	GET message FILTER message.from eq Yvette Droegmiller ORDERBY message.receivedDateTime asc TOP 1
+List the emails in descending order which marked as unread that I received today.	GET message FILTER message.isRead eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+Give me the list of read emails with low importance in descending order with received time.	GET message FILTER message.importance eq Low FILTER message.isRead eq True ORDERBY message.receivedDateTime desc
+Tell me about the emails I have received in ops pagers category with low importance ordered by received time from oldest to newest.	GET message FILTER message.categories eq ops pagers FILTER message.importance eq Low ORDERBY message.receivedDateTime asc
+What emails I have received today with attachments ordered by receive time newest to oldest?	GET message FILTER message.hasAttachments eq True FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+Provide me the first 92 emails I received which lies under paine webber category.	GET message FILTER message.categories eq PaineWebber ORDERBY message.receivedDateTime asc TOP 92
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Give me the number of low importance emails that I have sent today.	GET message COUNT FILTER message.importance eq Low FILTER message.sentDateTime eq today
+Give me the emails that I sent today about fifth contextdimension group-context ordered by sent time from newest to oldest.	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc SEARCH fifth contextdimension group-context
+Which are the emails I sent today with low importance ordered by sent time from newest to oldest?	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc
+List out the low importance emails I sent today from newest to oldest order.	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc
+What emails are sent today with low importance under cyber cafe's category?	GET message FILTER message.categories eq Cyber Cafe's FILTER message.importance eq Low FILTER message.sentDateTime eq today
+What ziprealty category emails I sent today in the order newest to oldest?	GET message FILTER message.categories eq ziprealty FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc
+List out total number of emails sent today without attachments.	GET message COUNT FILTER message.hasAttachments eq False FILTER message.sentDateTime eq today
+List out total number of emails sent today without attachments.	GET message COUNT FILTER message.hasAttachments eq False FILTER message.sentDateTime eq today
+Give me the emails that I sent today about fifth contextdimension group-context ordered by sent time from newest to oldest.	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc SEARCH fifth contextdimension group-context
+What are the emails I have sent today about IFAD ordered by sent time from oldest to newest?	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc SEARCH IFAD
+List out total number of emails sent today without attachments.	GET message COUNT FILTER message.hasAttachments eq False FILTER message.sentDateTime eq today
+Give me the emails that I sent today about fifth contextdimension group-context ordered by sent time from newest to oldest.	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc SEARCH fifth contextdimension group-context
+List out total number of emails sent today without attachments.	GET message COUNT FILTER message.hasAttachments eq False FILTER message.sentDateTime eq today
+What is the first email I have sent today?	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc TOP 1
+List out total number of emails sent today without attachments.	GET message COUNT FILTER message.hasAttachments eq False FILTER message.sentDateTime eq today
+Give me the emails that I sent today about fifth contextdimension group-context ordered by sent time from newest to oldest.	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc SEARCH fifth contextdimension group-context
+What are the emails I have sent today about IFAD ordered by sent time from oldest to newest?	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc SEARCH IFAD
+What is the first email I have sent today?	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc TOP 1
+List out the low importance emails I sent today from newest to oldest order.	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc
+Give me the number of low importance emails that I have sent today.	GET message COUNT FILTER message.importance eq Low FILTER message.sentDateTime eq today
+What emails are sent today with low importance under cyber cafe's category?	GET message FILTER message.categories eq Cyber Cafe's FILTER message.importance eq Low FILTER message.sentDateTime eq today
+Give me the number of low importance emails that I have sent today.	GET message COUNT FILTER message.importance eq Low FILTER message.sentDateTime eq today
+Give me the emails that I sent today about fifth contextdimension group-context ordered by sent time from newest to oldest.	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc SEARCH fifth contextdimension group-context
+List the emails of low importance that are sent by me today and contains word Seaweeds.	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today SEARCH Seaweeds
+Give me the number of low importance emails that I have sent today.	GET message COUNT FILTER message.importance eq Low FILTER message.sentDateTime eq today
+What are the emails I sent today in chapman online category without attachment?	GET message FILTER message.categories eq Chapman Online FILTER message.hasAttachments eq False FILTER message.sentDateTime eq today
+Give me the emails that I sent today about fifth contextdimension group-context ordered by sent time from newest to oldest.	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc SEARCH fifth contextdimension group-context
+List the emails of low importance that are sent by me today and contains word Seaweeds.	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today SEARCH Seaweeds
+List out total number of emails sent today without attachments.	GET message COUNT FILTER message.hasAttachments eq False FILTER message.sentDateTime eq today
+What ziprealty category emails I sent today in the order newest to oldest?	GET message FILTER message.categories eq ziprealty FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc
+Give me the emails that I sent today about fifth contextdimension group-context ordered by sent time from newest to oldest.	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc SEARCH fifth contextdimension group-context
+List out total number of emails sent today without attachments.	GET message COUNT FILTER message.hasAttachments eq False FILTER message.sentDateTime eq today
+List the emails of low importance that are sent by me today and contains word Seaweeds.	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today SEARCH Seaweeds
+List out total number of emails sent today without attachments.	GET message COUNT FILTER message.hasAttachments eq False FILTER message.sentDateTime eq today
+Give me the emails that I sent today about fifth contextdimension group-context ordered by sent time from newest to oldest.	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc SEARCH fifth contextdimension group-context
+Give me the number of low importance emails that I have sent today.	GET message COUNT FILTER message.importance eq Low FILTER message.sentDateTime eq today
+What emails are sent today with low importance under cyber cafe's category?	GET message FILTER message.categories eq Cyber Cafe's FILTER message.importance eq Low FILTER message.sentDateTime eq today
+Give me the number of low importance emails that I have sent today.	GET message COUNT FILTER message.importance eq Low FILTER message.sentDateTime eq today
+Give me the number of low importance emails that I have sent today.	GET message COUNT FILTER message.importance eq Low FILTER message.sentDateTime eq today
+What are the emails I have sent today about IFAD ordered by sent time from oldest to newest?	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc SEARCH IFAD
+Give me the number of low importance emails that I have sent today.	GET message COUNT FILTER message.importance eq Low FILTER message.sentDateTime eq today
+What ziprealty category emails I sent today in the order newest to oldest?	GET message FILTER message.categories eq ziprealty FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc
+List out the low importance emails I sent today from newest to oldest order.	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc
+What are the emails I have sent today about IFAD ordered by sent time from oldest to newest?	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc SEARCH IFAD
+List out the low importance emails I sent today from newest to oldest order.	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc
+What ziprealty category emails I sent today in the order newest to oldest?	GET message FILTER message.categories eq ziprealty FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc
+Give me the emails that I sent today about fifth contextdimension group-context ordered by sent time from newest to oldest.	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc SEARCH fifth contextdimension group-context
+What are the emails I have sent today about IFAD ordered by sent time from oldest to newest?	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc SEARCH IFAD
+Give me the emails that I sent today about fifth contextdimension group-context ordered by sent time from newest to oldest.	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc SEARCH fifth contextdimension group-context
+List out total number of emails sent today without attachments.	GET message COUNT FILTER message.hasAttachments eq False FILTER message.sentDateTime eq today
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the last email that I sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+What is the subject of last email I have sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email I received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+List the attachments of the first email that I received.	GET message ORDERBY message.sentDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Tell me the receive time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1

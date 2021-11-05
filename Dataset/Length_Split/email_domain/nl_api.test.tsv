@@ -1,0 +1,983 @@
+Tell me the time of last unread email I have received?	GET message FILTER message.isRead eq False ORDERBY message.receivedDateTime asc TOP 1
+Give me the time of the first email I received that is still unread.	GET message FILTER message.isRead eq False ORDERBY message.receivedDateTime asc TOP 1
+What is the received time of first unread email?  	GET message FILTER message.isRead eq False ORDERBY message.receivedDateTime asc TOP 1
+What are the last 85 read emails I have received with high importance ?	GET message FILTER message.importance eq High FILTER message.isRead eq False ORDERBY message.receivedDateTime desc TOP 85
+What are the last 85 high importance unread emails I have received? 	GET message FILTER message.importance eq High FILTER message.isRead eq False ORDERBY message.receivedDateTime desc TOP 85
+Tell me about the last 85 unread emails I have received with high importance.	GET message FILTER message.importance eq High FILTER message.isRead eq False ORDERBY message.receivedDateTime desc TOP 85
+What are the low importance read emails I have which lies under bugzilla stuff having attachments?	GET message FILTER message.categories eq Bugzilla Stuff FILTER message.hasAttachments eq True FILTER message.importance eq Low FILTER message.isRead eq True
+List out the read emails in bugzilla stuff category with low importance having attachments.	GET message FILTER message.categories eq Bugzilla Stuff FILTER message.hasAttachments eq True FILTER message.importance eq Low FILTER message.isRead eq True
+Provide emails under bugzilla stuff category with attachments which are marked as read and are of low importance.	GET message FILTER message.categories eq Bugzilla Stuff FILTER message.hasAttachments eq True FILTER message.importance eq Low FILTER message.isRead eq True
+Which are the read emails I have in (d) dallas category having attachments with low importance?	GET message FILTER message.categories eq (D) Dallas FILTER message.hasAttachments eq True FILTER message.importance eq Low FILTER message.isRead eq True
+List out the emails I have in (d) dallas category having attachments with low importance.	GET message FILTER message.categories eq (D) Dallas FILTER message.hasAttachments eq True FILTER message.importance eq Low FILTER message.isRead eq True
+List out Low importance read emails I have in (d) dallas category with attachment.	GET message FILTER message.categories eq (D) Dallas FILTER message.hasAttachments eq True FILTER message.importance eq Low FILTER message.isRead eq True
+What are the low importance emails I have in (d) dallas category those having attachment and marked as read?	GET message FILTER message.categories eq (D) Dallas FILTER message.hasAttachments eq True FILTER message.importance eq Low FILTER message.isRead eq True
+How many unread emails I have received today with low importance?	GET message COUNT FILTER message.importance eq High FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+List out the number of emails I have not read having high importance.	GET message COUNT FILTER message.importance eq High FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+How many emails I received today with high importance and still unread?	GET message COUNT FILTER message.importance eq High FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+What is the number of emails I received today with high importance and still unread?	GET message COUNT FILTER message.importance eq High FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+How many low importance emails I have received from donya hamn with attachments?	GET message COUNT FILTER message.from eq Donya Hamn FILTER message.hasAttachments eq True FILTER message.importance eq Low
+List out the low importance emails I have received from donya hamn with attachments.	GET message COUNT FILTER message.from eq Donya Hamn FILTER message.hasAttachments eq True FILTER message.importance eq Low
+How many emails I have received from donya hamn with attachments having low importance ?	GET message COUNT FILTER message.from eq Donya Hamn FILTER message.hasAttachments eq True FILTER message.importance eq Low
+List out the emails I have received from donya hamn with attachments having low importance.	GET message COUNT FILTER message.from eq Donya Hamn FILTER message.hasAttachments eq True FILTER message.importance eq Low
+How many emails are received with high importance today which are marked as unread? 	GET message COUNT FILTER message.importance eq High FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+List out total number of unread emails received today with high importance.	GET message COUNT FILTER message.importance eq High FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+How many emails I received today with high importance and still marked as unread?	GET message COUNT FILTER message.importance eq High FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+What are the number of emails I received today those having high importance and still unread?	GET message COUNT FILTER message.importance eq High FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+List out the emails with low importance I sent today with attachments and ordered by sent time from oldest to newest.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc
+Provide me the list of emails in ascending order with attachment and low importance I sent today.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc
+Which are the emails I sent today with attachments having low importance ordered by sent time from oldest to newest?	GET message FILTER message.hasAttachments eq True FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc
+Tell me about the emails I sent today with attachments having low importance ordered by sent time from oldest to newest.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc
+What is the number of emails with attachments received from detra pichoff with low importance? 	GET message COUNT FILTER message.from eq Detra Pichoff FILTER message.hasAttachments eq True FILTER message.importance eq Low
+How many low importance emails with attachments I received from detra pichoff?	GET message COUNT FILTER message.from eq Detra Pichoff FILTER message.hasAttachments eq True FILTER message.importance eq Low
+How many emails I have received from detra pichoff with attachments having low importance?	GET message COUNT FILTER message.from eq Detra Pichoff FILTER message.hasAttachments eq True FILTER message.importance eq Low
+List the emails I have received from detra pichoff with attachments having low importance.	GET message COUNT FILTER message.from eq Detra Pichoff FILTER message.hasAttachments eq True FILTER message.importance eq Low
+Provide me the emails I sent today from oldest to newest order falling under colonial bank category without attachments.	GET message FILTER message.categories eq Colonial Bank FILTER message.hasAttachments eq False FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc
+List out the emails I sent today from oldest to newest order falling under colonial bank category without attachments.	GET message FILTER message.categories eq Colonial Bank FILTER message.hasAttachments eq False FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc
+Which are the emails I have sent today in colonial bank category with no attachments ordered by sent time from oldest to newest?	GET message FILTER message.categories eq Colonial Bank FILTER message.hasAttachments eq False FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc
+Tell me about the emails I have sent today in colonial bank category with no attachments ordered by sent time from oldest to newest?	GET message FILTER message.categories eq Colonial Bank FILTER message.hasAttachments eq False FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc
+Which are the latest 20 unread emails received with high importance?	GET message FILTER message.importance eq High FILTER message.isRead eq False ORDERBY message.receivedDateTime desc TOP 20
+List out the latest 20 unread emails received with high importance.	GET message FILTER message.importance eq High FILTER message.isRead eq False ORDERBY message.receivedDateTime desc TOP 20
+List out the last 20 received unread emails having importance high.	GET message FILTER message.importance eq High FILTER message.isRead eq False ORDERBY message.receivedDateTime desc TOP 20
+Provide the 20 unread emails that have high importance arranged in descending order of received time.	GET message FILTER message.importance eq High FILTER message.isRead eq False ORDERBY message.receivedDateTime desc TOP 20
+Find the number of emails I received today with high importance and marked as unread.	GET message COUNT FILTER message.importance eq High FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+How many emails I received today with high importance which marked as unread?	GET message COUNT FILTER message.importance eq High FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+How many unread emails I received today with high importance?	GET message COUNT FILTER message.importance eq High FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+Tell me about the unread emails I received today with high importance.	GET message COUNT FILTER message.importance eq High FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+When did I received my first email and are not marked as read?	GET message FILTER message.isRead eq False ORDERBY message.receivedDateTime asc TOP 1
+Give me the received time of the first unread email.	GET message FILTER message.isRead eq False ORDERBY message.receivedDateTime asc TOP 1
+When did I receive my first email which is marked as unread?	GET message FILTER message.isRead eq False ORDERBY message.receivedDateTime asc TOP 1
+Give me the time of the first email I received and is marked as unread.	GET message FILTER message.isRead eq False ORDERBY message.receivedDateTime asc TOP 1
+How many emails I have sent today about corporate use with  attachments?	GET message COUNT FILTER message.categories eq corporate use FILTER message.hasAttachments eq True FILTER message.sentDateTime eq today
+Provide me with the number of emails I sent today about corporate use with attachments.	GET message COUNT FILTER message.categories eq corporate use FILTER message.hasAttachments eq True FILTER message.sentDateTime eq today
+What are the low importance emails with attachments I have sent today ordered by sent time from oldest to newest?	GET message FILTER message.hasAttachments eq True FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc
+List the emails of low importance and having attachments that are sent by me today in ascending order by sent time.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc
+How many emails do I have from gwyneth niece about instantaneous decision making with attachments?	GET message COUNT FILTER message.from eq Gwyneth Niece FILTER message.hasAttachments eq True SEARCH instantaneous decision making
+Give me the number of emails from gwyneth niece that are having attachments and contains words instantaneous decision making.	GET message COUNT FILTER message.from eq Gwyneth Niece FILTER message.hasAttachments eq True SEARCH instantaneous decision making
+Which are the unread emails from genevie havey about agent that I have received today?	GET message FILTER message.from eq Genevie Havey FILTER message.isRead eq False FILTER message.receivedDateTime eq today SEARCH agent
+List out the emails i received today from agent Genevie Havey which are marked unread.	GET message FILTER message.from eq Genevie Havey FILTER message.isRead eq False FILTER message.receivedDateTime eq today SEARCH agent
+List the unread emails about agent that i have received today from Genevie Havey.	GET message FILTER message.from eq Genevie Havey FILTER message.isRead eq False FILTER message.receivedDateTime eq today SEARCH agent
+How many emails I have with high importance with attachments and are marked as true?	GET message COUNT FILTER message.hasAttachments eq True FILTER message.importance eq High FILTER message.isRead eq True
+List out the read high importance number of emails with attachments,	GET message COUNT FILTER message.hasAttachments eq True FILTER message.importance eq High FILTER message.isRead eq True
+How many high importance emails marked as read having attachment?	GET message COUNT FILTER message.hasAttachments eq True FILTER message.importance eq High FILTER message.isRead eq True
+List out emails that I have received today under contract fax file category and are marked as unread ordered by receive time oldest to newest.	GET message FILTER message.categories eq Contract Fax File FILTER message.isRead eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc
+List out the unread emails I have received today in contract fax file category and start from oldest to newest.	GET message FILTER message.categories eq Contract Fax File FILTER message.isRead eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc
+Tell me about the unread emails I have received today in contract fax file category ordered by received time from oldest to newest.	GET message FILTER message.categories eq Contract Fax File FILTER message.isRead eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc
+List out the unread emails I have received today from maddie chmielowiec about Data structure?	GET message FILTER message.from eq Maddie Chmielowiec FILTER message.isRead eq False FILTER message.receivedDateTime eq today SEARCH Data structure
+What are the unread emails I have received today from maddie chmielowiec about Data structure ?	GET message FILTER message.from eq Maddie Chmielowiec FILTER message.isRead eq False FILTER message.receivedDateTime eq today SEARCH Data structure
+List out the unread emails I have received today from maddie chmielowiec about Data structure.	GET message FILTER message.from eq Maddie Chmielowiec FILTER message.isRead eq False FILTER message.receivedDateTime eq today SEARCH Data structure
+How many high importance read emails with attachments?	GET message COUNT FILTER message.hasAttachments eq True FILTER message.importance eq High FILTER message.isRead eq True
+How many read emails I have received with high importance having attachments?	GET message COUNT FILTER message.hasAttachments eq True FILTER message.importance eq High FILTER message.isRead eq True
+What are the number of high importance read emails having attachments ?	GET message COUNT FILTER message.hasAttachments eq True FILTER message.importance eq High FILTER message.isRead eq True
+Tell me about the last 97 emails I have received from jaclyn buckham with low importance.	GET message FILTER message.from eq Jaclyn Buckham FILTER message.importance eq Low ORDERBY message.receivedDateTime desc TOP 97
+List out the last 97 emails I have received from jaclyn buckham with low importance	GET message FILTER message.from eq Jaclyn Buckham FILTER message.importance eq Low ORDERBY message.receivedDateTime desc TOP 97
+List out last 97 emails I received from  jaclyn buckham with low imporatnce.	GET message FILTER message.from eq Jaclyn Buckham FILTER message.importance eq Low ORDERBY message.receivedDateTime desc TOP 97
+Please provide last 97 emails I received from  jaclyn buckham with low imporatnce.	GET message FILTER message.from eq Jaclyn Buckham FILTER message.importance eq Low ORDERBY message.receivedDateTime desc TOP 97
+List out read low importance emails I have received from keira renton in install category.	GET message FILTER message.categories eq install FILTER message.from eq Keira Renton FILTER message.importance eq Low FILTER message.isRead eq True
+What read emails I have received from keira renton in install category With low importance?	GET message FILTER message.categories eq install FILTER message.from eq Keira Renton FILTER message.importance eq Low FILTER message.isRead eq True
+What emails are received from Keira Renton under install category with low importance and are marked as read?	GET message FILTER message.categories eq install FILTER message.from eq Keira Renton FILTER message.importance eq Low FILTER message.isRead eq True
+Provide a list of emails received from Keira Renton falling into install category with low importance and marked as read.	GET message FILTER message.categories eq install FILTER message.from eq Keira Renton FILTER message.importance eq Low FILTER message.isRead eq True
+Which are the emails I have about motifs with low importance having no attachments ordered by received time from newest to oldest?	GET message FILTER message.hasAttachments eq False FILTER message.importance eq Low ORDERBY message.receivedDateTime desc SEARCH motifs
+Tell me about the emails I have about motifs with low importance having no attachments ordered by received time from newest to oldest.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq Low ORDERBY message.receivedDateTime desc SEARCH motifs
+What are the low importance emails I have received about motifs from newest to oldest order without attachments?	GET message FILTER message.hasAttachments eq False FILTER message.importance eq Low ORDERBY message.receivedDateTime desc SEARCH motifs
+Give me the low importance emails without attachments 'i have received from newest to oldest order about motifs. 	GET message FILTER message.hasAttachments eq False FILTER message.importance eq Low ORDERBY message.receivedDateTime desc SEARCH motifs
+What are the low importance emails I have received in the order newest to oldest with the keyword North Africa and is having no attachment?	GET message FILTER message.hasAttachments eq False FILTER message.importance eq Low ORDERBY message.receivedDateTime desc SEARCH North Africa
+List out the low importance emails I have received in the order newest to oldest with the keyword North Africa and is without attachment.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq Low ORDERBY message.receivedDateTime desc SEARCH North Africa
+What are the low importance emails that I have received without attachment with the keyword North Africa in the order newest to oldest? 	GET message FILTER message.hasAttachments eq False FILTER message.importance eq Low ORDERBY message.receivedDateTime desc SEARCH North Africa
+Please provide the low importance emails that I have without attachment with the keyword North Africa ordered by receive time newest to oldest.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq Low ORDERBY message.receivedDateTime desc SEARCH North Africa
+What are the attachments of last email I received falling under office stuff category?	GET message FILTER message.categories eq office stuff ORDERBY message.receivedDateTime desc TOP 1
+Give me the attachments of last email I received which lies under office stuff category.	GET message FILTER message.categories eq office stuff ORDERBY message.receivedDateTime desc TOP 1
+What is attached to the last email i received regarding office stuff?	GET message FILTER message.categories eq office stuff ORDERBY message.receivedDateTime desc TOP 1
+List the attachments of last email I received having  office stuff categories.	GET message FILTER message.categories eq office stuff ORDERBY message.receivedDateTime desc TOP 1
+What is attached to the last email that I have received in tts category?	GET message FILTER message.categories eq TTS ORDERBY message.receivedDateTime desc TOP 1
+Tell me the about the attachments of the last email that I have received in tts category.	GET message FILTER message.categories eq TTS ORDERBY message.receivedDateTime desc TOP 1
+What is the attachments of last email I received falling under tts category?	GET message FILTER message.categories eq TTS ORDERBY message.receivedDateTime desc TOP 1
+Show me the attachments of last email I received falling under tts category.	GET message FILTER message.categories eq TTS ORDERBY message.receivedDateTime desc TOP 1
+List out the attachments of first email sent.	GET message FILTER message.hasAttachments eq True ORDERBY message.sentDateTime asc TOP 1
+What are the attachments of first email sent?	GET message FILTER message.hasAttachments eq True ORDERBY message.sentDateTime asc TOP 1
+Tell me about the attachments of my first email.	GET message FILTER message.hasAttachments eq True ORDERBY message.sentDateTime asc TOP 1
+what are the attachments for my first email?	GET message FILTER message.hasAttachments eq True ORDERBY message.sentDateTime asc TOP 1
+What are the number of unread emails I received today about language acquistion?	GET message COUNT FILTER message.isRead eq False FILTER message.receivedDateTime eq today SEARCH language acquistion
+Give me the number of unread emails I received today about language acquistion.	GET message COUNT FILTER message.isRead eq False FILTER message.receivedDateTime eq today SEARCH language acquistion
+How many unread emails I have received today about language acquisition?	GET message COUNT FILTER message.isRead eq False FILTER message.receivedDateTime eq today SEARCH language acquistion
+List out the number of unread emails that I have received today containing language acquisition keyword.	GET message COUNT FILTER message.isRead eq False FILTER message.receivedDateTime eq today SEARCH language acquistion
+How many unread emails I received today about Decision support?	GET message COUNT FILTER message.isRead eq False FILTER message.receivedDateTime eq today SEARCH Decision support
+List the unread emails I received today about Decision support.	GET message COUNT FILTER message.isRead eq False FILTER message.receivedDateTime eq today SEARCH Decision support
+How many emails do I receive today about Decision support which marked as unread?	GET message COUNT FILTER message.isRead eq False FILTER message.receivedDateTime eq today SEARCH Decision support
+List of the number of emails that I received today regarding Decision support which marked as unread.	GET message COUNT FILTER message.isRead eq False FILTER message.receivedDateTime eq today SEARCH Decision support
+When did I received my first email and are not marked as read?	GET message FILTER message.isRead eq False ORDERBY message.receivedDateTime asc TOP 1
+Give me the received time of the first unread email.	GET message FILTER message.isRead eq False ORDERBY message.receivedDateTime asc TOP 1
+When did I receive my first email which is marked as unread?	GET message FILTER message.isRead eq False ORDERBY message.receivedDateTime asc TOP 1
+Give me the time of the first email I received and is marked as unread.	GET message FILTER message.isRead eq False ORDERBY message.receivedDateTime asc TOP 1
+How many emails I have with high importance with attachments and are marked as true?	GET message COUNT FILTER message.hasAttachments eq True FILTER message.importance eq High FILTER message.isRead eq True
+List out the read high importance number of emails with attachments,	GET message COUNT FILTER message.hasAttachments eq True FILTER message.importance eq High FILTER message.isRead eq True
+How many high importance emails marked as read having attachment?	GET message COUNT FILTER message.hasAttachments eq True FILTER message.importance eq High FILTER message.isRead eq True
+What are the number of unread emails I received today about language acquistion?	GET message COUNT FILTER message.isRead eq False FILTER message.receivedDateTime eq today SEARCH language acquistion
+Give me the number of unread emails I received today about language acquistion.	GET message COUNT FILTER message.isRead eq False FILTER message.receivedDateTime eq today SEARCH language acquistion
+How many unread emails I have received today about language acquisition?	GET message COUNT FILTER message.isRead eq False FILTER message.receivedDateTime eq today SEARCH language acquistion
+List out the number of unread emails that I have received today containing language acquisition keyword.	GET message COUNT FILTER message.isRead eq False FILTER message.receivedDateTime eq today SEARCH language acquistion
+List out the emails with browse-based result interface having no attachment with oldest to newest order.	GET message FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime asc SEARCH browse-based result interface
+Which emails have no attachments about browse-based result interface ordered by received time oldest to newest?	GET message FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime asc SEARCH browse-based result interface
+List the emails about browse-based result interface that i have received in the order oldest to newest with no attachment. 	GET message FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime asc SEARCH browse-based result interface
+Who is the sender of my last email received?	GET message ORDERBY message.receivedDateTime desc TOP 1
+Who is the sender of my first email ?	GET message ORDERBY message.receivedDateTime desc TOP 1
+Give me the  last email that I have received.	GET message ORDERBY message.receivedDateTime desc TOP 1
+Which are the emails I have sent in immigration category with high importance ordered by sent time from oldest to newest?	GET message FILTER message.categories eq Immigration FILTER message.importance eq High ORDERBY message.sentDateTime asc
+Give me the high importance emails which lies under immigration category I have sent from oldest to newest order. 	GET message FILTER message.categories eq Immigration FILTER message.importance eq High ORDERBY message.sentDateTime asc
+What emails I have sent under immigration category with high importance ordered by sent time oldest to newest?	GET message FILTER message.categories eq Immigration FILTER message.importance eq High ORDERBY message.sentDateTime asc
+Give me the list of high importance emails I have received from shante zoelle without attachment .	GET message FILTER message.from eq Shante Zoelle FILTER message.hasAttachments eq False FILTER message.importance eq High
+What emails I have received from Shante Zoelle of high importance without attachments?	GET message FILTER message.from eq Shante Zoelle FILTER message.hasAttachments eq False FILTER message.importance eq High
+Give me the emails I have received from shante zoelle having no attachments with high importance .	GET message FILTER message.from eq Shante Zoelle FILTER message.hasAttachments eq False FILTER message.importance eq High
+List out all emails I received from julissa zukof about extended markov tracking in air zip category.	GET message FILTER message.categories eq AirZip FILTER message.from eq Julissa Zukof SEARCH extended markov tracking
+What emails I have received from Julissa Zukof about extended markov tracking under air zip?	GET message FILTER message.categories eq AirZip FILTER message.from eq Julissa Zukof SEARCH extended markov tracking
+Tell me about the emails I have recevied in air zip category from juliissa zukof about extended markov tracking.	GET message FILTER message.categories eq AirZip FILTER message.from eq Julissa Zukof SEARCH extended markov tracking
+What is the subject of first email i have sent?	GET message ORDERBY message.sentDateTime asc TOP 1
+What is the subject of my first email sent?	GET message ORDERBY message.sentDateTime asc TOP 1
+What is the subject of first email I have sent?	GET message ORDERBY message.sentDateTime asc TOP 1
+Provide list of emails received today from Bernarda Witty which are marked as unread.	GET message FILTER message.from eq Bernarda Witty FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+List out the unread emails received today from  bernarda witty .	GET message FILTER message.from eq Bernarda Witty FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+Give me the list of unread emails I have received today from bernarda witty.	GET message FILTER message.from eq Bernarda Witty FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+Tell me about the emails I have received today in florida power category ordered by received from oldest to newest.	GET message FILTER message.categories eq Florida Power FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc
+Which are the emails i received today from oldest to newest order which lies under florida power category? 	GET message FILTER message.categories eq Florida Power FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc
+List out all emails I have received today in florida power category ordered by oldest to newest.	GET message FILTER message.categories eq Florida Power FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc
+Tell me about last read email I received.	GET message FILTER message.isRead eq True ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last read email I have received.	GET message FILTER message.isRead eq True ORDERBY message.receivedDateTime desc TOP 1
+Which is the last email that is marked as read I have received?	GET message FILTER message.isRead eq True ORDERBY message.receivedDateTime desc TOP 1
+Tell me the high importance emails which lies in heather jones having no attachments .	GET message FILTER message.categories eq Heather Jones FILTER message.hasAttachments eq False FILTER message.importance eq High
+List out the high importance emails without attachment in heather jones category.	GET message FILTER message.categories eq Heather Jones FILTER message.hasAttachments eq False FILTER message.importance eq High
+Provide emails under heather jones category with high importance without attachments.	GET message FILTER message.categories eq Heather Jones FILTER message.hasAttachments eq False FILTER message.importance eq High
+Give me the emails about scale free networks having no attachments which I have sent from oldest to newest order .	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime asc SEARCH scale free networks
+Give me the list of emails I have sent about scale free networks without attachment ordered by oldest to newest.	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime asc SEARCH scale free networks
+List out the emails having no attachments about scale free networks ordered by sent time from oldest to newest.	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime asc SEARCH scale free networks
+List out the read emails i have received today .	GET message COUNT FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+How many read emails I have received today?	GET message COUNT FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+How many read emails I have received today?	GET message COUNT FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+List out the high importance emails I have received today from shondra passer.	GET message FILTER message.from eq Shondra Passer FILTER message.importance eq High FILTER message.receivedDateTime eq today
+Give me the emails i have received today from shondra passer with high performance.	GET message FILTER message.from eq Shondra Passer FILTER message.importance eq High FILTER message.receivedDateTime eq today
+Which are the emails I have received today from shondra passer having high importance?	GET message FILTER message.from eq Shondra Passer FILTER message.importance eq High FILTER message.receivedDateTime eq today
+List out the read emails I have received today from  page hoguet.	GET message FILTER message.from eq Page Hoguet FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+Give me the read emails I have received today from  page hoguet.	GET message FILTER message.from eq Page Hoguet FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+Which are the emails I have received today from page hoguet that are marked as read?	GET message FILTER message.from eq Page Hoguet FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+List out first 42 emails I have sent today.	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc TOP 42
+Give me the first 42 emails I have sent today.	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc TOP 42
+List out the first 42 emails I have sent today?	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc TOP 42
+List out the Last 14 read emails I received .	GET message FILTER message.isRead eq True ORDERBY message.receivedDateTime desc TOP 14
+Tell me about the last 14 emails I have received and are marked as read.	GET message FILTER message.isRead eq True ORDERBY message.receivedDateTime desc TOP 14
+Which are the last unread 14 emails ?	GET message FILTER message.isRead eq True ORDERBY message.receivedDateTime desc TOP 14
+What emails I have received of high importance about columnar organization ordered by receive time newest to oldest?	GET message FILTER message.importance eq High ORDERBY message.receivedDateTime desc SEARCH columnar organization
+Which are the emails I have received in high importance about columnar organization ordered by received time from newest to oldest?	GET message FILTER message.importance eq High ORDERBY message.receivedDateTime desc SEARCH columnar organization
+List out the high importance emails I have about columnar organization ordered by receive time newest to oldest.	GET message FILTER message.importance eq High ORDERBY message.receivedDateTime desc SEARCH columnar organization
+How many emails I have received today with attachment?	GET message COUNT FILTER message.hasAttachments eq True FILTER message.receivedDateTime eq today
+How many emails I have received today with attachments?	GET message COUNT FILTER message.hasAttachments eq True FILTER message.receivedDateTime eq today
+What are the number of emails I have received today with attachments?	GET message COUNT FILTER message.hasAttachments eq True FILTER message.receivedDateTime eq today
+List out the emails that I have sent today with high importance having no attachments.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq High FILTER message.sentDateTime eq today
+Give me the high importance emails I have sent today with no attachments.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq High FILTER message.sentDateTime eq today
+List out all high importance emails I have sent today without attachment.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq High FILTER message.sentDateTime eq today
+How many read emails I have about sensitivity of voip traffic?	GET message COUNT FILTER message.isRead eq True SEARCH sensitivity of voip traffic
+How many read emails I have about sensitivity of voip traffic ?	GET message COUNT FILTER message.isRead eq True SEARCH sensitivity of voip traffic
+Tell me the read number of emails about sensitivity of voip traffic.	GET message COUNT FILTER message.isRead eq True SEARCH sensitivity of voip traffic
+List out emails I have in transamerica category with the keyword degree and marked as read.	GET message FILTER message.categories eq transamerica FILTER message.isRead eq True SEARCH degree
+What are the read emails I have about degree in transamerica category ?	GET message FILTER message.categories eq transamerica FILTER message.isRead eq True SEARCH degree
+Give me the read emails about degree lying under transamerica category.	GET message FILTER message.categories eq transamerica FILTER message.isRead eq True SEARCH degree
+What are the read emails which lies under transamerica category about degree keyword?	GET message FILTER message.categories eq transamerica FILTER message.isRead eq True SEARCH degree
+What is the subject of the last email I sent ordered by sent time from newest to oldest?	GET message ORDERBY message.sentDateTime desc TOP 1
+List the subject of the last email I sent ordered by sent time from newest to oldest.	GET message ORDERBY message.sentDateTime desc TOP 1
+Tell me about the subject of the last email I have sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the subject of the last email I have sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+What unread emails are there with high importance and without attachments?	GET message FILTER message.hasAttachments eq False FILTER message.importance eq High FILTER message.isRead eq False
+Provide list of unread emails with high importance and without attachments.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq High FILTER message.isRead eq False
+Give me the unread emails I have with high importance and without attachments.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq High FILTER message.isRead eq False
+What are the unread emails I have with high importance and without attachments?	GET message FILTER message.hasAttachments eq False FILTER message.importance eq High FILTER message.isRead eq False
+What emails are received today under paris sept 19 ordered by receive time newest to oldest?	GET message FILTER message.categories eq Paris Sept 19 FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+Provide list of received emails today falling into paris sept 19 category ordered by receive time newest to oldest.	GET message FILTER message.categories eq Paris Sept 19 FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+List out the emails I have received today from oldest to newest  order lying under paris sept 19 category.	GET message FILTER message.categories eq Paris Sept 19 FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+What are the emails I have received today from oldest to newest lying order under paris sept 19 category.	GET message FILTER message.categories eq Paris Sept 19 FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+Which are the first 65 unread emails?	GET message FILTER message.isRead eq False ORDERBY message.receivedDateTime asc TOP 65
+Provide first 65 unread emails.	GET message FILTER message.isRead eq False ORDERBY message.receivedDateTime asc TOP 65
+What are the first unread 65 emails I have received?	GET message FILTER message.isRead eq False ORDERBY message.receivedDateTime asc TOP 65
+Give me the first 65 unread emails I have received.	GET message FILTER message.isRead eq False ORDERBY message.receivedDateTime asc TOP 65
+Which are the emails I have sent with attachments having low importance ordered by sent time from newest to oldest?	GET message FILTER message.hasAttachments eq True FILTER message.importance eq Low ORDERBY message.sentDateTime desc
+Tell me about the emails I have sent with attachments having low importance ordered by sent time from newest to oldest.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq Low ORDERBY message.sentDateTime desc
+List out Low importance emails I sent with attachment ordered by newest to oldest.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq Low ORDERBY message.sentDateTime desc
+What are the low importance emails I sent with attachment ordered by newest to oldest?	GET message FILTER message.hasAttachments eq True FILTER message.importance eq Low ORDERBY message.sentDateTime desc
+Which are the emails I have with attachments having low importance ordered by received time from newest to oldest?	GET message FILTER message.hasAttachments eq True FILTER message.importance eq Low ORDERBY message.receivedDateTime desc
+Tell me about the emails I have with attachments having low importance ordered by received time from newest to oldest.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq Low ORDERBY message.receivedDateTime desc
+Provide emails of low importance with attachments ordered by receive time newest to oldest.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq Low ORDERBY message.receivedDateTime desc
+What emails I have received with attachments and low importance ordered by receive time newest to oldest?	GET message FILTER message.hasAttachments eq True FILTER message.importance eq Low ORDERBY message.receivedDateTime desc
+Which are the emails I have sent with high importance having no attachments ordered by sent time from newest to oldest?	GET message FILTER message.hasAttachments eq False FILTER message.importance eq High ORDERBY message.sentDateTime desc
+Tell me about the emails I have sent with high importance having no attachments ordered by sent time from newest to oldest.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq High ORDERBY message.sentDateTime desc
+List out emails sent with high importance and without attachments ordered by sent time newest to oldest.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq High ORDERBY message.sentDateTime desc
+What emails are sent with high importance and without attachments ordered by sent time newest to oldest?	GET message FILTER message.hasAttachments eq False FILTER message.importance eq High ORDERBY message.sentDateTime desc
+How many emails I have in groups nstuff category with low importance?	GET message COUNT FILTER message.categories eq GroupsNstuff FILTER message.importance eq Low
+List out the number of emails I have in groups nstuff category with low importance.	GET message COUNT FILTER message.categories eq GroupsNstuff FILTER message.importance eq Low
+How many emails having low importance in groups nstuff category?	GET message COUNT FILTER message.categories eq GroupsNstuff FILTER message.importance eq Low
+Please provide the number of emails I have in groups nstuff category with low importance.	GET message COUNT FILTER message.categories eq GroupsNstuff FILTER message.importance eq Low
+What number of emails I sent today with keyword hubs?	GET message COUNT FILTER message.sentDateTime eq today SEARCH hubs
+How many emails I sent today with the keyword hubs?	GET message COUNT FILTER message.sentDateTime eq today SEARCH hubs
+How many emails I sent today about hubs?	GET message COUNT FILTER message.sentDateTime eq today SEARCH hubs
+List out the number of emails I sent today about hubs.	GET message COUNT FILTER message.sentDateTime eq today SEARCH hubs
+Which are the emails I have sent about Ova having no attachments ordered by sent time from oldest to newest?	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime asc SEARCH Ova
+Tell me about the emails I have sent containing Ova keyword having no attachments ordered by sent time from oldest to newest.	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime asc SEARCH Ova
+Please provide the emails those have no attachment and with the keyword Ova order by sent time ascending.	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime asc SEARCH Ova
+What are the emails that I sent in order oldest to newest having keyword Ova and that have no attachment?	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime asc SEARCH Ova
+What emails I have received today about Streptomycin which are marked as unread?.	GET message FILTER message.isRead eq False FILTER message.receivedDateTime eq today SEARCH Streptomycin
+List out unread emails containing Streptomycin keyword in it received today	GET message FILTER message.isRead eq False FILTER message.receivedDateTime eq today SEARCH Streptomycin
+List out unread emails I have received today about Streptomycin.	GET message FILTER message.isRead eq False FILTER message.receivedDateTime eq today SEARCH Streptomycin
+What are unread emails I have received today about Streptomycin?	GET message FILTER message.isRead eq False FILTER message.receivedDateTime eq today SEARCH Streptomycin
+List out emails I have in  recruiters category having low importance and with attachment.	GET message FILTER message.categories eq Recruiters FILTER message.hasAttachments eq True FILTER message.importance eq Low
+What low importance emails i have in  recruiters category with attachment?	GET message FILTER message.categories eq Recruiters FILTER message.hasAttachments eq True FILTER message.importance eq Low
+What emails are there under recruiters category with attachments and low importance?	GET message FILTER message.categories eq Recruiters FILTER message.hasAttachments eq True FILTER message.importance eq Low
+Send me emails falling into recruiters category with low importance and attachments.	GET message FILTER message.categories eq Recruiters FILTER message.hasAttachments eq True FILTER message.importance eq Low
+What is the subject line of last email sent?	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me subject line of last email sent.	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the subject of last email I have sent. 	GET message ORDERBY message.sentDateTime desc TOP 1
+List out sent emails today about parietal keyword with attachments.	GET message FILTER message.hasAttachments eq True FILTER message.sentDateTime eq today SEARCH parietal
+Send me emails that I have sent today containing parietal in it with attachments.	GET message FILTER message.hasAttachments eq True FILTER message.sentDateTime eq today SEARCH parietal
+What emails I sent today about parietal with attachment?	GET message FILTER message.hasAttachments eq True FILTER message.sentDateTime eq today SEARCH parietal
+List out emails about parietal with attachment that I sent today.	GET message FILTER message.hasAttachments eq True FILTER message.sentDateTime eq today SEARCH parietal
+Provide me the last email I have sent today.	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc TOP 1
+Give me the last email I have sent today.	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc TOP 1
+Which is the last email sent today?	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc TOP 1
+List out last email sent today.	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc TOP 1
+List out high importance emails with attachments ordered by sent time oldest to newest.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High ORDERBY message.sentDateTime asc
+What emails I have sent with attachments and high importance ordered by sent time oldest to newest?	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High ORDERBY message.sentDateTime asc
+Give me the  high importance emails I have sent from oldest to newest order with attachments.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High ORDERBY message.sentDateTime asc
+Provide me the  high importance emails I have sent from oldest to newest order with attachments.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High ORDERBY message.sentDateTime asc
+Which are the emails falling under prosa category containing energy exploration keyword in it without attachments?	GET message FILTER message.categories eq prosa FILTER message.hasAttachments eq False SEARCH energy exploration
+Provide list of emails without attachments falling into prosa category about energy exploration.	GET message FILTER message.categories eq prosa FILTER message.hasAttachments eq False SEARCH energy exploration
+What are the emails of Prosa category with the keyword energy exploration and is having no attachment?	GET message FILTER message.categories eq prosa FILTER message.hasAttachments eq False SEARCH energy exploration
+List out the emails in Prosa category about energy exploration keyword and without attachment.	GET message FILTER message.categories eq prosa FILTER message.hasAttachments eq False SEARCH energy exploration
+List out emails of low importance, without attachments and marked as unread.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq Low FILTER message.isRead eq False
+Let me know about emails having low importance and without attachments and are still marked as unread.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq Low FILTER message.isRead eq False
+List out low importance emails I have without attachment and still unread.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq Low FILTER message.isRead eq False
+What are the  emails I have without attachment and having high importance but still unread?	GET message FILTER message.hasAttachments eq False FILTER message.importance eq Low FILTER message.isRead eq False
+Which are the read emails I have with no attachments having high importance?	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High FILTER message.isRead eq True
+Tell me about the emails I have with no attachments having high importance.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High FILTER message.isRead eq True
+Give me the read high importance emails having attachments.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High FILTER message.isRead eq True
+List out the high importance read emails having attachments.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High FILTER message.isRead eq True
+ Which are the emails I have received from valery ronda in m commerce - prakash category about publishing?	GET message FILTER message.categories eq mCommerce - Prakash FILTER message.from eq Valery Ronda SEARCH publishing
+List out the emails I have received from valery ronda in m commerce - prakash category about publishing.	GET message FILTER message.categories eq mCommerce - Prakash FILTER message.from eq Valery Ronda SEARCH publishing
+Which are the emails I received from valery ronda for publishing falling under m commerce - prakash category?	GET message FILTER message.categories eq mCommerce - Prakash FILTER message.from eq Valery Ronda SEARCH publishing
+Give me the emails I have received from valery ronda for publishing which falls in m commerce - prakash.	GET message FILTER message.categories eq mCommerce - Prakash FILTER message.from eq Valery Ronda SEARCH publishing
+What emails are received today with high importance and attachments?	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High FILTER message.receivedDateTime eq today
+List out emails received today with high importance and attachments.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High FILTER message.receivedDateTime eq today
+What are the high importance emails I have received today with attachments?	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High FILTER message.receivedDateTime eq today
+Provide me the high importance emails I have received today with attachments.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High FILTER message.receivedDateTime eq today
+How many unread emails are there with high importance?	GET message COUNT FILTER message.importance eq High FILTER message.isRead eq False
+Provide total number of unread emails with high importance.	GET message COUNT FILTER message.importance eq High FILTER message.isRead eq False
+How many unread emails I have with high importance?	GET message COUNT FILTER message.importance eq High FILTER message.isRead eq False
+List out the number of emails I have with high importance.	GET message COUNT FILTER message.importance eq High FILTER message.isRead eq False
+How many emails I have in po category with attachments?	GET message COUNT FILTER message.categories eq PO FILTER message.hasAttachments eq True
+Tell me about the emails I have in po category with attachments.	GET message COUNT FILTER message.categories eq PO FILTER message.hasAttachments eq True
+How many emails are there under po category with attachments?	GET message COUNT FILTER message.categories eq PO FILTER message.hasAttachments eq True
+Send me total number of emails falling into po category with attachments.	GET message COUNT FILTER message.categories eq PO FILTER message.hasAttachments eq True
+What are the emails about gunung palung I have which lies under report samples category having no attachments?	GET message FILTER message.categories eq report samples FILTER message.hasAttachments eq False SEARCH gunung palung
+List out the emails about gunung palung I have lying  under report samples category without attachments.	GET message FILTER message.categories eq report samples FILTER message.hasAttachments eq False SEARCH gunung palung
+What emails I have about gunung palung in report samples category and thodse having no attachment ?	GET message FILTER message.categories eq report samples FILTER message.hasAttachments eq False SEARCH gunung palung
+How many high importance emails I have those are marked as read?	GET message COUNT FILTER message.importance eq High FILTER message.isRead eq True
+Please provide the number of high importance read emails I have.	GET message COUNT FILTER message.importance eq High FILTER message.isRead eq True
+List out the number of high importance emails I have and are marked as read.	GET message COUNT FILTER message.importance eq High FILTER message.isRead eq True
+How many high importance emails I have and are marked as read?	GET message COUNT FILTER message.importance eq High FILTER message.isRead eq True
+Which are the emails I have sent today with high importance having no attachments?	GET message FILTER message.hasAttachments eq False FILTER message.importance eq High FILTER message.sentDateTime eq today
+Tell me about the emails I have sent today with high importance having no attachments.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq High FILTER message.sentDateTime eq today
+List out the emails without attachments and high importance I have sent today.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq High FILTER message.sentDateTime eq today
+What are the high importance and without attachments emails I have sent today? 	GET message FILTER message.hasAttachments eq False FILTER message.importance eq High FILTER message.sentDateTime eq today
+To whom did I received my first email?	GET message ORDERBY message.receivedDateTime asc TOP 1
+who is the sender of my first email?	GET message ORDERBY message.receivedDateTime asc TOP 1
+What is the first email I have received?	GET message ORDERBY message.receivedDateTime asc TOP 1
+Give me the first email I have received.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Which are the unread emails I have with attachments having high importance?	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High FILTER message.isRead eq False
+Tell me about the emails I have with attachments having high importance.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High FILTER message.isRead eq False
+What unread emails are there with attachments and high importance?	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High FILTER message.isRead eq False
+Send me list of unread emails with attachments and high importance.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High FILTER message.isRead eq False
+Provide emails of low importance marked as read without attachments.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq Low FILTER message.isRead eq True
+What emails I have with low importance and without attachments which are marked as read?	GET message FILTER message.hasAttachments eq False FILTER message.importance eq Low FILTER message.isRead eq True
+List out the low importance emails that I have without attachment and are marked as read.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq Low FILTER message.isRead eq True
+Please provide the low importance emails that I have without attachment and are marked as read.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq Low FILTER message.isRead eq True
+What are the high importance emails I have received from carlie hitzeman in newest to oldest order?	GET message FILTER message.from eq Carlie Hitzeman FILTER message.importance eq High ORDERBY message.receivedDateTime desc
+Which are the emails having high importance falling under carlie hitzeman category?	GET message FILTER message.from eq Carlie Hitzeman FILTER message.importance eq High ORDERBY message.receivedDateTime desc
+What emails I have received from Carlie Hitzeman with high importance ordered by receive time newest to oldest?	GET message FILTER message.from eq Carlie Hitzeman FILTER message.importance eq High ORDERBY message.receivedDateTime desc
+Send me received emails from Carlie Hitzeman with high importance ordered by receive time newest to oldest.	GET message FILTER message.from eq Carlie Hitzeman FILTER message.importance eq High ORDERBY message.receivedDateTime desc
+List out emails I received from vince platz in zions bank category ordered by newest to oldest.	GET message FILTER message.categories eq Zions Bank FILTER message.from eq Vince Platz ORDERBY message.receivedDateTime desc
+What are the emails I received in zions bank category from vince platz ordered by receive time ordered by newest to oldest?	GET message FILTER message.categories eq Zions Bank FILTER message.from eq Vince Platz ORDERBY message.receivedDateTime desc
+List out the emails I have received from vince platz which lies under zions bank category in newest to oldest order.	GET message FILTER message.categories eq Zions Bank FILTER message.from eq Vince Platz ORDERBY message.receivedDateTime desc
+What are the emails I have received from vince platz which lies under zions bank category in newest to oldest order?	GET message FILTER message.categories eq Zions Bank FILTER message.from eq Vince Platz ORDERBY message.receivedDateTime desc
+How many emails are there under c3i category with low importance?	GET message COUNT FILTER message.categories eq C3i FILTER message.importance eq Low
+Provide total number of emails falling into c3i category with low importance.	GET message COUNT FILTER message.categories eq C3i FILTER message.importance eq Low
+How many emails I have in c3i category with low importance?	GET message COUNT FILTER message.categories eq C3i FILTER message.importance eq Low
+Give me the number of emails I have in c3i category with low importance.	GET message COUNT FILTER message.categories eq C3i FILTER message.importance eq Low
+What emails I have received with low importance about conflict keyword ordered by receive time oldest to newest?	GET message FILTER message.importance eq Low ORDERBY message.receivedDateTime asc SEARCH conflict
+Provide emails received with low importance containing conflict ordered by receive time oldest to newest.	GET message FILTER message.importance eq Low ORDERBY message.receivedDateTime asc SEARCH conflict
+Give me the low importance emails I have received from oldest to newest order about conflict.	GET message FILTER message.importance eq Low ORDERBY message.receivedDateTime asc SEARCH conflict
+List out the low importance emails I have received from oldest to newest order about conflict.	GET message FILTER message.importance eq Low ORDERBY message.receivedDateTime asc SEARCH conflict
+Tell me about last email I received and marked as read.	GET message FILTER message.isRead eq True ORDERBY message.receivedDateTime desc TOP 1
+What was the last email I received and marked as read?	GET message FILTER message.isRead eq True ORDERBY message.receivedDateTime desc TOP 1
+Which is the last email marked as read that I have received?	GET message FILTER message.isRead eq True ORDERBY message.receivedDateTime desc TOP 1
+Provide last email received marked as read.	GET message FILTER message.isRead eq True ORDERBY message.receivedDateTime desc TOP 1
+List out the read emails I have received from maryalice jimison in contract sign off category.	GET message FILTER message.categories eq Contract Sign Off FILTER message.from eq Maryalice Jimison FILTER message.isRead eq True
+Which are the emails I have received from maryalice jimison in contract sign off category?	GET message FILTER message.categories eq Contract Sign Off FILTER message.from eq Maryalice Jimison FILTER message.isRead eq True
+What are the read emails I have received from maryalice jimison falling under contract sign off category?	GET message FILTER message.categories eq Contract Sign Off FILTER message.from eq Maryalice Jimison FILTER message.isRead eq True
+List out the read emails I have received from maryalice jimison falling under contract sign off category.	GET message FILTER message.categories eq Contract Sign Off FILTER message.from eq Maryalice Jimison FILTER message.isRead eq True
+Which are the emails I have sent about Testing keyword having no attachments ordered by sent time from newest to oldest?	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime desc SEARCH Testing
+List out the emails I have sent about Testing keyword having no attachments ordered by sent time from newest to oldest.	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime desc SEARCH Testing
+What are the emails I have sent about Testing without attachments from newest to oldest order?	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime desc SEARCH Testing
+List out the emails I have sent about Testing without attachments from newest to oldest order.	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime desc SEARCH Testing
+How many emails I have received from augusta okonski about action-selection randomization?	GET message COUNT FILTER message.from eq Augusta Okonski SEARCH action-selection randomization
+Which are the emails I have received from augusta okonski about action-selection randomization?	GET message COUNT FILTER message.from eq Augusta Okonski SEARCH action-selection randomization
+How many emails I have received from augusta okonski about action-selection randomization?	GET message COUNT FILTER message.from eq Augusta Okonski SEARCH action-selection randomization
+List out the number of emails about action-selection randomization I have received from augusta okonski.	GET message COUNT FILTER message.from eq Augusta Okonski SEARCH action-selection randomization
+List out Low importance emails I have in sfmp category ordered by sent time descending.	GET message FILTER message.categories eq SFMP FILTER message.importance eq Low ORDERBY message.sentDateTime desc
+What are the Low importance emails  I have in sfmp category ordered by sent time newest to oldest?	GET message FILTER message.categories eq SFMP FILTER message.importance eq Low ORDERBY message.sentDateTime desc
+List out emails sent with low importance under sfmp category ordered by sent time newest to oldest.	GET message FILTER message.categories eq SFMP FILTER message.importance eq Low ORDERBY message.sentDateTime desc
+What emails with low importance I have sent falling into sfmp category ordered by sent time newest to oldest?	GET message FILTER message.categories eq SFMP FILTER message.importance eq Low ORDERBY message.sentDateTime desc
+What are the emails that I have received today in ascending order and are marked as unread?	GET message FILTER message.isRead eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc
+List out the unread emails that I have received today in order oldest to newest.	GET message FILTER message.isRead eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc
+Provide list of emails received today which are still marked as unread ordered by receive time oldest to newest.	GET message FILTER message.isRead eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc
+Let me know about emails that I have received today and are marked as unread ordered by receive time oldest to newest.	GET message FILTER message.isRead eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc
+Provide me the first email I received without attachments.	GET message FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime asc TOP 1
+List out  the first email I received without attachments.	GET message FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime asc TOP 1
+Tell me about the first email I have received with no attachments.	GET message FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime asc TOP 1
+What is the first email I received with no attachments?	GET message FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime asc TOP 1
+What are the number of emails with low importance that are read.	GET message COUNT FILTER message.importance eq Low FILTER message.isRead eq True
+List the number of read emails with low importance. 	GET message COUNT FILTER message.importance eq Low FILTER message.isRead eq True
+How many read emails I have with low importance?	GET message COUNT FILTER message.importance eq Low FILTER message.isRead eq True
+List the number of emails I have with low importance.	GET message COUNT FILTER message.importance eq Low FILTER message.isRead eq True
+Give me the number of emails I sent today about Bus sniffing.	GET message COUNT FILTER message.sentDateTime eq today SEARCH Bus sniffing
+How many emails I sent today regarding Bus sniffing?	GET message COUNT FILTER message.sentDateTime eq today SEARCH Bus sniffing
+Provide the number of emails sent today which are about Bus sniffing	GET message COUNT FILTER message.sentDateTime eq today SEARCH Bus sniffing
+How many emails have been sent today that are about Bus sniffing?	GET message COUNT FILTER message.sentDateTime eq today SEARCH Bus sniffing
+Find the number of emails with no attachments that falls in  robert 6 categories.	GET message COUNT FILTER message.categories eq Robert 6 FILTER message.hasAttachments eq False
+How many emails of robert 6 categories has no attachments?	GET message COUNT FILTER message.categories eq Robert 6 FILTER message.hasAttachments eq False
+How many emails are there under the robert 6 categories that have no attachments	GET message COUNT FILTER message.categories eq Robert 6 FILTER message.hasAttachments eq False
+List the number of emails with no attachments that are under the robert 6 categories.	GET message COUNT FILTER message.categories eq Robert 6 FILTER message.hasAttachments eq False
+Which are the unread emails I received today from alene creary?	GET message FILTER message.from eq Alene Creary FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+Tell me about the unread emails I received today from alene creary.	GET message FILTER message.from eq Alene Creary FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+What are the unread emails from alene creary received today?	GET message FILTER message.from eq Alene Creary FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+List out the unread emails from alene creary received today.	GET message FILTER message.from eq Alene Creary FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+Which are the emails I sent about paper with attachments ordered by sent time from newest to oldest?	GET message FILTER message.hasAttachments eq True ORDERBY message.sentDateTime desc SEARCH Paper
+Tell me about the emails I sent containing paper keyword with attachments ordered by sent time from newest to oldest.	GET message FILTER message.hasAttachments eq True ORDERBY message.sentDateTime desc SEARCH Paper
+Find the emails regarding to Paper I sent that has attachments and start from newest to oldest.	GET message FILTER message.hasAttachments eq True ORDERBY message.sentDateTime desc SEARCH Paper
+What are the emails regarding Paper I sent with attachments ordered by sent time  newest to oldest?	GET message FILTER message.hasAttachments eq True ORDERBY message.sentDateTime desc SEARCH Paper
+Give me the low importance emails I received from newest to oldest order about sleeping configuration protocol.	GET message FILTER message.importance eq Low ORDERBY message.receivedDateTime desc SEARCH sleeping configuration protocol
+Provide me the low importance emails I received from newest to oldest order about sleeping configuration protocol.	GET message FILTER message.importance eq Low ORDERBY message.receivedDateTime desc SEARCH sleeping configuration protocol
+Which are the emails I received with low importance about sleeping configuration protocol ordered by received time from newest to oldest?	GET message FILTER message.importance eq Low ORDERBY message.receivedDateTime desc SEARCH sleeping configuration protocol
+Tell me about the emails I received with low importance containing configuration protocol keyword ordered by received time from newest to oldest.	GET message FILTER message.importance eq Low ORDERBY message.receivedDateTime desc SEARCH sleeping configuration protocol
+What are the unread emails I have received today in omni sky category?	GET message FILTER message.categories eq OmniSky FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+Tell me about the unread emails I have received today in omni sky category.	GET message FILTER message.categories eq OmniSky FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+Which are the unread emails received today under the omni sky categories	GET message FILTER message.categories eq OmniSky FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+List the unread emails received today under the omni sky categories.	GET message FILTER message.categories eq OmniSky FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+Which are the unread emails received today under the home depot categories?	GET message FILTER message.categories eq Home Depot FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+Provide me a list of unread emails received today under the home depot categories.	GET message FILTER message.categories eq Home Depot FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+What are the unread emails I have received today in the category home depot?	GET message FILTER message.categories eq Home Depot FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+Please provide the unread emails I have received today in the category home depot.	GET message FILTER message.categories eq Home Depot FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+Find the number of emails I received today with low importance.	GET message COUNT FILTER message.importance eq Low FILTER message.receivedDateTime eq today
+How many emails I received today with low importance?	GET message COUNT FILTER message.importance eq Low FILTER message.receivedDateTime eq today
+How many low importance emails I received today? 	GET message COUNT FILTER message.importance eq Low FILTER message.receivedDateTime eq today
+Tell me about the number of low importance emails I received today.	GET message COUNT FILTER message.importance eq Low FILTER message.receivedDateTime eq today
+Give me the emails about combinatorial falling under misc category having no attachments.	GET message FILTER message.categories eq misc FILTER message.hasAttachments eq False SEARCH combinatorial
+What are the emails about combinatorial lying under misc category having no attachments?	GET message FILTER message.categories eq misc FILTER message.hasAttachments eq False SEARCH combinatorial
+What are the combinatorial emails without attachments that fall under misc categories?	GET message FILTER message.categories eq misc FILTER message.hasAttachments eq False SEARCH combinatorial
+List out the combinatorial emails having no attachments and are falling under misc categories.	GET message FILTER message.categories eq misc FILTER message.hasAttachments eq False SEARCH combinatorial
+Give me the high importance emails I received from newest to oldest order with attachments.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High ORDERBY message.receivedDateTime desc
+What are the high importance emails I received from newest to oldest order with attachments?	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High ORDERBY message.receivedDateTime desc
+Which emails with attachments and high importance I received ordered by descending manner? 	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High ORDERBY message.receivedDateTime desc
+Find the emails in descending order which has attachments and high importance.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High ORDERBY message.receivedDateTime desc
+Find the emails I received today from valene poduska and marked as unread.	GET message FILTER message.from eq Valene Poduska FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+What are the emails I received today from valene poduska that marked as unread?	GET message FILTER message.from eq Valene Poduska FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+Which are the unread emails that have been received today from Valene Poduska.	GET message FILTER message.from eq Valene Poduska FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+List the unread emails received today from Valene Poduska.	GET message FILTER message.from eq Valene Poduska FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+How many emails are there with attachments that have high importance?	GET message COUNT FILTER message.hasAttachments eq True FILTER message.importance eq High
+Provide the number of high importance emails that have attachments.	GET message COUNT FILTER message.hasAttachments eq True FILTER message.importance eq High
+How many emails I have with attachments having low importance?	GET message COUNT FILTER message.hasAttachments eq True FILTER message.importance eq High
+List the emails I have with attachments having low importance.	GET message COUNT FILTER message.hasAttachments eq True FILTER message.importance eq High
+How many emails I have with no attachments about correctness guarantee?	GET message COUNT FILTER message.hasAttachments eq False SEARCH correctness guarantee
+List the emails I have with no attachments about correctness guarantee.	GET message COUNT FILTER message.hasAttachments eq False SEARCH correctness guarantee
+Please provide the number of emails I have about correctness guarantee and have no attachment.	GET message COUNT FILTER message.hasAttachments eq False SEARCH correctness guarantee
+How many emails I have with no attachments having high importance?	GET message COUNT FILTER message.hasAttachments eq False FILTER message.importance eq High
+List the emails I have with attachments having high importance.	GET message COUNT FILTER message.hasAttachments eq False FILTER message.importance eq High
+Give me the number of high importance emails I have without attachment.	GET message COUNT FILTER message.hasAttachments eq False FILTER message.importance eq High
+How many high importance emails I have without attachment?	GET message COUNT FILTER message.hasAttachments eq False FILTER message.importance eq High
+Find the number of emails I received regarding nichola from valencia brant.	GET message COUNT FILTER message.from eq Valencia Brant SEARCH nichola
+How many emails sent by valencia brant about nichola?	GET message COUNT FILTER message.from eq Valencia Brant SEARCH nichola
+How many emails I have received from valencia brant about nichola?	GET message COUNT FILTER message.from eq Valencia Brant SEARCH nichola
+List the emails I have received from valencia brant about nichola.	GET message COUNT FILTER message.from eq Valencia Brant SEARCH nichola
+What is the number of emails with attachments having high importance?	GET message COUNT FILTER message.hasAttachments eq True FILTER message.importance eq High
+Tell me the number of emails with attachments having high importance.	GET message COUNT FILTER message.hasAttachments eq True FILTER message.importance eq High
+How many high importance emails do I have with attachment?	GET message COUNT FILTER message.hasAttachments eq True FILTER message.importance eq High
+List out the high importance emails with attachment.	GET message COUNT FILTER message.hasAttachments eq True FILTER message.importance eq High
+Please provide the first 72 emails I received with attachment.	GET message FILTER message.hasAttachments eq True ORDERBY message.receivedDateTime asc TOP 72
+What are the top 72 emails I received with attachment in the order oldest to newest?	GET message FILTER message.hasAttachments eq True ORDERBY message.receivedDateTime asc TOP 72
+What are the first 72 emails with attachments I received?	GET message FILTER message.hasAttachments eq True ORDERBY message.receivedDateTime asc TOP 72
+List the first 72 emails with attachments I received.	GET message FILTER message.hasAttachments eq True ORDERBY message.receivedDateTime asc TOP 72
+What are the emails that I sent today about Culture media in the order oldest to newest?	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc SEARCH Culture media
+Please provide the emails I sent today about Culture media in the order oldest to newest.	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc SEARCH Culture media
+What are the emails about culture media I sent today starting from sent time oldest to newest?	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc SEARCH Culture media
+List out the emails about culture media I sent today starting from sent time oldest to newest.	GET message FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc SEARCH Culture media
+How many emails are there with low importance and marked as read?	GET message COUNT FILTER message.importance eq Low FILTER message.isRead eq True
+find out the number of emails having low importance and marked as read.	GET message COUNT FILTER message.importance eq Low FILTER message.isRead eq True
+Provide me the number of read low importance emails.	GET message COUNT FILTER message.importance eq Low FILTER message.isRead eq True
+Give me the number of read emails having low importance.	GET message COUNT FILTER message.importance eq Low FILTER message.isRead eq True
+Who is the recipient of my first email?	GET message ORDERBY message.sentDateTime asc TOP 1
+Tell me the recipient of my first email?.	GET message ORDERBY message.sentDateTime asc TOP 1
+To whom did I sent my first email ordered by sent time from oldest to newest?	GET message ORDERBY message.sentDateTime asc TOP 1
+Tell me about the recipients of first email I sent ordered by sent time from oldest to newest.	GET message ORDERBY message.sentDateTime asc TOP 1
+What are the high importance emails I sent today with attachment? 	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High FILTER message.sentDateTime eq today
+Give me the high importance emails I sent today with attachment.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High FILTER message.sentDateTime eq today
+What are the high importance emails that I sent today with attachment?	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High FILTER message.sentDateTime eq today
+Find out the high importance emails that I sent today with attachment.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High FILTER message.sentDateTime eq today
+To whom did I send my first email ordered by sent time from oldest to newest?	GET message ORDERBY message.sentDateTime asc TOP 1
+Tell me who are the recipients of my first email ordered by sent time from oldest to newest.	GET message ORDERBY message.sentDateTime asc TOP 1
+Tell me the recipient of first email I sent.	GET message ORDERBY message.sentDateTime asc TOP 1
+Who is the recipient of first email I sent?	GET message ORDERBY message.sentDateTime asc TOP 1
+Which are the emails I have about Ecuador with attachments having high importance?	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High SEARCH Ecuador
+Tell me about the emails I have containing Ecuador keyword with attachments having high importance.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High SEARCH Ecuador
+What are the emails with attachments about Ecuador having high importance?	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High SEARCH Ecuador
+List the emails regarding Ecuador with attachments having high importance.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High SEARCH Ecuador
+What are the high importance emails I have with attachment in the category fairmarkets?	GET message FILTER message.categories eq Fairmarkets FILTER message.hasAttachments eq True FILTER message.importance eq High
+Please provide the high importance emails I have with attachment in the fairmarkets category.	GET message FILTER message.categories eq Fairmarkets FILTER message.hasAttachments eq True FILTER message.importance eq High
+List of the emails having high importance fall in the fairmarkets categories with attachments.	GET message FILTER message.categories eq Fairmarkets FILTER message.hasAttachments eq True FILTER message.importance eq High
+Please provide the emails about the exchange keyword under the new category and have no attachment.	GET message FILTER message.categories eq New FILTER message.hasAttachments eq False SEARCH exchange
+Give me the emails about the exchange keyword under the new category and have no attachment.	GET message FILTER message.categories eq New FILTER message.hasAttachments eq False SEARCH exchange
+What are the emails put in the  with no attachment?	GET message FILTER message.categories eq New FILTER message.hasAttachments eq False SEARCH exchange
+List out the email under new categories about exchange with no attachment.	GET message FILTER message.categories eq New FILTER message.hasAttachments eq False SEARCH exchange
+Please provide the last email I received that is marked as unread.	GET message FILTER message.isRead eq False ORDERBY message.receivedDateTime desc TOP 1
+Give me the last email I received that is marked as unread.	GET message FILTER message.isRead eq False ORDERBY message.receivedDateTime desc TOP 1
+What are the newest emails that I received descending order which mark as unread?	GET message FILTER message.isRead eq False ORDERBY message.receivedDateTime desc TOP 1
+Give me the latest email which I received as unread ordered by newest to oldest.	GET message FILTER message.isRead eq False ORDERBY message.receivedDateTime desc TOP 1
+What are the emails that I have received today in the older oldest to newest and are marked as read?	GET message FILTER message.isRead eq True FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+List out the emails that I have received today in the older oldest to newest and are marked as read.	GET message FILTER message.isRead eq True FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+Find the emails I received today that marked as read ordered by received time from newest to oldest.	GET message FILTER message.isRead eq True FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+What emails I received today in descending order that marked as read	GET message FILTER message.isRead eq True FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime desc
+List out the low importance emails I have with attachment and are marked as unread.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq Low FILTER message.isRead eq False
+What are the low importance emails I have with attachment and are marked as unread?	GET message FILTER message.hasAttachments eq True FILTER message.importance eq Low FILTER message.isRead eq False
+What are the low importance email with attachment and marked as unread?	GET message FILTER message.hasAttachments eq True FILTER message.importance eq Low FILTER message.isRead eq False
+List out the the low importance email with attachment and marked as unread.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq Low FILTER message.isRead eq False
+To whom did I send my first email ordered by sent time from oldest to newest?	GET message ORDERBY message.sentDateTime asc TOP 1
+Tell me who are the recipients of my first email ordered by sent time from oldest to newest.	GET message ORDERBY message.sentDateTime asc TOP 1
+To whom did I sent my first email?	GET message ORDERBY message.sentDateTime asc TOP 1
+Who was the recipient for the first email I sent?	GET message ORDERBY message.sentDateTime asc TOP 1
+What are the low importance emails I received from newest to oldest order about interactive retrieval?	GET message FILTER message.importance eq Low ORDERBY message.receivedDateTime desc SEARCH interactive retrieval
+Provide me the low importance emails I received from newest to oldest order about interactive retrieval.	GET message FILTER message.importance eq Low ORDERBY message.receivedDateTime desc SEARCH interactive retrieval
+Tell me about the emails I have received about interactive retrieval with low importance ordered by received time from newest to oldest.	GET message FILTER message.importance eq Low ORDERBY message.receivedDateTime desc SEARCH interactive retrieval
+List out the emails with high importance and has attachments I received order by newest to oldest way.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High ORDERBY message.receivedDateTime desc
+What emails I received today with high importance and attachments ordered by descending manner.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High ORDERBY message.receivedDateTime desc
+Tell me about the emails I received having attachments with high importance ordered by received time from newest to oldest.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High ORDERBY message.receivedDateTime desc
+Which are the emails I received having attachments with high importance ordered by received time from newest to oldest?	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High ORDERBY message.receivedDateTime desc
+How many low importance emails I have with attachment?	GET message COUNT FILTER message.hasAttachments eq True FILTER message.importance eq Low
+Give me the number of low importance emails I have with attachment.	GET message COUNT FILTER message.hasAttachments eq True FILTER message.importance eq Low
+What are the number of emails with attachments which has low importance?	GET message COUNT FILTER message.hasAttachments eq True FILTER message.importance eq Low
+How many emails with attachments I have with low importance? 	GET message COUNT FILTER message.hasAttachments eq True FILTER message.importance eq Low
+Which are the emails I sent having low importance with no attachments ordered by sent time from oldest to newest?	GET message FILTER message.hasAttachments eq False FILTER message.importance eq Low ORDERBY message.sentDateTime asc
+Tell me about the emails I sent having low importance with no attachments ordered by sent time from oldest to newest.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq Low ORDERBY message.sentDateTime asc
+Give me the low importance emails I sent from oldest to newest order without attachments.	GET message FILTER message.hasAttachments eq False FILTER message.importance eq Low ORDERBY message.sentDateTime asc
+What are the low importance emails I sent from oldest to newest order without attachments?	GET message FILTER message.hasAttachments eq False FILTER message.importance eq Low ORDERBY message.sentDateTime asc
+Which are the read emails I received today from adriana jaques?	GET message FILTER message.from eq Adriana Jaques FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+Tell me about the read emails I received today from adriana jaques.	GET message FILTER message.from eq Adriana Jaques FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+What are the emails do I received today from adriana jaques which marked as read?	GET message FILTER message.from eq Adriana Jaques FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+List of the emails which marked as read that I received today from adriana jaques.	GET message FILTER message.from eq Adriana Jaques FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+To whom did I sent my last email in newest to oldest order?	GET message ORDERBY message.sentDateTime desc TOP 1
+Tell me the recipients of last email I sent in newest to oldest order?	GET message ORDERBY message.sentDateTime desc TOP 1
+To whom did I send my last email ordered by sent time from newest to oldest.T	GET message ORDERBY message.sentDateTime desc TOP 1
+Tell me Who is the recipients of my last email ordered by sent time from newest to oldest?	GET message ORDERBY message.sentDateTime desc TOP 1
+Give me the time of the first email I sent.	GET message ORDERBY message.sentDateTime asc TOP 1
+What was the time of the first email I sent?	GET message ORDERBY message.sentDateTime asc TOP 1
+When did I sent the first email?	GET message ORDERBY message.sentDateTime asc TOP 1
+Let me know when did i sent the first email.	GET message ORDERBY message.sentDateTime asc TOP 1
+What are the emails from fatimah pond of high importance I received starting from receive time newest to oldest?	GET message FILTER message.from eq Fatimah Pond FILTER message.importance eq High ORDERBY message.receivedDateTime desc
+List out the emails from fatimah pond of high importance I received starting from receive time newest to oldest.	GET message FILTER message.from eq Fatimah Pond FILTER message.importance eq High ORDERBY message.receivedDateTime desc
+Which emails do I received from fatimah pond in descending order having high importance? 	GET message FILTER message.from eq Fatimah Pond FILTER message.importance eq High ORDERBY message.receivedDateTime desc
+List of the emails which marked high importance that I received from fatimah pond in ordered from newest to oldest.	GET message FILTER message.from eq Fatimah Pond FILTER message.importance eq High ORDERBY message.receivedDateTime desc
+Who sent me the last email?	GET message ORDERBY message.receivedDateTime desc TOP 1
+From whom did I last receive an email?	GET message ORDERBY message.receivedDateTime desc TOP 1
+From whom did I receive the last email?	GET message ORDERBY message.receivedDateTime desc TOP 1
+Who was the sender of the top 1 email I received in the order newest to oldest?	GET message ORDERBY message.receivedDateTime desc TOP 1
+Which are the emails I sent today in deliveries category having low importance?	GET message FILTER message.categories eq Deliveries FILTER message.importance eq Low FILTER message.sentDateTime eq today
+Tell me about the emails I sent today in deliveries category having low importance.	GET message FILTER message.categories eq Deliveries FILTER message.importance eq Low FILTER message.sentDateTime eq today
+What are the low importance emails I sent today in the category deliveries?	GET message FILTER message.categories eq Deliveries FILTER message.importance eq Low FILTER message.sentDateTime eq today
+Please provide the low importance emails I sent today in the deliveries category.	GET message FILTER message.categories eq Deliveries FILTER message.importance eq Low FILTER message.sentDateTime eq today
+Which are the unread emails I received today in miami 3/29 category?	GET message FILTER message.categories eq Miami 3/29 FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+Tell me about the unread emails I received today in miami 3/29 category.	GET message FILTER message.categories eq Miami 3/29 FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+List the unread emails I received today under the category miami 3/29.	GET message FILTER message.categories eq Miami 3/29 FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+What are the unread emails under category miami 3/29 that I have received today?	GET message FILTER message.categories eq Miami 3/29 FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+What are the emails with attachments having high importance I received starting from receive time newest to oldest?	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High ORDERBY message.receivedDateTime desc
+List the emails with attachments having high importance I received starting from receive time newest to oldest.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High ORDERBY message.receivedDateTime desc
+List the high importance emails with attachments starting from old to new.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High ORDERBY message.receivedDateTime desc
+Which are the high importance emails with attachments starting with oldest to newest?	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High ORDERBY message.receivedDateTime desc
+How many emails I have about Linguistics with no attachments?	GET message COUNT FILTER message.hasAttachments eq False SEARCH Linguistics
+Give me the number of emails about Linguistics having no attachments.	GET message COUNT FILTER message.hasAttachments eq False SEARCH Linguistics
+Which unread emails I have received from Lilia Clausi in dondi category?	GET message FILTER message.categories eq dondi FILTER message.from eq Lilia Clausi FILTER message.isRead eq False
+List out the unread emails I received in dondi category from Lilia Clausi.	GET message FILTER message.categories eq dondi FILTER message.from eq Lilia Clausi FILTER message.isRead eq False
+Give me the first read email I have received.	GET message FILTER message.isRead eq True ORDERBY message.receivedDateTime asc TOP 1
+What is the top most read email I have received in the order oldest to newest?	GET message FILTER message.isRead eq True ORDERBY message.receivedDateTime asc TOP 1
+Provide me the first email I received without attachments.	GET message FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime asc TOP 1
+What is the top most email I received in the order oldest to newest without attachments?	GET message FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime asc TOP 1
+What are the unread emails I have received today in the cibc category?	GET message FILTER message.categories eq cibc FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+List the emails that are received by me today in cibc category and are marked as unread.	GET message FILTER message.categories eq cibc FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+Tell me about the high importance emails that I sent today with attachments.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High FILTER message.sentDateTime eq today
+What are the high importance emails that I sent today with attachments?	GET message FILTER message.hasAttachments eq True FILTER message.importance eq High FILTER message.sentDateTime eq today
+Give me the details of to recipients of my last email.	GET message ORDERBY message.sentDateTime desc TOP 1
+Tell me who are the to recipients of my top most email ordered by sent time from newest to oldest.	GET message ORDERBY message.sentDateTime desc TOP 1
+Make a list of emails with attachments that are marked low importance arranged in order of sent time from newest to oldest.	GET message FILTER message.hasAttachments eq True FILTER message.importance eq Low ORDERBY message.sentDateTime desc
+Which are the emails with attachments marked as low importance ordered by sent time from newest to oldest?	GET message FILTER message.hasAttachments eq True FILTER message.importance eq Low ORDERBY message.sentDateTime desc
+How many emails I have with attachments and are marked as low importance?	GET message COUNT FILTER message.hasAttachments eq True FILTER message.importance eq Low
+Tell me about the number of low importance emails that are having attachments.	GET message COUNT FILTER message.hasAttachments eq True FILTER message.importance eq Low
+What are the low importance emails I have from nancee savocchia ordered by receive time from newest to oldest?	GET message FILTER message.from eq Nancee Savocchia FILTER message.importance eq Low ORDERBY message.receivedDateTime desc
+Give me the emails from nancee savocchia that are marked as low importance in descending order by receive time.	GET message FILTER message.from eq Nancee Savocchia FILTER message.importance eq Low ORDERBY message.receivedDateTime desc
+Which are the read emails I have in high importance about Water storage?	GET message FILTER message.importance eq High FILTER message.isRead eq True SEARCH Water storage
+Tell me about the emails about water storage with high importance marked as read.	GET message FILTER message.importance eq High FILTER message.isRead eq True SEARCH Water storage
+Give me the List of high importance read emails about Water storage . 	GET message FILTER message.importance eq High FILTER message.isRead eq True SEARCH Water storage
+Which are the unread emails I have received from oldest to newest order which lies in mou category?	GET message FILTER message.categories eq MOU FILTER message.isRead eq False ORDERBY message.receivedDateTime asc
+Tell me about the unread emails in mou category ordered by received time from oldest to newest?	GET message FILTER message.categories eq MOU FILTER message.isRead eq False ORDERBY message.receivedDateTime asc
+List out the unread emails I have in mou category  ordered by received time oldest to newest.	GET message FILTER message.categories eq MOU FILTER message.isRead eq False ORDERBY message.receivedDateTime asc
+how many read emails I have received from gisele farquharson?	GET message COUNT FILTER message.from eq Gisele Farquharson FILTER message.isRead eq True
+How many read emails I have received from gisele farquharson?	GET message COUNT FILTER message.from eq Gisele Farquharson FILTER message.isRead eq True
+How many emails I have received from Gisele Farquharson which are marked as read?	GET message COUNT FILTER message.from eq Gisele Farquharson FILTER message.isRead eq True
+What are the read emails which falls under axi code having high importance ?	GET message FILTER message.categories eq AxiCode FILTER message.importance eq High FILTER message.isRead eq True
+What are the high importance read emails in axi code category?	GET message FILTER message.categories eq AxiCode FILTER message.importance eq High FILTER message.isRead eq True
+Which are the read emails I have in axi code category having high importance?	GET message FILTER message.categories eq AxiCode FILTER message.importance eq High FILTER message.isRead eq True
+What are the high importance read emails in axi code category?	GET message FILTER message.categories eq AxiCode FILTER message.importance eq High FILTER message.isRead eq True
+List out the high importance emails I have received from mendy pamintuan in datasheets category.	GET message FILTER message.categories eq Datasheets FILTER message.from eq Mendy Pamintuan FILTER message.importance eq High
+Tell me about emails I have received from mendy pamintuan in datasheets category with high importance.	GET message FILTER message.categories eq Datasheets FILTER message.from eq Mendy Pamintuan FILTER message.importance eq High
+what are the high importance emails received from mendy pamintuan which lies in datasheets category ?	GET message FILTER message.categories eq Datasheets FILTER message.from eq Mendy Pamintuan FILTER message.importance eq High
+List out the number of emails in sun investment category about maximin.	GET message COUNT FILTER message.categories eq Sun Investment SEARCH maximin
+Tell me the number of emails about maximum keyword which lies under sun investment?	GET message COUNT FILTER message.categories eq Sun Investment SEARCH maximin
+How many emails I have about maximin in sun investment category?	GET message COUNT FILTER message.categories eq Sun Investment SEARCH maximin
+Tell me about the first 86 emails I have received with  high importance?	GET message FILTER message.importance eq High ORDERBY message.receivedDateTime asc TOP 86
+Filter a list of first 86 emails I have received with high importance.	GET message FILTER message.importance eq High ORDERBY message.receivedDateTime asc TOP 86
+What are the first 86 mails I have received with high importance?	GET message FILTER message.importance eq High ORDERBY message.receivedDateTime asc TOP 86
+Tell me about the last email having low importance?	GET message FILTER message.importance eq Low ORDERBY message.receivedDateTime desc TOP 1
+Which the last email received with low importance?	GET message FILTER message.importance eq Low ORDERBY message.receivedDateTime desc TOP 1
+Tell me about last email I have received with low importance.	GET message FILTER message.importance eq Low ORDERBY message.receivedDateTime desc TOP 1
+What emails I have received today about grn ordered by receive time oldest to newest?	GET message FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc SEARCH grn
+List the emails I have received today about grn ordered by received time from oldest to newest?	GET message FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc SEARCH grn
+List out the emails I have received today with the keyword grn ordered by receive time oldest to newest.	GET message FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc SEARCH grn
+Give me the last 12 emails I have receieved with low importance.	GET message FILTER message.importance eq Low ORDERBY message.receivedDateTime desc TOP 12
+What are the Last 12 low importance emails I received?	GET message FILTER message.importance eq Low ORDERBY message.receivedDateTime desc TOP 12
+Which are last 12 emails that I have received with low importance?	GET message FILTER message.importance eq Low ORDERBY message.receivedDateTime desc TOP 12
+Tell me about the read emails I have received today having atachmnets.	GET message FILTER message.hasAttachments eq True FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+List out emails that I have received today which are marked as read with attachments.	GET message FILTER message.hasAttachments eq True FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+List out the read emails I have received today with attachment.	GET message FILTER message.hasAttachments eq True FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+Tell me about the first email I have received with high importance.	GET message FILTER message.importance eq High ORDERBY message.receivedDateTime asc TOP 1
+Which is the first email I have received with high importance?	GET message FILTER message.importance eq High ORDERBY message.receivedDateTime asc TOP 1
+List the first email with high importance.	GET message FILTER message.importance eq High ORDERBY message.receivedDateTime asc TOP 1
+Which are the last 27 emails I have received with high importance?	GET message FILTER message.importance eq High ORDERBY message.receivedDateTime desc TOP 27
+Tell me about the last 27 emails I have received with high importance.	GET message FILTER message.importance eq High ORDERBY message.receivedDateTime desc TOP 27
+List out last 27 emails I received with high importance.	GET message FILTER message.importance eq High ORDERBY message.receivedDateTime desc TOP 27
+What are the last 27 emails I received with high importance?	GET message FILTER message.importance eq High ORDERBY message.receivedDateTime desc TOP 27
+What emails I have received today for arrow's theorem ordered by receive time oldest to newest?	GET message FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc SEARCH arrow's theorem
+Provide emails received today about arrow's theorem ordered by receive time oldest to newest.	GET message FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc SEARCH arrow's theorem
+Which are the emails I have received today about arrow's theorem ordered by received time from oldest to newest?	GET message FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc SEARCH arrow's theorem
+Tell me about the emails I have received today about arrow's theorem ordered by received time from oldest to newest.	GET message FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc SEARCH arrow's theorem
+Which are the read emails I have about utterance keyword having low importance?	GET message FILTER message.importance eq Low FILTER message.isRead eq True SEARCH utterance
+List out the read emails I have with low importance about utterance keyword.	GET message FILTER message.importance eq Low FILTER message.isRead eq True SEARCH utterance
+What are the low importance emails I have with the keyword utterance and that are marked as read?	GET message FILTER message.importance eq Low FILTER message.isRead eq True SEARCH utterance
+Please provide the low importance emails I have with the keyword utterance and that are marked as read.	GET message FILTER message.importance eq Low FILTER message.isRead eq True SEARCH utterance
+Give me the last low importance email I have received.	GET message FILTER message.importance eq Low ORDERBY message.receivedDateTime desc TOP 1
+Provide me the last email I have received having low importance.	GET message FILTER message.importance eq Low ORDERBY message.receivedDateTime desc TOP 1
+Which is the last email received with low importance?	GET message FILTER message.importance eq Low ORDERBY message.receivedDateTime desc TOP 1
+Send me last email received with low importance.	GET message FILTER message.importance eq Low ORDERBY message.receivedDateTime desc TOP 1
+Which are first 81 emails received under omnipod category?	GET message FILTER message.categories eq Omnipod ORDERBY message.receivedDateTime asc TOP 81
+List out first 81 emails received falling into omnipod category.	GET message FILTER message.categories eq Omnipod ORDERBY message.receivedDateTime asc TOP 81
+Provide me the first 81 emails I have received lying under omnipod category.	GET message FILTER message.categories eq Omnipod ORDERBY message.receivedDateTime asc TOP 81
+What emails are received today with low importance about multi-user oo7 benchmark?	GET message FILTER message.importance eq Low FILTER message.receivedDateTime eq today SEARCH multi-user oo7 benchmark
+Provide emails received today with low importance containing multi-user oo7 benchmark keyword in it.	GET message FILTER message.importance eq Low FILTER message.receivedDateTime eq today SEARCH multi-user oo7 benchmark
+Give me the low importance emails I have received today about multi-user oo7 benchmark.	GET message FILTER message.importance eq Low FILTER message.receivedDateTime eq today SEARCH multi-user oo7 benchmark
+What are the low importance emails I have received today about multi-user oo7 benchmark?	GET message FILTER message.importance eq Low FILTER message.receivedDateTime eq today SEARCH multi-user oo7 benchmark
+Which are last 13 emails received with low importance?	GET message FILTER message.importance eq Low ORDERBY message.receivedDateTime desc TOP 13
+List out last 13 low importance emails that I have received.	GET message FILTER message.importance eq Low ORDERBY message.receivedDateTime desc TOP 13
+Provide the list of last 13 emails I received with low importance.	GET message FILTER message.importance eq Low ORDERBY message.receivedDateTime desc TOP 13
+List out last 13 low importance emails I received .	GET message FILTER message.importance eq Low ORDERBY message.receivedDateTime desc TOP 13
+Tell me about first email I sent with the keyword privacy requirement.	GET message ORDERBY message.sentDateTime asc SEARCH privacy requirement TOP 1
+List out first emails containing privacy requirement.	GET message ORDERBY message.sentDateTime asc SEARCH privacy requirement TOP 1
+Which is the first emails about privacy requirement keyword?	GET message ORDERBY message.sentDateTime asc SEARCH privacy requirement TOP 1
+Which are the read emails I have in pricewaterhouse category with low importance?	GET message FILTER message.categories eq pricewaterhouse FILTER message.importance eq Low FILTER message.isRead eq True
+List out all the read emails I have in pricewaterhouse category with low importance.	GET message FILTER message.categories eq pricewaterhouse FILTER message.importance eq Low FILTER message.isRead eq True
+What are the read emails lying under pricewaterhouse category with low importance?	GET message FILTER message.categories eq pricewaterhouse FILTER message.importance eq Low FILTER message.isRead eq True
+Give me the read low importance emails which falls under pricewaterhouse category.	GET message FILTER message.categories eq pricewaterhouse FILTER message.importance eq Low FILTER message.isRead eq True
+Which are the last 8 emails I have sent about re-find information?	GET message ORDERBY message.sentDateTime desc SEARCH re-find information TOP 8
+Tell me about the last 8 emails I have sent containing e-find information keyword.	GET message ORDERBY message.sentDateTime desc SEARCH re-find information TOP 8
+List out last 8 emails I sent about re-find information.	GET message ORDERBY message.sentDateTime desc SEARCH re-find information TOP 8
+Provide last 8 emails I sent with the keyword re-find information.	GET message ORDERBY message.sentDateTime desc SEARCH re-find information TOP 8
+What are the unread high importance emails lying under baltamore 4/12 category?	GET message FILTER message.categories eq Baltamore 4/12 FILTER message.importance eq High FILTER message.isRead eq False
+Give me the high importance unread emails which lies under baltamore 4/12 category.	GET message FILTER message.categories eq Baltamore 4/12 FILTER message.importance eq High FILTER message.isRead eq False
+Give me the List of high importance unread emails I have in baltamore 4/12 category.	GET message FILTER message.categories eq Baltamore 4/12 FILTER message.importance eq High FILTER message.isRead eq False
+What important unread emails I have in baltamore 4/12 category?	GET message FILTER message.categories eq Baltamore 4/12 FILTER message.importance eq High FILTER message.isRead eq False
+Which are the unread emails I have about arabinose with attachments?	GET message FILTER message.hasAttachments eq True FILTER message.isRead eq False SEARCH arabinose
+Tell me about the unread emails I have containing arabinose keyword with attachments.	GET message FILTER message.hasAttachments eq True FILTER message.isRead eq False SEARCH arabinose
+Give me the unread emails about arabinose with attachments.	GET message FILTER message.hasAttachments eq True FILTER message.isRead eq False SEARCH arabinose
+What are the unread and with attachments emails about arabinose?	GET message FILTER message.hasAttachments eq True FILTER message.isRead eq False SEARCH arabinose
+What emails are there under interaction protocol with high importance marked as unread?	GET message FILTER message.importance eq High FILTER message.isRead eq False SEARCH interaction protocol
+List out high importance emails about interaction protocol marked as unread.	GET message FILTER message.importance eq High FILTER message.isRead eq False SEARCH interaction protocol
+List out high importance and still unread emails I have with the keyword interaction protocol.	GET message FILTER message.importance eq High FILTER message.isRead eq False SEARCH interaction protocol
+What are the high importance emails I have about interaction protocol and still marked as unread?	GET message FILTER message.importance eq High FILTER message.isRead eq False SEARCH interaction protocol
+Which are the numbers of emails I have received from albertine jacquemin with attachments?	GET message COUNT FILTER message.from eq Albertine Jacquemin FILTER message.hasAttachments eq True
+Tell me about the number of emails I have received from albertine jacquemin with attachments.	GET message COUNT FILTER message.from eq Albertine Jacquemin FILTER message.hasAttachments eq True
+How many emails I have received from Albertine Jacquemin with attachments?	GET message COUNT FILTER message.from eq Albertine Jacquemin FILTER message.hasAttachments eq True
+List the number of emails received from Albertine Jacquemin having attachments.	GET message COUNT FILTER message.from eq Albertine Jacquemin FILTER message.hasAttachments eq True
+Which are the read emails I have in accenture new media category with low importance?	GET message FILTER message.categories eq Accenture New Media FILTER message.importance eq Low FILTER message.isRead eq True
+Tell me about the emails I have in accenture new media category with low importance.	GET message FILTER message.categories eq Accenture New Media FILTER message.importance eq Low FILTER message.isRead eq True
+List out the read low importance emails which lies under accenture new media category.	GET message FILTER message.categories eq Accenture New Media FILTER message.importance eq Low FILTER message.isRead eq True
+Give me the read emails lying under accenture new media category with low importance.	GET message FILTER message.categories eq Accenture New Media FILTER message.importance eq Low FILTER message.isRead eq True
+Which are the read emails I have in pemex category having high importance?	GET message FILTER message.categories eq pemex FILTER message.importance eq High FILTER message.isRead eq True
+Tell me about the emails in pemex category having high importance and are marked as read.	GET message FILTER message.categories eq pemex FILTER message.importance eq High FILTER message.isRead eq True
+List out high importance read emails I have in pemex category.	GET message FILTER message.categories eq pemex FILTER message.importance eq High FILTER message.isRead eq True
+What read emails I have  in pemex category with high importance ?	GET message FILTER message.categories eq pemex FILTER message.importance eq High FILTER message.isRead eq True
+Which are the unread emails I have received from nestor hulton with high importance?	GET message FILTER message.from eq Nestor Hulton FILTER message.importance eq High FILTER message.isRead eq False
+Tell me about the unread emails I have received from nestor hulton with high importance.	GET message FILTER message.from eq Nestor Hulton FILTER message.importance eq High FILTER message.isRead eq False
+Give me the unread emails I have received from nestor hulton with high importance.	GET message FILTER message.from eq Nestor Hulton FILTER message.importance eq High FILTER message.isRead eq False
+What are the unread high importance emails I have received from nestor hulton?	GET message FILTER message.from eq Nestor Hulton FILTER message.importance eq High FILTER message.isRead eq False
+Tell me about the last emails I have received in juniper networks category.	GET message FILTER message.categories eq JuniperNetworks ORDERBY message.receivedDateTime desc TOP 1
+Which is the last emails I have received in juniper networks category?	GET message FILTER message.categories eq JuniperNetworks ORDERBY message.receivedDateTime desc TOP 1
+Which is the last email received under juniper networks category?	GET message FILTER message.categories eq JuniperNetworks ORDERBY message.receivedDateTime desc TOP 1
+List out the last email received falling into juniper networks category.	GET message FILTER message.categories eq JuniperNetworks ORDERBY message.receivedDateTime desc TOP 1
+How many emails I have from shaunda beyea without attachment?	GET message COUNT FILTER message.from eq Shaunda Beyea FILTER message.hasAttachments eq False
+Please provide number of emails I have from shaunda beyea without attachment.	GET message COUNT FILTER message.from eq Shaunda Beyea FILTER message.hasAttachments eq False
+List out the number of emails I have received from shaunda beyea without attachments.	GET message COUNT FILTER message.from eq Shaunda Beyea FILTER message.hasAttachments eq False
+Which are the emails I have received in ops pagers category with low importance ordered by received time from oldest to newest?	GET message FILTER message.categories eq ops pagers FILTER message.importance eq Low ORDERBY message.receivedDateTime asc
+List out low importance emails I have in ops pagers category ordered by receive time oldest to newest.	GET message FILTER message.categories eq ops pagers FILTER message.importance eq Low ORDERBY message.receivedDateTime asc
+What are the emails having low importance in ops pagers category ordered by receive time oldest to newest?	GET message FILTER message.categories eq ops pagers FILTER message.importance eq Low ORDERBY message.receivedDateTime asc
+What are the unread emails that I have received in ascending order in avocado it contacts 11 category?	GET message FILTER message.categories eq AvocadoIT Contacts11 FILTER message.isRead eq False ORDERBY message.receivedDateTime asc
+Please provide the unread emails that I have received in order oldest to newest of avocado it contacts 11 category.	GET message FILTER message.categories eq AvocadoIT Contacts11 FILTER message.isRead eq False ORDERBY message.receivedDateTime asc
+What emails I have received under avocado it contacts11 which are marked as unread ordered by receive time oldest to newest?	GET message FILTER message.categories eq AvocadoIT Contacts11 FILTER message.isRead eq False ORDERBY message.receivedDateTime asc
+Send me list of unread emails falling into avocado it contacts11 category ordered by receive time oldest to newest.	GET message FILTER message.categories eq AvocadoIT Contacts11 FILTER message.isRead eq False ORDERBY message.receivedDateTime asc
+List out the unread emails I have received today with attachments.	GET message FILTER message.hasAttachments eq True FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+Which are the unread emails with attachments I have received today?	GET message FILTER message.hasAttachments eq True FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+Which are the unread emails I have received today with attachments?	GET message FILTER message.hasAttachments eq True FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+List out the unread emails I have received today with attachments.	GET message FILTER message.hasAttachments eq True FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+Which is the last email that I have received having high importance?	GET message FILTER message.importance eq High ORDERBY message.receivedDateTime desc TOP 1
+Tell me about the last email that I have received with high importance.	GET message FILTER message.importance eq High ORDERBY message.receivedDateTime desc TOP 1
+Give me the high importance last email I received.	GET message FILTER message.importance eq High ORDERBY message.receivedDateTime desc TOP 1
+Provide me the high importance last email I received.	GET message FILTER message.importance eq High ORDERBY message.receivedDateTime desc TOP 1
+How many emails I have without attachment and are marked as read?	GET message COUNT FILTER message.hasAttachments eq False FILTER message.isRead eq True
+Give me the number of emails I have without attachment and are marked as read.	GET message COUNT FILTER message.hasAttachments eq False FILTER message.isRead eq True
+How many read emails I have with no attachments?	GET message COUNT FILTER message.hasAttachments eq False FILTER message.isRead eq True
+Tell me about the read emails I have with no attachments.	GET message COUNT FILTER message.hasAttachments eq False FILTER message.isRead eq True
+Tell me about the last 47 emails I received with high importance.	GET message FILTER message.importance eq High ORDERBY message.receivedDateTime desc TOP 47
+Which are the last 47 emails I received with high importance?	GET message FILTER message.importance eq High ORDERBY message.receivedDateTime desc TOP 47
+Give me the last 47 emails I received having high importance.	GET message FILTER message.importance eq High ORDERBY message.receivedDateTime desc TOP 47
+List out the last 47 high importance emails I received.	GET message FILTER message.importance eq High ORDERBY message.receivedDateTime desc TOP 47
+Give me the emails I have about Forest without attachment and are marked as read.	GET message FILTER message.hasAttachments eq False FILTER message.isRead eq True SEARCH Forests
+Find the emails regarding Forest that has no attachments and marked as read.	GET message FILTER message.hasAttachments eq False FILTER message.isRead eq True SEARCH Forests
+what emails regarding forest has no attachments as marked as read?	GET message FILTER message.hasAttachments eq False FILTER message.isRead eq True SEARCH Forests
+List out the emails I sent from newest to oldest order about  incremental coverage quality algorithm falling under religon.	GET message FILTER message.categories eq religon ORDERBY message.sentDateTime desc SEARCH incremental coverage quality algorithm
+What are the emails I sent from newest to oldest order about   incremental coverage quality algorithm falling under religon.	GET message FILTER message.categories eq religon ORDERBY message.sentDateTime desc SEARCH incremental coverage quality algorithm
+What are the emails about incremental coverage quality algorithm that fall under religon categories I sent starting from sent time newest to oldest?	GET message FILTER message.categories eq religon ORDERBY message.sentDateTime desc SEARCH incremental coverage quality algorithm
+List out the emails about incremental coverage quality algorithm that fall under religon categories I sent starting from sent time newest to oldest.	GET message FILTER message.categories eq religon ORDERBY message.sentDateTime desc SEARCH incremental coverage quality algorithm
+What are the emails I sent today with attachment in the category san jose state?	GET message FILTER message.categories eq San Jose State FILTER message.hasAttachments eq True FILTER message.sentDateTime eq today
+Please provide the emails I sent today with attachment in the san jose state category.	GET message FILTER message.categories eq San Jose State FILTER message.hasAttachments eq True FILTER message.sentDateTime eq today
+What are the emails I have in the san jose state categories do I sent today with attachments.	GET message FILTER message.categories eq San Jose State FILTER message.hasAttachments eq True FILTER message.sentDateTime eq today
+List of the emails in the san jose state categories that I sent today with attachments.	GET message FILTER message.categories eq San Jose State FILTER message.hasAttachments eq True FILTER message.sentDateTime eq today
+List out the emails I received in the release notes category and are marked as read ordered by newest to oldest.	GET message FILTER message.categories eq Release Notes FILTER message.isRead eq True ORDERBY message.receivedDateTime desc
+What are the emails I received in the category release notes and are marked as read in the order newest to oldest?	GET message FILTER message.categories eq Release Notes FILTER message.isRead eq True ORDERBY message.receivedDateTime desc
+Which emails under release notes categories do i received descending ordered by time?	GET message FILTER message.categories eq Release Notes FILTER message.isRead eq True ORDERBY message.receivedDateTime desc
+Tell me a list of the emails under release notes categories that i received order time from newest to oldest.	GET message FILTER message.categories eq Release Notes FILTER message.isRead eq True ORDERBY message.receivedDateTime desc
+What are the emails marked as read I received from joaquin bir having high importance?	GET message FILTER message.from eq Joaquin Bir FILTER message.importance eq High FILTER message.isRead eq True
+Let me know the emails from joaquin bir I received that are marked as read with high importance.	GET message FILTER message.from eq Joaquin Bir FILTER message.importance eq High FILTER message.isRead eq True
+Please provide the high importance emails that I have from Joaquin Bir and are marked as read.	GET message FILTER message.from eq Joaquin Bir FILTER message.importance eq High FILTER message.isRead eq True
+What are the high importance emails I have from Joaquin Bir and are marked as read?	GET message FILTER message.from eq Joaquin Bir FILTER message.importance eq High FILTER message.isRead eq True
+Find the emails with attachments I received today and marked as unread.	GET message FILTER message.hasAttachments eq True FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+Which emails i received today with attachments and marked as unread?	GET message FILTER message.hasAttachments eq True FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+Which are the emails marked as unread with attachments received today?	GET message FILTER message.hasAttachments eq True FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+Give me those emails which have attachments and received today that are marked as unread. 	GET message FILTER message.hasAttachments eq True FILTER message.isRead eq False FILTER message.receivedDateTime eq today
+What are the high importance emails I have with the keyword novel feature those are marked as read?	GET message FILTER message.importance eq High FILTER message.isRead eq True SEARCH novel feature
+List out the high importance emails I have about novel feature those are marked as read.	GET message FILTER message.importance eq High FILTER message.isRead eq True SEARCH novel feature
+Which are the read emails that have high importance and about novel feature?	GET message FILTER message.importance eq High FILTER message.isRead eq True SEARCH novel feature
+List the read mails having high importance and are about novel features.	GET message FILTER message.importance eq High FILTER message.isRead eq True SEARCH novel feature
+What are the emails that I have about google personalized search with attachment and are marked as read?	GET message FILTER message.hasAttachments eq True FILTER message.isRead eq True SEARCH google personalized search
+List out the read emails that I have about google personlized search with attachment.	GET message FILTER message.hasAttachments eq True FILTER message.isRead eq True SEARCH google personalized search
+What are the emails about google personalized search having attachments and are marked as read?	GET message FILTER message.hasAttachments eq True FILTER message.isRead eq True SEARCH google personalized search
+Let me know the emails that are marked as read with attachments about google personalized search.	GET message FILTER message.hasAttachments eq True FILTER message.isRead eq True SEARCH google personalized search
+Provide me the read low importance emails I have about Role of women.	GET message FILTER message.importance eq Low FILTER message.isRead eq True SEARCH Role of women
+Give me the read low importance emails I have about Role of women.	GET message FILTER message.importance eq Low FILTER message.isRead eq True SEARCH Role of women
+What emails regarding Role of women have low importance and marked as read?	GET message FILTER message.importance eq Low FILTER message.isRead eq True SEARCH Role of women
+Give me the list of emails about Role of women with low importance and marked ad read.	GET message FILTER message.importance eq Low FILTER message.isRead eq True SEARCH Role of women
+What are the high importance emails I have received from deeanna tottingham lying under baltamore 4/12 category?	GET message FILTER message.categories eq Baltamore 4/12 FILTER message.from eq Deeanna Tottingham FILTER message.importance eq High
+List out the high importance emails I have received from deeanna tottingham lying under baltamore 4/12 category.	GET message FILTER message.categories eq Baltamore 4/12 FILTER message.from eq Deeanna Tottingham FILTER message.importance eq High
+Which are the emails I have received from deeanna tottingham in baltamore 4/12 category with high importance?	GET message FILTER message.categories eq Baltamore 4/12 FILTER message.from eq Deeanna Tottingham FILTER message.importance eq High
+Tell me about the emails I have received from deeanna tottingham in baltamore 4/12 category with high importance.	GET message FILTER message.categories eq Baltamore 4/12 FILTER message.from eq Deeanna Tottingham FILTER message.importance eq High
+What are the last 31 emails I have received in the ge medical systems category?	GET message FILTER message.categories eq GE Medical Systems ORDERBY message.receivedDateTime desc TOP 31
+List out the top 31 emails I have received in the order newest to oldest in the ge medical systems category.	GET message FILTER message.categories eq GE Medical Systems ORDERBY message.receivedDateTime desc TOP 31
+What are the latest 31 emails in the ge medical systems categories I received in descending order.	GET message FILTER message.categories eq GE Medical Systems ORDERBY message.receivedDateTime desc TOP 31
+Give me the top 31 emails fall in ge medical systems categories that I received order by receive time from newest to oldest.	GET message FILTER message.categories eq GE Medical Systems ORDERBY message.receivedDateTime desc TOP 31
+What are the low importance emails I have from Kirstin Shollenbarger and are marked as read?	GET message FILTER message.from eq Kirstin Shollenbarger FILTER message.importance eq Low FILTER message.isRead eq True
+Give me the low importance emails I have from Kirstin Shollenbarger those are marked as read.	GET message FILTER message.from eq Kirstin Shollenbarger FILTER message.importance eq Low FILTER message.isRead eq True
+Which are the read emails I received from kirstin shollenbarger with low importance?	GET message FILTER message.from eq Kirstin Shollenbarger FILTER message.importance eq Low FILTER message.isRead eq True
+Tell me about the read emails I received from kirstin shollenbarger with low importance.	GET message FILTER message.from eq Kirstin Shollenbarger FILTER message.importance eq Low FILTER message.isRead eq True
+What are the read emails do I have in misc. leads info category ordered by received time oldest to newest?	GET message FILTER message.categories eq Misc. Leads Info FILTER message.isRead eq True ORDERBY message.receivedDateTime asc
+List the read emails in ascending order by receive time I have in misc. leads info category. 	GET message FILTER message.categories eq Misc. Leads Info FILTER message.isRead eq True ORDERBY message.receivedDateTime asc
+Provide me the low importance emails I received from Edelmira Bucaram that are marked as unread.	GET message FILTER message.from eq Edelmira Bucaram FILTER message.importance eq Low FILTER message.isRead eq False
+What are the unread emails I have received from Edelmira Bucaram with low importance?	GET message FILTER message.from eq Edelmira Bucaram FILTER message.importance eq Low FILTER message.isRead eq False
+Provide a list of read emails without attachments that were received today.	GET message FILTER message.hasAttachments eq False FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+Which are the read emails without attachments that were received today?	GET message FILTER message.hasAttachments eq False FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+When did I sent my first email about Maldives?	GET message ORDERBY message.sentDateTime asc SEARCH Maldives TOP 1
+Give me the time of the first email thatI sent about Maldives.	GET message ORDERBY message.sentDateTime asc SEARCH Maldives TOP 1
+What are the low importance emails I have received today about lgn?	GET message FILTER message.importance eq Low FILTER message.receivedDateTime eq today SEARCH lgn
+List the low importance emails that are received by me today and contains word lgn.	GET message FILTER message.importance eq Low FILTER message.receivedDateTime eq today SEARCH lgn
+How many emails I have received from alona inbody with attachments?	GET message COUNT FILTER message.from eq Alona Inbody FILTER message.hasAttachments eq True
+What are the emails do I have from Jamaal Kusko of send.com category and that have attachment to it?	GET message FILTER message.categories eq Send.com FILTER message.from eq Jamaal Kusko FILTER message.hasAttachments eq True
+What emails I have from Jamaal Kusko under send.com category with attachments?	GET message FILTER message.categories eq Send.com FILTER message.from eq Jamaal Kusko FILTER message.hasAttachments eq True
+List the read emails from obdulia hoving ordered by received time oldest to newest?	GET message FILTER message.from eq Obdulia Hoving FILTER message.isRead eq True ORDERBY message.receivedDateTime asc
+List me the emails I received in the order of oldest to newest from Obdulia Hoving and are marked as read.	GET message FILTER message.from eq Obdulia Hoving FILTER message.isRead eq True ORDERBY message.receivedDateTime asc
+List out the received mails from Obdulia Hoving in oldest to newest order which are marked read.	GET message FILTER message.from eq Obdulia Hoving FILTER message.isRead eq True ORDERBY message.receivedDateTime asc
+Give me the first email that i have sent having high importance?	GET message FILTER message.importance eq High ORDERBY message.sentDateTime asc TOP 1
+When did I received my first email with high performance?	GET message FILTER message.importance eq High ORDERBY message.sentDateTime asc TOP 1
+Tell me about first important mail that i sent .	GET message FILTER message.importance eq High ORDERBY message.sentDateTime asc TOP 1
+How many emails have attachments in itineray.com category ordered by sent time oldest to newest?	GET message FILTER message.categories eq Itinerary.com FILTER message.hasAttachments eq True ORDERBY message.sentDateTime asc
+List out the emails i have sent to itinerary.com from oldest to newest order including attachments.	GET message FILTER message.categories eq Itinerary.com FILTER message.hasAttachments eq True ORDERBY message.sentDateTime asc
+What are the email I have sent in the order of oldest to newest of itinerary.com that have attachment to it?	GET message FILTER message.categories eq Itinerary.com FILTER message.hasAttachments eq True ORDERBY message.sentDateTime asc
+List the emails I have received with attachment that are marked as read and start from oldest to newest.	GET message FILTER message.hasAttachments eq True FILTER message.isRead eq True ORDERBY message.receivedDateTime asc
+Tell me about the read emails having attachments ordered by received time from oldest to newest.	GET message FILTER message.hasAttachments eq True FILTER message.isRead eq True ORDERBY message.receivedDateTime asc
+What emails I have received with attachments and marked as read ordered by receiving time oldest to newest?	GET message FILTER message.hasAttachments eq True FILTER message.isRead eq True ORDERBY message.receivedDateTime asc
+What is the last email I have sent which lies under 10/25 category?	GET message FILTER message.categories eq 10/25 ORDERBY message.sentDateTime desc TOP 1
+Tell me about the last email I have sent in 10/25 category.	GET message FILTER message.categories eq 10/25 ORDERBY message.sentDateTime desc TOP 1
+Tell me about last emails I have sent in 10/25 category.	GET message FILTER message.categories eq 10/25 ORDERBY message.sentDateTime desc TOP 1
+What emails I have sent about fungi with high importance ordered by sent time newest to oldest?	GET message FILTER message.importance eq High ORDERBY message.sentDateTime desc SEARCH fungi
+What are the emails about fungi having high importance which I have sent from newest to oldest order ?	GET message FILTER message.importance eq High ORDERBY message.sentDateTime desc SEARCH fungi
+List out the high importance emails about fungi ordered by sent time newest to oldest.	GET message FILTER message.importance eq High ORDERBY message.sentDateTime desc SEARCH fungi
+How many emails I have received today falling under co-marketing agreements category?	GET message COUNT FILTER message.categories eq Co-Marketing Agreements FILTER message.receivedDateTime eq today
+Tell me the number of emails I have received today containing co-marketing agreements category .	GET message COUNT FILTER message.categories eq Co-Marketing Agreements FILTER message.receivedDateTime eq today
+Tell me the number of emails I have received  today in co-marketing agreements category.	GET message COUNT FILTER message.categories eq Co-Marketing Agreements FILTER message.receivedDateTime eq today
+Which are the emails I have received today from richie woodford in pinnacle category?	GET message FILTER message.categories eq Pinnacle FILTER message.from eq Richie Woodford FILTER message.receivedDateTime eq today
+Give me the emails I have received today from richie woodford  which falls under pinnacle .	GET message FILTER message.categories eq Pinnacle FILTER message.from eq Richie Woodford FILTER message.receivedDateTime eq today
+List the emails i have received today from richie woodford in category pinnacle.	GET message FILTER message.categories eq Pinnacle FILTER message.from eq Richie Woodford FILTER message.receivedDateTime eq today
+Which are the read emails I have received from vernell kohlmyer with attachments?	GET message FILTER message.from eq Vernell Kohlmyer FILTER message.hasAttachments eq True FILTER message.isRead eq False
+List out emails with attachments received from Vernell Kohlmyer marked as unread.	GET message FILTER message.from eq Vernell Kohlmyer FILTER message.hasAttachments eq True FILTER message.isRead eq False
+List out the  unread emails I have received from vernell kohlmyer with attachment.	GET message FILTER message.from eq Vernell Kohlmyer FILTER message.hasAttachments eq True FILTER message.isRead eq False
+Give me the unread emails with no attachments I have received from newest to oldest order.	GET message FILTER message.hasAttachments eq False FILTER message.isRead eq False ORDERBY message.receivedDateTime desc
+Tell me about the unread emails having no attachments ordered by received time from newest to oldest?	GET message FILTER message.hasAttachments eq False FILTER message.isRead eq False ORDERBY message.receivedDateTime desc
+List out the unread emails I have received without attachment ordered by newest to oldest. 	GET message FILTER message.hasAttachments eq False FILTER message.isRead eq False ORDERBY message.receivedDateTime desc
+Tell me about the last emails I have sent with no attachmnents.	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime desc TOP 1
+Give me the last email I have sent having no attachment .	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime desc TOP 1
+Tell me about last email that I have sent without attachment .	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime desc TOP 1
+List last 71 emails that I have sent with low importance.	GET message FILTER message.importance eq Low ORDERBY message.sentDateTime desc TOP 71
+give me last 71 email I have sent having low importance.	GET message FILTER message.importance eq Low ORDERBY message.sentDateTime desc TOP 71
+List out last 71 low importance emails I have sent .	GET message FILTER message.importance eq Low ORDERBY message.sentDateTime desc TOP 71
+List out the read emails I have received with high importance ordered by received time from oldest to newest.	GET message FILTER message.importance eq High FILTER message.isRead eq True ORDERBY message.receivedDateTime asc
+Provide list of emails I have received with high importance and marked as read ordered by receive time oldest to newest.	GET message FILTER message.importance eq High FILTER message.isRead eq True ORDERBY message.receivedDateTime asc
+Give me the high importance read emails  I have received from oldest to newest order.	GET message FILTER message.importance eq High FILTER message.isRead eq True ORDERBY message.receivedDateTime asc
+Which are the first 26 emails that I have sent without attachments?	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime asc TOP 26
+What are the first 26 emails I have sent without attachments? 	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime asc TOP 26
+Which are the first 26 emails I have sent with no attachments?	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime asc TOP 26
+List out the low importance emails I have received that are marked as read ordered by oldest to newest.	GET message FILTER message.importance eq Low FILTER message.isRead eq True ORDERBY message.receivedDateTime asc
+What emails I have received of low importance which are marked as read ordered by receive time oldest to newest?	GET message FILTER message.importance eq Low FILTER message.isRead eq True ORDERBY message.receivedDateTime asc
+What are the read low importance emails I have received from oldest to newest order ?	GET message FILTER message.importance eq Low FILTER message.isRead eq True ORDERBY message.receivedDateTime asc
+Give me the attachments of first email I have received.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Which is the attachments of first email I have received?	GET message ORDERBY message.receivedDateTime asc TOP 1
+What is attached to the first email I received?	GET message ORDERBY message.receivedDateTime asc TOP 1
+ List the attachments of the first email that I received.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Which low importance emails I have sent today about artificial grammars?	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today SEARCH artificial grammars
+List out emails of low importance sent today by me for keyword artificial grammars.	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today SEARCH artificial grammars
+which are the emails I have sent today about artificial grammars with low importance?	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today SEARCH artificial grammars
+Tell me about the emails I have sent today about artificial grammars with low importance.	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today SEARCH artificial grammars
+What emails I have received today with low importance and are marked as read?	GET message FILTER message.importance eq Low FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+List out low importance emails received today marked as read?	GET message FILTER message.importance eq Low FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+Which are the read emails I have received today with low importance?	GET message FILTER message.importance eq Low FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+Tell me about the read emails I have received today with low importance.	GET message FILTER message.importance eq Low FILTER message.isRead eq True FILTER message.receivedDateTime eq today
+List out the emails I have received from noel belser about Technical aid with attachments.	GET message FILTER message.from eq Noel Belser FILTER message.hasAttachments eq True SEARCH Technical aid
+Tell me about the emails I have received from noel belser containing Technical aid keyword with attachments.	GET message FILTER message.from eq Noel Belser FILTER message.hasAttachments eq True SEARCH Technical aid
+List out the emails about Technical aid I have received from noel belser with attachments.	GET message FILTER message.from eq Noel Belser FILTER message.hasAttachments eq True SEARCH Technical aid
+What are the emails I have received from noel belser with attachments about Technical aid?	GET message FILTER message.from eq Noel Belser FILTER message.hasAttachments eq True SEARCH Technical aid
+Which are the emails I have received today with low importance ordered by received time from oldest to newest?	GET message FILTER message.importance eq Low FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc
+Tell me about the emails I have received today with low importance ordered by received time from oldest to newest.	GET message FILTER message.importance eq Low FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc
+What are the low importance emails that I have received today in order oldest to newest?	GET message FILTER message.importance eq Low FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc
+List out the low importance emails that I have received today ordered by oldest to newest.	GET message FILTER message.importance eq Low FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc
+What are the emails I have sent having attachments and lyind under siebeltesting category from oldest to newest order?	GET message FILTER message.categories eq siebeltesting FILTER message.hasAttachments eq True ORDERBY message.sentDateTime asc
+List out the emails I have sent having attachments and lyind under siebeltesting category from oldest to newest order. 	GET message FILTER message.categories eq siebeltesting FILTER message.hasAttachments eq True ORDERBY message.sentDateTime asc
+What emails are sent under siebeltesting category with attachments ordered by sent time oldest to newest?	GET message FILTER message.categories eq siebeltesting FILTER message.hasAttachments eq True ORDERBY message.sentDateTime asc
+List out emails sent with attachments falling into siebeltesting category ordered by sent time oldest to newest.	GET message FILTER message.categories eq siebeltesting FILTER message.hasAttachments eq True ORDERBY message.sentDateTime asc
+What emails are sent under current tasks without attachments ordered by sent time oldest to newest?	GET message FILTER message.categories eq Current Tasks FILTER message.hasAttachments eq False ORDERBY message.sentDateTime asc
+Provide list of emails sent falling into current tasks category without attachments ordered by sent time oldest to newest.	GET message FILTER message.categories eq Current Tasks FILTER message.hasAttachments eq False ORDERBY message.sentDateTime asc
+What are the emails I have sent which lies under current tasks category from oldest to newest order without attachments?	GET message FILTER message.categories eq Current Tasks FILTER message.hasAttachments eq False ORDERBY message.sentDateTime asc
+List out the emails I have sent which lies under current tasks category from oldest to newest order without attachments.	GET message FILTER message.categories eq Current Tasks FILTER message.hasAttachments eq False ORDERBY message.sentDateTime asc
+Which are the read emails I have recevied with high importance ordered by received time from newest to oldest?	GET message FILTER message.importance eq High FILTER message.isRead eq True ORDERBY message.receivedDateTime desc
+List out the read emails I have recevied with high importance ordered by received time from newest to oldest.	GET message FILTER message.importance eq High FILTER message.isRead eq True ORDERBY message.receivedDateTime desc
+What are the high importance emails that I have received in the order newest to oldest and are marked as read?	GET message FILTER message.importance eq High FILTER message.isRead eq True ORDERBY message.receivedDateTime desc
+Give me the high importance emails that I have ordered by receive time newest to oldest and are marked as read.	GET message FILTER message.importance eq High FILTER message.isRead eq True ORDERBY message.receivedDateTime desc
+When did I received by first email?	GET message ORDERBY message.receivedDateTime asc TOP 1
+Give me the time of first email I have received.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Give me the time of first email I have received.	GET message ORDERBY message.receivedDateTime asc TOP 1
+What is the received time of first email?	GET message ORDERBY message.receivedDateTime asc TOP 1
+List out last 17 emails I have sent in follow up with! category.	GET message FILTER message.categories eq Follow up with! ORDERBY message.sentDateTime desc TOP 17
+Give me the list of Last 17 emails I have sent in follow up with! category.	GET message FILTER message.categories eq Follow up with! ORDERBY message.sentDateTime desc TOP 17
+Which are the last 17 emails sent under follow up with! category?	GET message FILTER message.categories eq Follow up with! ORDERBY message.sentDateTime desc TOP 17
+Provide last 17 sent emails falling into follow up with! category.	GET message FILTER message.categories eq Follow up with! ORDERBY message.sentDateTime desc TOP 17
+What are the emails that I have received from Deanne Kary in the order newest to oldest and that are marked as read?	GET message FILTER message.from eq Deanne Kary FILTER message.isRead eq True ORDERBY message.receivedDateTime desc
+List the emails that I have received from Deanne Kary in the order newest to oldest and that are marked as read.	GET message FILTER message.from eq Deanne Kary FILTER message.isRead eq True ORDERBY message.receivedDateTime desc
+List out read emails I received from deanne kary ordered by newest to oldest.	GET message FILTER message.from eq Deanne Kary FILTER message.isRead eq True ORDERBY message.receivedDateTime desc
+What are the  emails I received from deanne kary which are marked as read in ordered by newest to oldest?	GET message FILTER message.from eq Deanne Kary FILTER message.isRead eq True ORDERBY message.receivedDateTime desc
+What emails I have received with attachments which are marked as unread ordered by receive time oldest to newest?	GET message FILTER message.hasAttachments eq True FILTER message.isRead eq False ORDERBY message.receivedDateTime asc
+List out emails received with attachments marked as unread ordered by receive time oldest to newest.	GET message FILTER message.hasAttachments eq True FILTER message.isRead eq False ORDERBY message.receivedDateTime asc
+Give me the unread emails that I have received with attachment in the order oldest to newest.	GET message FILTER message.hasAttachments eq True FILTER message.isRead eq False ORDERBY message.receivedDateTime asc
+What are the unread emails that I have with attachment ordered by receive time oldest to newest? 	GET message FILTER message.hasAttachments eq True FILTER message.isRead eq False ORDERBY message.receivedDateTime asc
+Which are the emails I have received from trula fry with no attachments ordered by received time from newest to oldest?	GET message FILTER message.from eq Trula Fry FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime desc
+Tell me about the emails I have received from trula fry with no attachments ordered by received time from newest to oldest.	GET message FILTER message.from eq Trula Fry FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime desc
+Which are the emails I have received from trula fry from newest to oldest order without attachments?	GET message FILTER message.from eq Trula Fry FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime desc
+What are the emails I have received from trula fry from newest to oldest order without attachments?	GET message FILTER message.from eq Trula Fry FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime desc
+What emails I have received  in pcia category without attachment ordered by receive time newest to oldest?	GET message FILTER message.categories eq PCIA FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime desc
+List out emails I have in pcia category without attachment ordered by receive time newest to oldest.	GET message FILTER message.categories eq PCIA FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime desc
+Give me the emails without attachments I have received from newest to oldest order which lies under pcia categroy.	GET message FILTER message.categories eq PCIA FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime desc
+What are the emails lying under pcia category I have received from newest to oldest order without attachments?	GET message FILTER message.categories eq PCIA FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime desc
+What is the received time of my first email?	GET message ORDERBY message.receivedDateTime asc TOP 1
+Give me the received time of my first email.	GET message ORDERBY message.receivedDateTime asc TOP 1
+When did I received my first email?	GET message ORDERBY message.receivedDateTime asc TOP 1
+Give me the time of the first email that I have received.	GET message ORDERBY message.receivedDateTime asc TOP 1
+Which are the emails I have with low importance about expertise search ordered by sent time from oldest to newest?	GET message FILTER message.importance eq Low ORDERBY message.sentDateTime asc SEARCH expertise search
+Tell me about the emails I have with low importance about expertise search ordered by sent time from oldest to newest.	GET message FILTER message.importance eq Low ORDERBY message.sentDateTime asc SEARCH expertise search
+What emails are sent with low importance about expertise search ordered by sent time oldest to newest?	GET message FILTER message.importance eq Low ORDERBY message.sentDateTime asc SEARCH expertise search
+Provide list of emails sent with low importance containing expertise search keyword in it ordered by sent time oldest to newest?	GET message FILTER message.importance eq Low ORDERBY message.sentDateTime asc SEARCH expertise search
+List the low importance emails that I have received in order oldest to newest and are marked as unread.	GET message FILTER message.importance eq Low FILTER message.isRead eq False ORDERBY message.receivedDateTime asc
+What are the low importance emails I have received in ascending order and are marked as unread?	GET message FILTER message.importance eq Low FILTER message.isRead eq False ORDERBY message.receivedDateTime asc
+What emails I have received with low importance marked as unread ordered by receive time oldest to newest?	GET message FILTER message.importance eq Low FILTER message.isRead eq False ORDERBY message.receivedDateTime asc
+Provide emails received with low importance marked as unread ordered by receive time oldest to newest.	GET message FILTER message.importance eq Low FILTER message.isRead eq False ORDERBY message.receivedDateTime asc
+What unread emails I have received with low importance ordered by receive time newest to oldest?	GET message FILTER message.importance eq Low FILTER message.isRead eq False ORDERBY message.receivedDateTime desc
+List out Low importance unread emails I have received and start from newest to oldest.	GET message FILTER message.importance eq Low FILTER message.isRead eq False ORDERBY message.receivedDateTime desc
+List out the unread emails I have received from newest to oldest order having low importance.	GET message FILTER message.importance eq Low FILTER message.isRead eq False ORDERBY message.receivedDateTime desc
+Give me the unread emails I have received from newest to oldest order having low importance.	GET message FILTER message.importance eq Low FILTER message.isRead eq False ORDERBY message.receivedDateTime desc
+What emails I have sent today with low importance ordered by sent time oldest to newest?	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc
+List out emails sent today with low importance ordered by sent time oldest to newest.	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc
+List out the Low importance emails I sent today  ordered by oldest to newest.	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc
+What are the low importance emails I sent today ordered by sent time oldest to newest?	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime asc
+What are the emails about Cybernetics lying under *vendors_megapath category I have received from oldest to newest order?	GET message FILTER message.categories eq *Vendors_megapath ORDERBY message.receivedDateTime asc SEARCH Cybernetics
+Give me the emails about Cybernetics lying under *vendors_megapath category I have received from oldest to newest order.	GET message FILTER message.categories eq *Vendors_megapath ORDERBY message.receivedDateTime asc SEARCH Cybernetics
+List out emails I have about Cybernetics in *vendors_megapath category ordered by receive time oldest to newest.	GET message FILTER message.categories eq *Vendors_megapath ORDERBY message.receivedDateTime asc SEARCH Cybernetics
+What emails I have in *vendors_megapath category about Cybernetics ordered by receive time oldest to newest?	GET message FILTER message.categories eq *Vendors_megapath ORDERBY message.receivedDateTime asc SEARCH Cybernetics
+List out last 23 emails I sent without attachment.	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime desc TOP 23
+What are the Last 23 emails I sent without attachment?	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime desc TOP 23
+List out the last 23 emails I sent without attachment.	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime desc TOP 23
+What are the top 23 emails I sent without attachment in the order newest to oldest?	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime desc TOP 23
+List out emails I have received today without attachment and start from oldest to newest.	GET message FILTER message.hasAttachments eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc
+What email I have received today without attachment ordered by receive time oldest to newest?	GET message FILTER message.hasAttachments eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc
+Which are the unread emails I have received today ordered by received time from oldest to newest?	GET message FILTER message.hasAttachments eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc
+Tell me about the unread emails which I have received today ordered by received time from oldest to newest.	GET message FILTER message.hasAttachments eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc
+List out the high importance emails I have sent today from newest to oldest order.	GET message FILTER message.importance eq High FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc
+Give me the high importance emails I have sent today from newest to oldest order.	GET message FILTER message.importance eq High FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc
+List out high importance emails I sent today and start from newest to oldest.	GET message FILTER message.importance eq High FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc
+What are the  emails I sent today with high importance ordered by newest to oldest?	GET message FILTER message.importance eq High FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc
+What emails are received without attachments and are still marked as unread ordered by receive time oldest to newest?	GET message FILTER message.hasAttachments eq False FILTER message.isRead eq False ORDERBY message.receivedDateTime asc
+Provide list of unread emails received without attachments ordered by receive time oldest to newest.	GET message FILTER message.hasAttachments eq False FILTER message.isRead eq False ORDERBY message.receivedDateTime asc
+List out all emails I have received without attachment and still unread and start from oldest to newest.	GET message FILTER message.hasAttachments eq False FILTER message.isRead eq False ORDERBY message.receivedDateTime asc
+What emails I have without attachment and still unread ordered by receive time oldest to newest?	GET message FILTER message.hasAttachments eq False FILTER message.isRead eq False ORDERBY message.receivedDateTime asc
+How many emails I sent today in agency resumes category?	GET message COUNT FILTER message.categories eq Agency Resumes FILTER message.sentDateTime eq today
+Give me the number of emails I sent today in agency resumes category.	GET message COUNT FILTER message.categories eq Agency Resumes FILTER message.sentDateTime eq today
+How many emails are sent today under agency resumes category?	GET message COUNT FILTER message.categories eq Agency Resumes FILTER message.sentDateTime eq today
+Provide total number of emails sent today falling into agency resumes category.	GET message COUNT FILTER message.categories eq Agency Resumes FILTER message.sentDateTime eq today
+Which are the read emails I have received having no attachments ordered by received time from newest to oldest?	GET message FILTER message.hasAttachments eq False FILTER message.isRead eq True ORDERBY message.receivedDateTime desc
+Tell me about the emails not having attachments ordered by received time from newest to oldest.	GET message FILTER message.hasAttachments eq False FILTER message.isRead eq True ORDERBY message.receivedDateTime desc
+List read emails I have without attachment ordered by receive time newest to oldest.	GET message FILTER message.hasAttachments eq False FILTER message.isRead eq True ORDERBY message.receivedDateTime desc
+What emails having no attachment and marked as read ordered by receive time newest to oldest?	GET message FILTER message.hasAttachments eq False FILTER message.isRead eq True ORDERBY message.receivedDateTime desc
+Give me the low importance emails I have sent today from newest to oldest order.	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc
+List out the low importance emails I have sent today from newest to oldest order.	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc
+List out low importance emails I sent today and start from newest to oldest.	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc
+What emails I sent today with low importance ordered by newest to oldest?	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc
+Please provide the emails that I have with attachment in the category internet everywhere ceo summit ordered by receive time oldest to newest.	GET message FILTER message.categories eq Internet Everywhere CEO Summit FILTER message.hasAttachments eq True ORDERBY message.receivedDateTime asc
+What are the emails that I have received with attachment in the category internet everywhere ceo summit in the order oldest to newest?	GET message FILTER message.categories eq Internet Everywhere CEO Summit FILTER message.hasAttachments eq True ORDERBY message.receivedDateTime asc
+List out emails I have in internet everywhere ceo summit category with attachment ordered by receive time oldest to newest.	GET message FILTER message.categories eq Internet Everywhere CEO Summit FILTER message.hasAttachments eq True ORDERBY message.receivedDateTime asc
+What are the emails I have in internet everywhere ceo summit category with attachment ordered by receive time oldest to newest?	GET message FILTER message.categories eq Internet Everywhere CEO Summit FILTER message.hasAttachments eq True ORDERBY message.receivedDateTime asc
+Which are the last 32 emails I have sent with high importance?	GET message FILTER message.importance eq High ORDERBY message.sentDateTime asc TOP 34
+Tell me about the emails I have sent with high importance.	GET message FILTER message.importance eq High ORDERBY message.sentDateTime asc TOP 34
+Which are first 34 emails with high importance?	GET message FILTER message.importance eq High ORDERBY message.sentDateTime asc TOP 34
+List out first 34 emails with high importance.	GET message FILTER message.importance eq High ORDERBY message.sentDateTime asc TOP 34
+What emails are received from Eustolia Huether with attachments ordered by receive time oldest to newest?	GET message FILTER message.from eq Eustolia Huether FILTER message.hasAttachments eq True ORDERBY message.receivedDateTime asc
+Send me list of emails received from Eustolia Huether with attachments ordered by receive time oldest to newest.	GET message FILTER message.from eq Eustolia Huether FILTER message.hasAttachments eq True ORDERBY message.receivedDateTime asc
+Which are the emails I have received from eustolia huether with attachments ordered by received time from oldest to newest?	GET message FILTER message.from eq Eustolia Huether FILTER message.hasAttachments eq True ORDERBY message.receivedDateTime asc
+Tell me about the emails I have received from eustolia huether with attachments ordered by received time from oldest to newest.	GET message FILTER message.from eq Eustolia Huether FILTER message.hasAttachments eq True ORDERBY message.receivedDateTime asc
+Which are the emails I have in japantesting category with no attachments ordered by received time from oldest to newest?	GET message FILTER message.categories eq japantesting FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime asc
+Tell me about the emails I have in japantesting category with no attachments ordered by received time from oldest to newest.	GET message FILTER message.categories eq japantesting FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime asc
+What are the emails I have received lying under japantesting category without attachments from oldest to newest order.	GET message FILTER message.categories eq japantesting FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime asc
+List out the emails I have received lying under japantesting category without attachments from oldest to newest order.	GET message FILTER message.categories eq japantesting FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime asc
+What are the unread emails from ashely schearer I received ordered by receive time newest to oldest? 	GET message FILTER message.from eq Ashely Schearer FILTER message.isRead eq False ORDERBY message.receivedDateTime desc
+List the unread emails from ashely schearer I received starting from receive time newest to oldest.	GET message FILTER message.from eq Ashely Schearer FILTER message.isRead eq False ORDERBY message.receivedDateTime desc
+which are the unread emails I have received from ashely schearer ordered by received time from newest to oldest?	GET message FILTER message.from eq Ashely Schearer FILTER message.isRead eq False ORDERBY message.receivedDateTime desc
+Tell me about the unread emails I have received from ashely schearer ordered by received time from newest to oldest.	GET message FILTER message.from eq Ashely Schearer FILTER message.isRead eq False ORDERBY message.receivedDateTime desc
+Which are the emails I sent today with low importance ordered by sent time from newest to oldest?	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc
+Tell me about the emails I sent today with low importance ordered by sent time from newest to oldest.	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc
+Find the emails I sent today with low importance ordered by sent time newest to oldest.	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc
+Which are the low importance emails I sent today and start from newest to oldest?	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc
+Tell me about the emails I sent without attachment in the category alice ordered by newest to oldest.	GET message FILTER message.categories eq Alice FILTER message.hasAttachments eq False ORDERBY message.sentDateTime desc
+What are the emails I sent without attachment in the alice category in the order newest to oldest?	GET message FILTER message.categories eq Alice FILTER message.hasAttachments eq False ORDERBY message.sentDateTime desc
+What emails without attachments I sent of alice categories in descending order?	GET message FILTER message.categories eq Alice FILTER message.hasAttachments eq False ORDERBY message.sentDateTime desc
+list out emails that has no attachments  in descending order which falls in alice categories that I sent.	GET message FILTER message.categories eq Alice FILTER message.hasAttachments eq False ORDERBY message.sentDateTime desc
+Find the emails in descending order that falls in servlet int backup on01-02-2001 categories with attachments.	GET message FILTER message.categories eq ServletIntBackupOn01-02-2001 FILTER message.hasAttachments eq True ORDERBY message.sentDateTime desc
+Whats emails of   servlet int backup on01-02-2001 categories has attachments ordered by sent time from newest to oldest?	GET message FILTER message.categories eq ServletIntBackupOn01-02-2001 FILTER message.hasAttachments eq True ORDERBY message.sentDateTime desc
+Give me the emails I sent with attachment in the category servlet int backup on01-02-2001 in the order newest to oldest.	GET message FILTER message.categories eq ServletIntBackupOn01-02-2001 FILTER message.hasAttachments eq True ORDERBY message.sentDateTime desc
+List out the emails I sent in the category servlet int backup on01-02-2001 ordered by newest to oldest with attachment.	GET message FILTER message.categories eq ServletIntBackupOn01-02-2001 FILTER message.hasAttachments eq True ORDERBY message.sentDateTime desc
+Give me the emails I have received in the order oldest to newest with the keyword Domain model in the category etrade us.	GET message FILTER message.categories eq etradeUS ORDERBY message.receivedDateTime asc SEARCH Domain model
+What are the emails I have received about Domain model in the etrade us category in the order oldest to newest?	GET message FILTER message.categories eq etradeUS ORDERBY message.receivedDateTime asc SEARCH Domain model
+Which are the emails I received in etrade us category about Domain model?	GET message FILTER message.categories eq etradeUS ORDERBY message.receivedDateTime asc SEARCH Domain model
+Tell me about the emails I have received in etrade us category about Domain model.	GET message FILTER message.categories eq etradeUS ORDERBY message.receivedDateTime asc SEARCH Domain model
+How many low importance emails I sent today?	GET message COUNT FILTER message.importance eq Low FILTER message.sentDateTime eq today
+Give me the low importance emails I sent today.	GET message COUNT FILTER message.importance eq Low FILTER message.sentDateTime eq today
+How many emails I sent today with low importance?	GET message COUNT FILTER message.importance eq Low FILTER message.sentDateTime eq today
+List the emails I sent today with low importance.	GET message COUNT FILTER message.importance eq Low FILTER message.sentDateTime eq today
+What are the emails about persuasive argument that fall under platform certification categories ordered by received time oldest to newest? 	GET message FILTER message.categories eq PlatformCertification ORDERBY message.receivedDateTime asc SEARCH persuasive argument
+List the emails about persuasive argument that fall under platform certification categories ordered by received time oldest to newest.	GET message FILTER message.categories eq PlatformCertification ORDERBY message.receivedDateTime asc SEARCH persuasive argument
+What are the Emails I received ascending ordered in the platform certification categories about persuasive argument.	GET message FILTER message.categories eq PlatformCertification ORDERBY message.receivedDateTime asc SEARCH persuasive argument
+List the Emails in the platform certification categories about persuasive argument in ascending order by receive time.	GET message FILTER message.categories eq PlatformCertification ORDERBY message.receivedDateTime asc SEARCH persuasive argument
+Give me the low importance emails I sent today from newest to oldest order.	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc
+Which are the emails I have sent today with low importance ordered by sent time from newest to oldest?	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc
+Tell me about the emails that I have sent today with low importance ordered by sent time from newest to oldest.	GET message FILTER message.importance eq Low FILTER message.sentDateTime eq today ORDERBY message.sentDateTime desc
+What are the emails with attachments sent by jennifer spacek ordered by receive time oldest to newest? 	GET message FILTER message.from eq Jennifer Spacek FILTER message.hasAttachments eq True ORDERBY message.receivedDateTime asc
+List out the emails with attachments sent by jennifer spacek ordered by receive time oldest to newest.	GET message FILTER message.from eq Jennifer Spacek FILTER message.hasAttachments eq True ORDERBY message.receivedDateTime asc
+Tell me about the emails I have received from jennifer spacek with attachments ordered by received time from oldest to newest.	GET message FILTER message.from eq Jennifer Spacek FILTER message.hasAttachments eq True ORDERBY message.receivedDateTime asc
+what are the emails I have received with attachments from jennifer spacek ordered by received time from oldest to newest.	GET message FILTER message.from eq Jennifer Spacek FILTER message.hasAttachments eq True ORDERBY message.receivedDateTime asc
+Find the first email I sent which do not have attachments.	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime asc TOP 1
+Which first email I sent without attachments?	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime asc TOP 1
+What is the first email I sent with no attachments?	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime asc TOP 1
+Tell me about the first email I sent with no attachments.	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime asc TOP 1
+Which are the emails under the south east area received from Shaunta Grebel and are without attachments?	GET message FILTER message.categories eq SouthEast Area FILTER message.from eq Shaunta Grebel FILTER message.hasAttachments eq False
+List out the emails from Shaunta Grebel that are under the south east area categories and not having attachments.	GET message FILTER message.categories eq SouthEast Area FILTER message.from eq Shaunta Grebel FILTER message.hasAttachments eq False
+List the emails without attachments  I received from shaunta grebel and falls in categories.	GET message FILTER message.categories eq SouthEast Area FILTER message.from eq Shaunta Grebel FILTER message.hasAttachments eq False
+What are the emails sent by shaunta grebel has no attachments and falls in south east area categories?	GET message FILTER message.categories eq SouthEast Area FILTER message.from eq Shaunta Grebel FILTER message.hasAttachments eq False
+Tell me about the emails I have containing bilinguality keyword with high importance in union pacific railroad category.	GET message FILTER message.categories eq UnionPacificRailroad FILTER message.importance eq High SEARCH bilinguality
+Which are the emails I have about bilinguality with high importance in union pacific railroad category?	GET message FILTER message.categories eq UnionPacificRailroad FILTER message.importance eq High SEARCH bilinguality
+Give me the high importance emails about union pacific railroad falling under union pacific railroad category.	GET message FILTER message.categories eq UnionPacificRailroad FILTER message.importance eq High SEARCH bilinguality
+What are the high importance emails about union pacific railroad falling under union pacific railroad category?	GET message FILTER message.categories eq UnionPacificRailroad FILTER message.importance eq High SEARCH bilinguality
+Which are the emails I sent today about re-ranking algorithm in tracking category?	GET message FILTER message.categories eq Tracking FILTER message.sentDateTime eq today SEARCH re-ranking algorithm
+Tell me about the emails I sent today in tracking category about re-ranking algorithm.	GET message FILTER message.categories eq Tracking FILTER message.sentDateTime eq today SEARCH re-ranking algorithm
+Give me the emails of tracking categories I sent today regarding re-ranking algorithm.	GET message FILTER message.categories eq Tracking FILTER message.sentDateTime eq today SEARCH re-ranking algorithm
+Which emails about re-ranking algorithm I sent today which falls in tracking categories?	GET message FILTER message.categories eq Tracking FILTER message.sentDateTime eq today SEARCH re-ranking algorithm
+What are the read low importance emails I have received from newest to oldest order?	GET message FILTER message.importance eq Low FILTER message.isRead eq True ORDERBY message.receivedDateTime desc
+Give me the read low importance emails I have received from newest to oldest order.	GET message FILTER message.importance eq Low FILTER message.isRead eq True ORDERBY message.receivedDateTime desc
+What low importance read emails ordered by newest to oldest?	GET message FILTER message.importance eq Low FILTER message.isRead eq True ORDERBY message.receivedDateTime desc
+Give me the emails I received from Maynard Corallo without attachment in the order newest to oldest.	GET message FILTER message.from eq Maynard Corallo FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime desc
+Tell me about the emails I received from Maynard Corallo without attachment ordered by newest to oldest.	GET message FILTER message.from eq Maynard Corallo FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime desc
+What are the emails without attachments I received from maynard corallo ordered by receive time newest to oldest?	GET message FILTER message.from eq Maynard Corallo FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime desc
+List out the emails without attachments sent by maynard corallo starting from receive time newest to oldest.	GET message FILTER message.from eq Maynard Corallo FILTER message.hasAttachments eq False ORDERBY message.receivedDateTime desc
+Provide me the number of emails I received today from carlotta fu.	GET message COUNT FILTER message.from eq Carlotta Fu FILTER message.receivedDateTime eq today
+List out the number of emails I received today from carlotta fu.	GET message COUNT FILTER message.from eq Carlotta Fu FILTER message.receivedDateTime eq today
+How many emails I received today from carlotta fu?	GET message COUNT FILTER message.from eq Carlotta Fu FILTER message.receivedDateTime eq today
+Which are the read emails I received having no attachments ordered by received time from oldest to newest?	GET message FILTER message.hasAttachments eq False FILTER message.isRead eq True ORDERBY message.receivedDateTime asc
+Tell me about the read emails I received having no attachments ordered by received time from oldest to newest.	GET message FILTER message.hasAttachments eq False FILTER message.isRead eq True ORDERBY message.receivedDateTime asc
+Give me the emails I received without attachment and are marked as read in the order oldest to newest.	GET message FILTER message.hasAttachments eq False FILTER message.isRead eq True ORDERBY message.receivedDateTime asc
+List out the emails I received without attachment and are marked as read ordered by oldest to newest.	GET message FILTER message.hasAttachments eq False FILTER message.isRead eq True ORDERBY message.receivedDateTime asc
+What are the emails I received from Miquel Amo in the order newest to oldest and are marked as read?	GET message FILTER message.from eq Miquel Amo FILTER message.isRead eq True ORDERBY message.receivedDateTime desc
+List out the emails I have received from Miquel Amo ordered by newest to oldest those are marked as read.	GET message FILTER message.from eq Miquel Amo FILTER message.isRead eq True ORDERBY message.receivedDateTime desc
+What are the emails do I received descending order from miquel amo by time.	GET message FILTER message.from eq Miquel Amo FILTER message.isRead eq True ORDERBY message.receivedDateTime desc
+List out an email from miquel amo that i received ordered by time from newest to oldest.	GET message FILTER message.from eq Miquel Amo FILTER message.isRead eq True ORDERBY message.receivedDateTime desc
+What are the Emails in the 08/04/00 categories in order by receive today having no attachment?	GET message FILTER message.categories eq 08/04/00 FILTER message.hasAttachments eq False FILTER message.receivedDateTime eq today
+List out the Emails put in the 08/04/00 categories in order by receive today having no attachment.	GET message FILTER message.categories eq 08/04/00 FILTER message.hasAttachments eq False FILTER message.receivedDateTime eq today
+What are the emails I have received today without attachment in the category 08/04/00?	GET message FILTER message.categories eq 08/04/00 FILTER message.hasAttachments eq False FILTER message.receivedDateTime eq today
+List out the emails I have received today without attachment in the 08/04/00 category.	GET message FILTER message.categories eq 08/04/00 FILTER message.hasAttachments eq False FILTER message.receivedDateTime eq today
+Give me the unread emails I have received from lyndsay lieske in oldest to newest order.	GET message FILTER message.from eq Lyndsay Lieske FILTER message.isRead eq False ORDERBY message.receivedDateTime asc
+What are the unread emails I have received from lyndsay lieske in oldest to newest order?	GET message FILTER message.from eq Lyndsay Lieske FILTER message.isRead eq False ORDERBY message.receivedDateTime asc
+Which are the unread emails I have received from lyndsay lieske ordered by received time from oldest to newest?	GET message FILTER message.from eq Lyndsay Lieske FILTER message.isRead eq False ORDERBY message.receivedDateTime asc
+Tell me about the unread emails I have received from lyndsay lieske ordered by received time from oldest to newest.	GET message FILTER message.from eq Lyndsay Lieske FILTER message.isRead eq False ORDERBY message.receivedDateTime asc
+Which are the emails I have received today having no attachments ordered by received time from oldest to newest?	GET message FILTER message.hasAttachments eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc
+Tell me about the emails that I have received without attachments ordered by received time from oldest to newest.	GET message FILTER message.hasAttachments eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc
+What are the emails I have received today from oldest to newest order without attachments?	GET message FILTER message.hasAttachments eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc
+List out the emails I have received today from oldest to newest order having no attachments.	GET message FILTER message.hasAttachments eq False FILTER message.receivedDateTime eq today ORDERBY message.receivedDateTime asc
+What are the high importance emails I have about String-to-string correction problem ordered by sent time from newest to oldest?	GET message FILTER message.importance eq High ORDERBY message.sentDateTime desc SEARCH String-to-string correction problem
+Tell me about the high importance emails that contains the word String-to-string correction problem ordered by sent time from newest to oldest.	GET message FILTER message.importance eq High ORDERBY message.sentDateTime desc SEARCH String-to-string correction problem
+How many low importance emails I sent today?	GET message COUNT FILTER message.importance eq Low FILTER message.sentDateTime eq today
+Give me the number of low importance emails I sent today.	GET message COUNT FILTER message.importance eq Low FILTER message.sentDateTime eq today
+Tell me about the unread emails that I have received from cherilyn macnab ordered by received time from newest to oldest.	GET message FILTER message.from eq Cherilyn Macnab FILTER message.isRead eq False ORDERBY message.receivedDateTime desc
+Give me the unread emails that I have received from cherilyn macnab ordered by received time from newest to oldest.	GET message FILTER message.from eq Cherilyn Macnab FILTER message.isRead eq False ORDERBY message.receivedDateTime desc
+What are the unread emails I have without attachments ordered by receive time oldest to newest?	GET message FILTER message.hasAttachments eq False FILTER message.isRead eq False ORDERBY message.receivedDateTime asc
+Give me the emails that are marked as unread and does not have attachments in ascending order by their receive time.	GET message FILTER message.hasAttachments eq False FILTER message.isRead eq False ORDERBY message.receivedDateTime asc
+Give me the emails of wireless roi category that I sent without attachments in newest to oldest order.	GET message FILTER message.categories eq WirelessROI FILTER message.hasAttachments eq False ORDERBY message.sentDateTime desc
+What wireless roi category emails I sent in newest to oldest order without attachments? 	GET message FILTER message.categories eq WirelessROI FILTER message.hasAttachments eq False ORDERBY message.sentDateTime desc
+What are the high importance unread emails I have ordered by receive time from oldest to newest?	GET message FILTER message.importance eq High FILTER message.isRead eq False ORDERBY message.receivedDateTime asc
+Give me the unread emails that are marked as high importance in ascending order by their receive time.	GET message FILTER message.importance eq High FILTER message.isRead eq False ORDERBY message.receivedDateTime asc
+Give me the top 5 emails that I have with no attachments ordered by sent time from newest to oldest.	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime desc TOP 5
+Provide me with the top 5 emails that I have with no attachments ordered by sent time from newest to oldest.	GET message FILTER message.hasAttachments eq False ORDERBY message.sentDateTime desc TOP 5
+What are the oldest 51 emails with attachments I sent ordered by sent time from oldest to newest?	GET message FILTER message.hasAttachments eq True ORDERBY message.sentDateTime asc TOP 51
+List the oldest 51 emails I have sent ordered by sent time from oldest to newest and are having attachments.	GET message FILTER message.hasAttachments eq True ORDERBY message.sentDateTime asc TOP 51
