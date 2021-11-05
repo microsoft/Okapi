@@ -1,14 +1,22 @@
-# Project
+# Okapi: a Large-Scale Human Labeled Dataset for Compositional Generalization in Natural Language Interfaces to Web APIs
+This works presents Okapi, a new dataset for Natural Language to executable web Application Programming Interfaces (NL2API). This dataset is in English and contains 22,508 questions and 9,019 unique API calls, covering three domains. We define new compositional generalization tasks for NL2API which explore the models' ability to extrapolate from simple API calls in the training set to new and more complex API calls in the inference phase. Also, the models are required to generate API calls that execute correctly as opposed to the existing approaches which evaluate queries with placeholder values. Our dataset is different than most of the existing compositional semantic parsing datasets because it is a non-synthetic dataset studying the compositional generalization in a low-resource setting. Okapi is a step towards creating realistic datasets and benchmarks for studying compositional generalization alongside the existing datasets and tasks. We report the generalization capabilities of sequence-to-sequence baseline models trained on a variety of the SCAN and Okapi datasets tasks. The best model achieves 15\% exact match accuracy when generalizing from simple API calls to more complex API calls. This highlights some challenges for future research.
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+### Okapi statistics in comparison to other semantic parsing datasets
 
-As the maintainer of this project, please make a few updates:
+| Dataset | # Question | # Queries | # Domains | # Templates | Realistic | 2-grams Jaccard similarity |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| CFQ | 239,357 | 228,149 | - | 34921 | No | 0.04 |
+| SCAN | 20,910 | 20,910 | 1 | - | No | 0.39 |
+|GeoQuery | 880 | 246 | 1 | 98 | Yes | 0.24 |
+| **Okapi** | 22,628 | 9019 | 3 | 1961 | Yes | 0.14 |
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+### Comparisons of models' performance on SCAN and Okapi datasets with respect to exact match accuracy(%).
+| | SCAN | SCAN | Okapi Doc | Okapi Doc | Okapi Email | Okapi Email | Okapi Calendar | Okapi Calendar |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Method\Split | Len | MCD | Length | Program | Length | Program | Length | Program | 
+| LSTM+Attention | 14.1 | 6.1 | 0 | 35.1 | 0 | 26.0 | 0 | 34.0 |
+| Transformer+Copy | 0 | 0 | 7.14 | 83.2 | 11.2 | 70.5 | 10.6 | 81.8 |
+| T5-Base | 14.4 | 15.4 | 15 |31.37 | 14.85 | 41.06 | 13.2 | 25.79 |
 
 ## Contributing
 
