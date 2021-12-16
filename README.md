@@ -1,5 +1,6 @@
 # Okapi: a Large-Scale Human Labeled Dataset for Compositional Generalization in Natural Language Interfaces to Web APIs
-This works presents Okapi, a new dataset for Natural Language to executable web Application Programming Interfaces (NL2API). This dataset is in English and contains 22,508 questions and 9,019 unique API calls, covering three domains. We define new compositional generalization tasks for NL2API which explore the models' ability to extrapolate from simple API calls in the training set to new and more complex API calls in the inference phase. Also, the models are required to generate API calls that execute correctly as opposed to the existing approaches which evaluate queries with placeholder values. Our dataset is different than most of the existing compositional semantic parsing datasets because it is a non-synthetic dataset studying the compositional generalization in a low-resource setting. Okapi is a step towards creating realistic datasets and benchmarks for studying compositional generalization alongside the existing datasets and tasks. We report the generalization capabilities of sequence-to-sequence baseline models trained on a variety of the SCAN and Okapi datasets tasks. The best model achieves 15\% exact match accuracy when generalizing from simple API calls to more complex API calls. This highlights some challenges for future research.
+This works presents Okapi, a new dataset for Natural Language to executable web Application Programming Interfaces (NL2API). This dataset is in English and contains 22,508 questions and 9,019 unique API calls, covering three domains. We define new compositional generalization tasks for NL2API which explore the models' ability to extrapolate from simple API calls in the training set to new and more complex API calls in the inference phase. Also, the models are required to generate API calls that execute correctly as opposed to the existing approaches which evaluate queries with placeholder values. Our dataset is different than most of the existing compositional semantic parsing datasets because it is a non-synthetic dataset studying the compositional generalization in a low-resource setting. Okapi is a step towards creating realistic datasets and benchmarks for studying compositional generalization alongside the existing datasets and tasks. We report the generalization capabilities of sequence-to-sequence baseline models trained on a variety of the SCAN and Okapi datasets tasks. The best model achieves 15\% exact match accuracy when generalizing from simple API calls to more complex API calls. This highlights some challenges for future research. 
+The link to the paper can be found here: [Compositional Generalization for Natural Language Interfaces to Web APIs](https://arxiv.org/abs/2112.05209)
 
 ### Okapi statistics in comparison to other semantic parsing datasets
 
@@ -17,6 +18,17 @@ This works presents Okapi, a new dataset for Natural Language to executable web 
 | LSTM+Attention | 14.1 | 6.1 | 0 | 35.1 | 0 | 26.0 | 0 | 34.0 |
 | Transformer+Copy | 0 | 0 | 7.14 | 83.2 | 11.2 | 70.5 | 10.6 | 81.8 |
 | T5-Base | 14.4 | 15.4 | 15 |31.37 | 14.85 | 41.06 | 13.2 | 25.79 |
+
+### Citation
+If you find our paper useful, please cite the following:
+``` 
+@article{hosseini2021compositional,
+  title={Compositional Generalization for Natural Language Interfaces to Web APIs},
+  author={Hosseini, Saghar and Awadallah, Ahmed Hassan and Su, Yu},
+  journal={arXiv preprint arXiv:2112.05209},
+  year={2021}
+} 
+```
 
 ## Contributing
 
